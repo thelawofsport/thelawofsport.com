@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements — Sports Law | The Law of Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --color-navy: #0B1D3A;
+    --color-navy-light: #132B52;
+    --color-navy-mid: #1A3A6B;
+    --color-emerald: #1B7A5A;
+    --color-emerald-light: #22976E;
+    --color-emerald-pale: #E8F5F0;
+    --color-gold: #D4A847;
+    --color-gold-light: #F0DCA0;
+    --color-white: #FFFFFF;
+    --color-offwhite: #F7F8FA;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-gray-600: #4B5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1F2937;
+    --color-gray-900: #111827;
+    --color-text: #1F2937;
+    --color-text-light: #6B7280;
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F7F8FA;
+    --color-surface: #FFFFFF;
+    --color-border: #E5E7EB;
+    --color-shadow: rgba(11, 29, 58, 0.08);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 3px var(--color-shadow);
+    --shadow-md: 0 4px 12px var(--color-shadow);
+    --shadow-lg: 0 8px 30px var(--color-shadow);
+    --transition: 0.2s ease;
+}
+[data-theme="dark"] {
+    --color-text: #E5E7EB;
+    --color-text-light: #9CA3AF;
+    --color-bg: #0F1729;
+    --color-bg-alt: #162036;
+    --color-surface: #1A2744;
+    --color-border: #2A3A5C;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-offwhite: #162036;
+    --color-gray-50: #162036;
+    --color-gray-100: #1A2744;
+    --color-gray-200: #2A3A5C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
+body {
+    font-family: var(--font-sans); color: var(--color-text);
+    background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--color-emerald); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--color-emerald-light); }
+h1, h2, h3, h4 { line-height: 1.2; }
+.pitch-logo { display: flex; align-items: center; gap: 10px; overflow: visible; flex-shrink: 0; }
+.logo-text { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-white); }
+
+/* Portal Layout */
+.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+
+/* Portal Top Nav */
+.portal-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    background: var(--color-navy); display: flex; align-items: center;
+    justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
+}
+.portal-nav-left { display: flex; align-items: center; gap: 44px; }
+.portal-nav-left .logo-text { font-size: 1rem; }
+.portal-nav-menu { display: flex; gap: 4px; }
+.portal-nav-menu a {
+    color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
+    padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
+}
+.portal-nav-menu a:hover, .portal-nav-menu a.active {
+    color: var(--color-gold); background: rgba(255,255,255,0.1);
+}
+.portal-nav-right { display: flex; align-items: center; gap: 16px; }
+.portal-search {
+    display: flex; align-items: center; background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm); padding: 6px 12px; gap: 8px;
+}
+.portal-search input {
+    background: transparent; border: none; color: var(--color-white);
+    font-family: var(--font-sans); font-size: 0.84rem; outline: none; width: 180px;
+}
+.portal-search input::placeholder { color: rgba(255,255,255,0.4); }
+.search-icon { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center; transition: all var(--transition);
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); color: var(--color-white); }
+
+/* AI Assistant Button */
+.ai-assistant-btn {
+    background: linear-gradient(135deg, rgba(91,45,142,0.6), rgba(27,122,90,0.6));
+    border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition); position: relative;
+}
+.ai-assistant-btn:hover {
+    background: linear-gradient(135deg, rgba(91,45,142,0.85), rgba(27,122,90,0.85));
+    color: var(--color-white); border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 0 12px rgba(91,45,142,0.4);
+}
+.ai-assistant-btn svg { width: 16px; height: 16px; }
+
+/* Left Sidebar */
+.portal-sidebar {
+    width: 245px; background: var(--color-bg-alt); border-right: 1px solid var(--color-border);
+    padding: 24px 0; flex-shrink: 0; position: sticky; top: 77px;
+    height: calc(100vh - 64px); overflow-y: auto; display: flex; flex-direction: column;
+}
+.sidebar-section { padding: 0 16px; margin-bottom: 28px; }
+.sidebar-label {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--color-text-light); margin-bottom: 8px; padding: 0 8px;
+}
+.sidebar-link {
+    display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+    border-radius: var(--radius-sm); color: var(--color-text); font-size: 0.88rem;
+    font-weight: 500; transition: all var(--transition);
+}
+.sidebar-link:hover { background: var(--color-border); color: var(--color-text); }
+.sidebar-link.active { background: var(--color-emerald-pale); color: var(--color-emerald); font-weight: 600; }
+[data-theme="dark"] .sidebar-link.active { background: rgba(27,122,90,0.2); }
+.sidebar-icon { font-size: 1rem; width: 20px; text-align: center; }
+.sidebar-divider { height: 1px; background: var(--color-border); margin: 0 16px 28px; }
+.portal-sidebar > :nth-child(2) { margin-top: auto; }
+.portal-sidebar > :nth-last-child(2) { margin-top: auto; }
+
+/* Main Content Area */
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
+
+/* Two-column layout */
+.announcements-layout {
+    display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start;
+}
+.announcements-left { min-width: 0; }
+.announcements-right {
+    position: sticky; top: 109px;
+    display: flex; flex-direction: column; gap: 24px;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 32px; padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+.page-header h1 {
+    font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800;
+    color: var(--color-navy); margin-bottom: 6px;
+}
+[data-theme="dark"] .page-header h1 { color: var(--color-white); }
+.page-header p { color: var(--color-text-light); font-size: 0.95rem; }
+.page-breadcrumb {
+    font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
+}
+.page-breadcrumb a { font-size: 0.78rem; }
+
+/* Announcement Feed */
+.announcement-feed { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+
+.announcement-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 24px 28px; overflow: hidden;
+    transition: all var(--transition);
+}
+.announcement-card:hover { box-shadow: var(--shadow-md); }
+
+.announcement-header {
+    display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px;
+}
+
+.announcement-date {
+    font-size: 0.8rem; font-weight: 600; color: var(--color-text-light); letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+
+.announcement-category-tag {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; padding: 4px 12px; border-radius: 12px;
+    display: inline-block; white-space: nowrap;
+}
+
+.announcement-category-tag.admin {
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
+    color: var(--color-white);
+}
+
+.announcement-category-tag.lecture {
+    background: linear-gradient(135deg, var(--color-emerald), var(--color-emerald-light));
+    color: var(--color-white);
+}
+
+.announcement-category-tag.tutorial {
+    background: linear-gradient(135deg, #2563EB, #60A5FA);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .announcement-category-tag.admin {
+    background: linear-gradient(135deg, var(--color-navy-light), var(--color-navy-mid));
+}
+
+[data-theme="dark"] .announcement-category-tag.lecture {
+    background: rgba(27, 122, 90, 0.2);
+    color: var(--color-emerald-light);
+}
+
+[data-theme="dark"] .announcement-category-tag.tutorial {
+    background: rgba(37, 99, 235, 0.15);
+    color: #60A5FA;
+}
+
+.announcement-category-tag.assessment {
+    background: linear-gradient(135deg, #D4A847, #F0DCA0);
+    color: var(--color-navy);
+}
+
+[data-theme="dark"] .announcement-category-tag.assessment {
+    background: rgba(212, 168, 71, 0.2);
+    color: var(--color-gold-light);
+}
+
+.announcement-title {
+    font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 10px; margin-top: 8px;
+}
+
+[data-theme="dark"] .announcement-title { color: var(--color-white); }
+
+.announcement-body {
+    font-size: 0.92rem; color: var(--color-text); line-height: 1.7; margin-bottom: 14px;
+}
+
+.announcement-body p { margin-bottom: 12px; }
+.announcement-body p:last-child { margin-bottom: 0; }
+
+.announcement-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; margin-top: 4px;
+    background: var(--color-emerald-pale); color: var(--color-emerald);
+    border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600;
+    transition: all var(--transition);
+}
+
+[data-theme="dark"] .announcement-link {
+    background: rgba(27, 122, 90, 0.15);
+}
+
+.announcement-link:hover {
+    background: var(--color-emerald);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .announcement-link:hover {
+    background: var(--color-emerald-light);
+}
+
+/* Filter Section */
+.announcement-filters {
+    display: flex; gap: 12px; margin-bottom: 28px; align-items: center;
+}
+
+.filter-btn {
+    font-size: 0.85rem; font-weight: 600; padding: 8px 16px;
+    border-radius: 20px; border: 1px solid var(--color-border);
+    background: var(--color-surface); color: var(--color-text);
+    cursor: pointer; transition: all var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--color-navy); color: var(--color-white); border-color: var(--color-navy);
+}
+
+/* Section Divider */
+.section-divider {
+    border: none; height: 1px; background: var(--color-border); margin: 8px 0 36px;
+}
+
+.section-heading {
+    font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 6px;
+}
+
+[data-theme="dark"] .section-heading { color: var(--color-white); }
+
+.section-subheading {
+    font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 20px;
+}
+
+/* Upcoming Calendar */
+.upcoming-calendar {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); overflow: hidden;
+}
+.upcoming-calendar-header {
+    padding: 18px 20px 14px; border-bottom: 1px solid var(--color-border);
+}
+.upcoming-calendar-header h3 {
+    font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 2px;
+}
+[data-theme="dark"] .upcoming-calendar-header h3 { color: var(--color-white); }
+.upcoming-calendar-header p {
+    font-size: 0.72rem; color: var(--color-text-light);
+}
+.cal-section-label {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; padding: 10px 20px 6px;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+}
+.cal-item {
+    display: flex; gap: 12px; padding: 10px 20px;
+    border-bottom: 1px solid var(--color-border); align-items: center;
+    transition: background var(--transition);
+}
+.cal-item:last-child { border-bottom: none; }
+.cal-item:hover { background: var(--color-gray-50); }
+[data-theme="dark"] .cal-item:hover { background: var(--color-gray-100); }
+.cal-date-box {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: var(--radius-sm);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    line-height: 1;
+}
+.cal-date-box.lecture { background: var(--color-emerald-pale); }
+.cal-date-box.tutorial { background: #EFF6FF; }
+.cal-date-box.assessment { background: #FEF3C7; }
+[data-theme="dark"] .cal-date-box.lecture { background: rgba(27,122,90,0.2); }
+[data-theme="dark"] .cal-date-box.tutorial { background: rgba(37,99,235,0.15); }
+[data-theme="dark"] .cal-date-box.assessment { background: rgba(212,168,71,0.15); }
+.cal-date-month {
+    font-size: 0.55rem; font-weight: 700; text-transform: uppercase;
+}
+.cal-date-day { font-size: 0.95rem; font-weight: 700; }
+.cal-date-box.lecture .cal-date-month,
+.cal-date-box.lecture .cal-date-day { color: var(--color-emerald); }
+.cal-date-box.tutorial .cal-date-month,
+.cal-date-box.tutorial .cal-date-day { color: #2563EB; }
+.cal-date-box.assessment .cal-date-month,
+.cal-date-box.assessment .cal-date-day { color: #B45309; }
+.cal-item-info { flex: 1; min-width: 0; }
+.cal-item-title {
+    font-size: 0.82rem; font-weight: 600; color: var(--color-text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cal-item-meta {
+    font-size: 0.7rem; color: var(--color-text-light);
+}
+.cal-view-all {
+    display: block; text-align: center; padding: 12px;
+    font-size: 0.82rem; font-weight: 600; color: var(--color-emerald);
+    border-top: 1px solid var(--color-border);
+    transition: all var(--transition);
+}
+.cal-view-all:hover { background: var(--color-emerald-pale); }
+[data-theme="dark"] .cal-view-all:hover { background: rgba(27,122,90,0.12); }
+
+/* Quick Links Panel */
+.quick-links-panel {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); overflow: hidden;
+}
+.quick-links-header {
+    padding: 18px 20px 14px; border-bottom: 1px solid var(--color-border);
+}
+.quick-links-header h3 {
+    font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 2px;
+}
+[data-theme="dark"] .quick-links-header h3 { color: var(--color-white); }
+.quick-links-header p {
+    font-size: 0.72rem; color: var(--color-text-light);
+}
+.quick-link-item {
+    display: flex; align-items: center; gap: 14px; padding: 12px 20px;
+    border-bottom: 1px solid var(--color-border);
+    transition: all var(--transition); text-decoration: none; color: var(--color-text);
+}
+.quick-link-item:last-child { border-bottom: none; }
+.quick-link-item:hover { background: var(--color-gray-50); }
+[data-theme="dark"] .quick-link-item:hover { background: var(--color-gray-100); }
+.quick-link-icon {
+    flex-shrink: 0; width: 36px; height: 36px; border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.quick-link-icon.modules { background: var(--color-emerald-pale); color: var(--color-emerald); }
+.quick-link-icon.assessment { background: #FEF3C7; color: #B45309; }
+.quick-link-icon.contact { background: #EFF6FF; color: #2563EB; }
+.quick-link-icon.mylearn { background: #F3E8FF; color: #7C3AED; }
+[data-theme="dark"] .quick-link-icon.modules { background: rgba(27,122,90,0.2); }
+[data-theme="dark"] .quick-link-icon.assessment { background: rgba(212,168,71,0.15); }
+[data-theme="dark"] .quick-link-icon.contact { background: rgba(37,99,235,0.15); }
+[data-theme="dark"] .quick-link-icon.mylearn { background: rgba(124,58,237,0.15); }
+.quick-link-info { flex: 1; }
+.quick-link-title { font-size: 0.85rem; font-weight: 600; color: var(--color-text); }
+.quick-link-desc { font-size: 0.7rem; color: var(--color-text-light); }
+.quick-link-arrow { font-size: 0.9rem; color: var(--color-text-light); flex-shrink: 0; transition: transform var(--transition); }
+.quick-link-item:hover .quick-link-arrow { transform: translateX(3px); color: var(--color-emerald); }
+
+/* Portal Footer */
+.portal-footer {
+    border-top: 1px solid var(--color-border); padding: 20px 0; margin-top: 48px;
+    font-size: 0.78rem; color: var(--color-text-light);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.portal-footer a { font-size: 0.78rem; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .announcements-layout { grid-template-columns: 1fr; }
+    .announcements-right { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (max-width: 900px) {
+    .portal-sidebar { display: none; }
+    .portal-main { padding: 24px 20px; }
+    .announcement-filters { flex-wrap: wrap; }
+    .announcements-right { grid-template-columns: 1fr; }
+}
+    </style>
+</head>
+<body class="portal-page">
+
+    <!-- Top Navigation -->
+    <nav class="portal-nav">
+        <div class="portal-nav-left">
+            <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
+            </a>
+            <div class="portal-nav-menu">
+                <a href="v1.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="overview.html">Overview</a>
+                <a href="modules.html">Modules</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="assessment.html">Assessment</a>
+            </div>
+        </div>
+        <div class="portal-nav-right">
+            <div class="portal-search">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" placeholder="Search lectures, modules..." id="searchInput">
+            </div>
+            <button class="ai-assistant-btn" id="aiAssistant" title="AI Study Assistant">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1.27a7 7 0 0 1-12.46 0H6a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="9.5" cy="15.5" r="1"/><circle cx="14.5" cy="15.5" r="1"/></svg>
+            </button>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar -->
+    <aside class="portal-sidebar">
+
+        <div class="sidebar-section">
+            <div class="sidebar-label">Course</div>
+            <a href="v1.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+            <a href="announcements.html" class="sidebar-link active">
+                <span class="sidebar-icon">&#128227;</span> Announcements
+            </a>
+            <a href="lectures.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127891;</span> Lectures
+            </a>
+            <a href="tutorials.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128172;</span> Tutorials
+            </a>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Announcements contextual links -->
+        <div class="sidebar-section">
+            <div class="sidebar-label">Announcements</div>
+            <a href="#" class="sidebar-link sidebar-filter active" data-filter="all">
+                <span class="sidebar-icon">&#128227;</span> All Announcements
+            </a>
+            <a href="#" class="sidebar-link sidebar-filter" data-filter="admin">
+                <span class="sidebar-icon">&#128221;</span> Course Admin
+            </a>
+            <a href="#" class="sidebar-link sidebar-filter" data-filter="lecture">
+                <span class="sidebar-icon">&#127891;</span> Lecture Details
+            </a>
+            <a href="#" class="sidebar-link sidebar-filter" data-filter="tutorial">
+                <span class="sidebar-icon">&#128172;</span> Tutorial Details
+            </a>
+            <a href="#" class="sidebar-link sidebar-filter" data-filter="assessment">
+                <span class="sidebar-icon">&#127942;</span> Assessment Updates
+            </a>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- University LMS links -->
+        <div class="sidebar-section">
+            <div class="sidebar-label">UNE MyLearn (External)</div>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Course Outline
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127942;</span> Grades
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128228;</span> Submit Assessment
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128488;</span> Discussion Forums
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; Announcements</div>
+            <h1>Announcements</h1>
+            <p>Course updates, reminders, and important notices from your lecturer.</p>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="announcements-layout">
+
+        <!-- LEFT: Announcements -->
+        <div class="announcements-left">
+
+        <!-- Filter Buttons -->
+        <div class="announcement-filters" id="all">
+            <button class="filter-btn active" data-filter="all">All Announcements</button>
+            <button class="filter-btn" data-filter="admin">Course Admin</button>
+            <button class="filter-btn" data-filter="lecture">Lecture</button>
+            <button class="filter-btn" data-filter="tutorial">Tutorial</button>
+            <button class="filter-btn" data-filter="assessment">Assessment</button>
+        </div>
+
+        <!-- Announcement Feed -->
+        <div class="announcement-feed">
+
+            <!-- Announcement 1 -->
+            <div class="announcement-card" data-category="admin" id="admin">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">7 October 2026</div>
+                        <span class="announcement-category-tag admin">Course Admin</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Welcome to Sports Law — Trimester 3, 2026</h3>
+                <div class="announcement-body">
+                    <p>Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome section to meet your lecturer and understand how the course works, then move into Module 1. If you have any questions, check the Contact page for the best way to reach me. I'm looking forward to a great trimester.</p>
+                </div>
+            </div>
+
+            <!-- Announcement 2 -->
+            <div class="announcement-card" data-category="lecture" id="lecture-news">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">6 October 2026</div>
+                        <span class="announcement-category-tag lecture">Lecture</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Lecture 1 — What is Sports Law Now Available</h3>
+                <div class="announcement-body">
+                    <p>The recording and materials for Lecture 1 (What is Sports Law) are now available on the Lectures page. This lecture sets the foundation for the entire course — it covers how sports law sits within the broader legal landscape and why it matters. Make sure you watch this before Tutorial 1.</p>
+                </div>
+                <a href="lecture1.html" class="announcement-link">Go to Lecture 1 &rarr;</a>
+            </div>
+
+            <!-- Announcement 3 -->
+            <div class="announcement-card" data-category="tutorial" id="tutorial-news">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">6 October 2026</div>
+                        <span class="announcement-category-tag tutorial">Tutorial</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Tutorial 1 — Problem Question Now Posted</h3>
+                <div class="announcement-body">
+                    <p>The problem question for Tutorial 1 has been posted on the Tutorials page. Read the scenario carefully and come prepared with your initial thoughts — we'll work through the legal issues together. Remember to watch Lecture 1 first, as the tutorial builds directly on that material.</p>
+                </div>
+                <a href="tutorial1.html" class="announcement-link">Go to Tutorial 1 &rarr;</a>
+            </div>
+
+            <!-- Announcement 4 -->
+            <div class="announcement-card" data-category="assessment" id="assessment-news">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">5 October 2026</div>
+                        <span class="announcement-category-tag assessment">Assessment</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Assessment 1 Brief Now Available</h3>
+                <div class="announcement-body">
+                    <p>The brief for Assessment 1 (Research Essay, 40%) is now available on the Assessment page. The essay is due in Week 5. You'll find the full brief, marking criteria, approved topic list, and an explanatory video on the Assessment page. Start thinking about your topic early — the best essays are the ones where students choose something they're genuinely interested in.</p>
+                </div>
+                <a href="assessment.html" class="announcement-link">View Assessment Details &rarr;</a>
+            </div>
+
+            <!-- Announcement 5 -->
+            <div class="announcement-card" data-category="admin">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">5 October 2026</div>
+                        <span class="announcement-category-tag admin">Course Admin</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Discussion Forums Are Open</h3>
+                <div class="announcement-body">
+                    <p>The Discussion Forums on UNE MyLearn are now open for the trimester. This is the best place to ask course-related questions — your classmates will benefit from the answers too. I monitor the forums regularly and will respond as a priority. For personal questions, email me directly at mbrickne@une.edu.au.</p>
+                </div>
+                <a href="contact.html" class="announcement-link">Contact & Response Times &rarr;</a>
+            </div>
+
+            <!-- Announcement 6 -->
+            <div class="announcement-card" data-category="admin">
+                <div class="announcement-header">
+                    <div>
+                        <div class="announcement-date">3 October 2026</div>
+                        <span class="announcement-category-tag admin">Course Admin</span>
+                    </div>
+                </div>
+                <h3 class="announcement-title">Course Site Now Live</h3>
+                <div class="announcement-body">
+                    <p>The Law of Sport course platform is now live for Trimester 3. All lecture content, module overviews, and assessment information will be published here throughout the trimester. Content is released week by week — check the Schedule page for the full timeline. Bookmark this site and check back regularly.</p>
+                </div>
+                <a href="schedule.html" class="announcement-link">View Schedule &rarr;</a>
+            </div>
+
+        </div>
+
+        </div><!-- end announcements-left -->
+
+        <!-- RIGHT: Calendar & Quick Links -->
+        <div class="announcements-right">
+
+            <!-- Upcoming Calendar -->
+            <div class="upcoming-calendar">
+                <div class="upcoming-calendar-header">
+                    <h3>Upcoming</h3>
+                    <p>Lectures, tutorials &amp; assessments</p>
+                </div>
+
+                <!-- Lectures -->
+                <div class="cal-section-label">&#127891; Lectures</div>
+                <a href="lecture1.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box lecture">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">7</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Lecture 1: What is Sports Law</div>
+                        <div class="cal-item-meta">Module 1 &mdash; Week 1</div>
+                    </div>
+                </a>
+                <a href="lecture2.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box lecture">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">14</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Lecture 2: Sports Governance</div>
+                        <div class="cal-item-meta">Module 1 &mdash; Week 2</div>
+                    </div>
+                </a>
+                <a href="lecture3.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box lecture">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">21</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Lecture 3: Discipline &amp; Disputes</div>
+                        <div class="cal-item-meta">Module 2 &mdash; Week 3</div>
+                    </div>
+                </a>
+                <a href="lecture4.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box lecture">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">28</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Lecture 4: Player Contracting</div>
+                        <div class="cal-item-meta">Module 3 &mdash; Week 4</div>
+                    </div>
+                </a>
+                <a href="lecture5.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box lecture">
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">4</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Lecture 5: Player Representation</div>
+                        <div class="cal-item-meta">Module 3 &mdash; Week 5</div>
+                    </div>
+                </a>
+
+                <!-- Tutorials -->
+                <div class="cal-section-label">&#128172; Tutorials</div>
+                <div class="cal-item">
+                    <div class="cal-date-box tutorial">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">8</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Tutorial 1: Sports Governance</div>
+                        <div class="cal-item-meta">Week 2 &mdash; Wed 6&ndash;8pm AEDT</div>
+                    </div>
+                </div>
+                <div class="cal-item">
+                    <div class="cal-date-box tutorial">
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">22</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Tutorial 2: Sports Discipline &amp; Disputes</div>
+                        <div class="cal-item-meta">Week 4 &mdash; Wed 6&ndash;8pm AEDT</div>
+                    </div>
+                </div>
+                <div class="cal-item">
+                    <div class="cal-date-box tutorial">
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">5</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Tutorial 3: Athletes, Contract &amp; Control</div>
+                        <div class="cal-item-meta">Week 5 &mdash; Wed 6&ndash;8pm AEDT</div>
+                    </div>
+                </div>
+
+                <!-- Assessments -->
+                <div class="cal-section-label">&#128221; Assessments</div>
+                <a href="assessment.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box assessment">
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">6</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Assessment 1: Plea of Mitigation</div>
+                        <div class="cal-item-meta">Due Week 5 &mdash; 40%</div>
+                    </div>
+                </a>
+                <a href="assessment.html" class="cal-item" style="text-decoration:none; color:inherit;">
+                    <div class="cal-date-box assessment">
+                        <span class="cal-date-month">Dec</span>
+                        <span class="cal-date-day">11</span>
+                    </div>
+                    <div class="cal-item-info">
+                        <div class="cal-item-title">Assessment 2: Sponsorship Review</div>
+                        <div class="cal-item-meta">Due Week 10 &mdash; 60%</div>
+                    </div>
+                </a>
+
+                <a href="schedule.html" class="cal-view-all">View Full Schedule &rarr;</a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links-panel">
+                <div class="quick-links-header">
+                    <h3>Quick Links</h3>
+                    <p>Jump to key areas of the course</p>
+                </div>
+                <a href="modules.html" class="quick-link-item">
+                    <div class="quick-link-icon modules">&#127891;</div>
+                    <div class="quick-link-info">
+                        <div class="quick-link-title">Modules &amp; Lectures</div>
+                        <div class="quick-link-desc">All 5 modules and 11 lectures</div>
+                    </div>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="assessment.html" class="quick-link-item">
+                    <div class="quick-link-icon assessment">&#128221;</div>
+                    <div class="quick-link-info">
+                        <div class="quick-link-title">Assessment</div>
+                        <div class="quick-link-desc">Briefs, criteria &amp; submission info</div>
+                    </div>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="contact.html" class="quick-link-item">
+                    <div class="quick-link-icon contact">&#128231;</div>
+                    <div class="quick-link-info">
+                        <div class="quick-link-title">Contact Your Lecturer</div>
+                        <div class="quick-link-desc">Response times &amp; office hours</div>
+                    </div>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+                <a href="mylearn.html" class="quick-link-item">
+                    <div class="quick-link-icon mylearn">&#127891;</div>
+                    <div class="quick-link-info">
+                        <div class="quick-link-title">UNE MyLearn</div>
+                        <div class="quick-link-desc">Grades, submissions &amp; forums</div>
+                    </div>
+                    <span class="quick-link-arrow">&rarr;</span>
+                </a>
+            </div>
+
+        </div><!-- end announcements-right -->
+
+        </div><!-- end announcements-layout -->
+
+        <!-- Footer -->
+        <div class="portal-footer">
+            <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <a href="#">Grades, submissions, extensions & policies are on your university's platform</a>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Dark mode toggle
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            toggle.textContent = '\u2600';
+        }
+        toggle.addEventListener('click', () => {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggle.textContent = '\u263E';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggle.textContent = '\u2600';
+            }
+        });
+
+        // Unified filter functionality — top buttons and sidebar links stay in sync
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const sidebarFilters = document.querySelectorAll('.sidebar-filter');
+        const announcementCards = document.querySelectorAll('.announcement-card');
+
+        function applyFilter(filter) {
+            // Update top filter buttons
+            filterBtns.forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-filter') === filter);
+            });
+
+            // Update sidebar links
+            sidebarFilters.forEach(s => {
+                s.classList.toggle('active', s.getAttribute('data-filter') === filter);
+            });
+
+            // Filter announcement cards
+            announcementCards.forEach(card => {
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const category = card.getAttribute('data-category');
+                    card.style.display = category === filter ? 'block' : 'none';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                applyFilter(btn.getAttribute('data-filter'));
+            });
+        });
+
+        sidebarFilters.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                applyFilter(link.getAttribute('data-filter'));
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment — FAQ | Sports Law | The Law of Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --color-navy: #0B1D3A;
+    --color-navy-light: #132B52;
+    --color-navy-mid: #1A3A6B;
+    --color-emerald: #1B7A5A;
+    --color-emerald-light: #22976E;
+    --color-emerald-pale: #E8F5F0;
+    --color-gold: #D4A847;
+    --color-gold-light: #F0DCA0;
+    --color-purple: #5B2D8E;
+    --color-purple-pale: #E8E2F5;
+    --color-red-pale: #FDF2F2;
+    --color-red-accent: #DC2626;
+    --color-white: #FFFFFF;
+    --color-offwhite: #F7F8FA;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-gray-600: #4B5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1F2937;
+    --color-gray-900: #111827;
+    --color-text: #1F2937;
+    --color-text-light: #6B7280;
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F7F8FA;
+    --color-surface: #FFFFFF;
+    --color-border: #E5E7EB;
+    --color-shadow: rgba(11, 29, 58, 0.08);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 3px var(--color-shadow);
+    --shadow-md: 0 4px 12px var(--color-shadow);
+    --shadow-lg: 0 8px 30px var(--color-shadow);
+    --transition: 0.2s ease;
+}
+[data-theme="dark"] {
+    --color-text: #E5E7EB;
+    --color-text-light: #9CA3AF;
+    --color-bg: #0F1729;
+    --color-bg-alt: #162036;
+    --color-surface: #1A2744;
+    --color-border: #2A3A5C;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-offwhite: #162036;
+    --color-gray-50: #162036;
+    --color-gray-100: #1A2744;
+    --color-gray-200: #2A3A5C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; overflow-y: scroll; }
+body {
+    font-family: var(--font-sans); color: var(--color-text);
+    background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--color-emerald); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--color-emerald-light); }
+h1, h2, h3, h4 { line-height: 1.2; }
+.pitch-logo { display: flex; align-items: center; gap: 10px; overflow: visible; flex-shrink: 0; }
+.logo-text { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-white); }
+
+/* Portal Layout */
+.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+
+/* Portal Top Nav */
+.portal-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    background: var(--color-navy); display: flex; align-items: center;
+    justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
+}
+.portal-nav-left { display: flex; align-items: center; gap: 44px; }
+.portal-nav-left .logo-text { font-size: 1rem; }
+.portal-nav-menu { display: flex; gap: 4px; }
+.portal-nav-menu a {
+    color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
+    padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
+}
+.portal-nav-menu a:hover, .portal-nav-menu a.active {
+    color: var(--color-gold); background: rgba(255,255,255,0.1);
+}
+.portal-nav-right { display: flex; align-items: center; gap: 16px; }
+.portal-search {
+    display: flex; align-items: center; background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm); padding: 6px 12px; gap: 8px;
+}
+.portal-search input {
+    background: transparent; border: none; color: var(--color-white);
+    font-family: var(--font-sans); font-size: 0.84rem; outline: none; width: 180px;
+}
+.portal-search input::placeholder { color: rgba(255,255,255,0.4); }
+.search-icon { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center; transition: all var(--transition);
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); color: var(--color-white); }
+
+/* AI Assistant Button */
+.ai-assistant-btn {
+    background: linear-gradient(135deg, rgba(91,45,142,0.6), rgba(27,122,90,0.6));
+    border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition); position: relative;
+}
+.ai-assistant-btn:hover {
+    background: linear-gradient(135deg, rgba(91,45,142,0.85), rgba(27,122,90,0.85));
+    color: var(--color-white); border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 0 12px rgba(91,45,142,0.4);
+}
+.ai-assistant-btn svg { width: 16px; height: 16px; }
+
+/* Left Sidebar */
+.portal-sidebar {
+    width: 245px; background: var(--color-bg-alt); border-right: 1px solid var(--color-border);
+    padding: 24px 0; flex-shrink: 0; position: sticky; top: 77px;
+    height: calc(100vh - 64px); overflow-y: auto; display: flex; flex-direction: column;
+}
+.sidebar-section { padding: 0 16px; margin-bottom: 28px; }
+.sidebar-label {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--color-text-light); margin-bottom: 8px; padding: 0 8px;
+}
+.sidebar-link {
+    display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+    border-radius: var(--radius-sm); color: var(--color-text); font-size: 0.88rem;
+    font-weight: 500; transition: all var(--transition);
+}
+.sidebar-link:hover { background: var(--color-border); color: var(--color-text); }
+.sidebar-link.active { background: var(--color-emerald-pale); color: var(--color-emerald); font-weight: 600; }
+[data-theme="dark"] .sidebar-link.active { background: rgba(27,122,90,0.2); }
+.sidebar-icon { font-size: 1rem; width: 20px; text-align: center; }
+.sidebar-divider { height: 1px; background: var(--color-border); margin: 0 16px 28px; }
+.portal-sidebar > :nth-child(2) { margin-top: auto; }
+.portal-sidebar > :nth-last-child(2) { margin-top: auto; }
+
+/* Main Content Area */
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
+
+/* Page Header */
+.page-header {
+    margin-bottom: 32px; padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+.page-header h1 {
+    font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800;
+    color: var(--color-navy); margin-bottom: 6px;
+}
+[data-theme="dark"] .page-header h1 { color: var(--color-white); }
+.page-header p { color: var(--color-text-light); font-size: 0.95rem; }
+.page-breadcrumb {
+    font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
+}
+.page-breadcrumb a { font-size: 0.78rem; }
+
+/* Assessment Sub-Tabs (Module-tab style) */
+.assessment-tabs {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-bottom: 32px;
+    width: 100%;
+}
+.assessment-tab {
+    padding: 18px 16px; border-radius: 0; font-size: 0.95rem; font-weight: 700;
+    color: var(--color-white); cursor: pointer; transition: all var(--transition);
+    text-decoration: none; border: none; border-bottom: 3px solid transparent;
+    background: rgba(0,0,0,0.05); text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    line-height: 1.3;
+}
+.assessment-tab-icon { font-size: 1.3rem; display: block; }
+.assessment-tab:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.assessment-tab:last-child { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+[data-theme="dark"] .assessment-tab { background: rgba(255,255,255,0.08); }
+.assessment-tab:hover {
+    color: var(--color-white); filter: brightness(1.15);
+}
+.assessment-tab.active {
+    color: var(--color-white); border-bottom-color: rgba(255,255,255,0.6);
+}
+.tab-overview { background: rgba(27, 122, 90, 0.55); }
+.tab-overview.active { background: #1B7A5A; }
+.tab-info { background: rgba(11, 29, 58, 0.55); }
+.tab-info.active { background: #0B1D3A; }
+.tab-criteria { background: rgba(180, 83, 9, 0.55); }
+.tab-criteria.active { background: #B45309; }
+.tab-allocations { background: rgba(30, 77, 110, 0.55); }
+.tab-allocations.active { background: #1E4D6E; }
+.tab-faq { background: rgba(91, 45, 142, 0.55); }
+.tab-faq.active { background: #5B2D8E; }
+
+/* FAQ Assessment Tabs (module-tab style) */
+/* Assessment Selector — side-by-side half-width tabs */
+.assessment-selector {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 32px;
+}
+.assessment-selector-tab {
+    padding: 22px 24px; font-family: var(--font-sans); font-weight: 700;
+    color: var(--color-white); border: none; cursor: pointer;
+    transition: all var(--transition); text-align: center; position: relative;
+}
+.assessment-selector-tab .selector-label {
+    display: block; font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 4px;
+}
+.assessment-selector-tab .selector-title {
+    display: block; font-size: 1.05rem; font-weight: 700;
+}
+.selector-tab-assess1 {
+    background: #2C3E90; border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+.selector-tab-assess2 {
+    background: #009878; border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.assessment-selector-tab:hover { filter: brightness(1.1); }
+.assessment-selector-tab.active::after {
+    content: ''; position: absolute; bottom: 0; left: 20%; right: 20%;
+    height: 3px; background: var(--color-gold); border-radius: 3px 3px 0 0;
+}
+.assessment-selector-tab:not(.active) { opacity: 0.7; }
+.assessment-selector-tab:not(.active):hover { opacity: 0.85; }
+
+/* Section */
+.section-heading {
+    font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 24px; margin-top: 32px;
+}
+[data-theme="dark"] .section-heading { color: var(--color-white); }
+.section-heading:first-of-type { margin-top: 0; }
+
+.intro-text {
+    font-size: 0.92rem; color: var(--color-text); line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden;
+}
+
+.faq-question {
+    padding: 18px 24px; cursor: pointer; display: flex;
+    justify-content: space-between; align-items: center; font-size: 0.92rem;
+    font-weight: 600; color: var(--color-text); transition: background var(--transition);
+    background: var(--color-surface);
+}
+.faq-question:hover { background: var(--color-gray-50); }
+[data-theme="dark"] .faq-question:hover { background: var(--color-gray-100); }
+
+.faq-question .faq-toggle {
+    font-size: 1.2rem; color: var(--color-text-light); transition: transform var(--transition);
+    flex-shrink: 0; margin-left: 16px;
+}
+.faq-item.open .faq-question { background: var(--color-gray-50); }
+[data-theme="dark"] .faq-item.open .faq-question { background: var(--color-gray-100); }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+.faq-answer {
+    padding: 0 24px 20px; font-size: 0.9rem; color: var(--color-text);
+    line-height: 1.7; display: none;
+}
+.faq-item.open .faq-answer { display: block; }
+
+.faq-answer p { margin-bottom: 12px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { font-weight: 600; }
+
+/* Contact Card */
+.contact-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 28px 32px;
+    margin-top: 32px;
+}
+
+.contact-card h3 {
+    font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 16px;
+}
+[data-theme="dark"] .contact-card h3 { color: var(--color-white); }
+
+.contact-card p {
+    font-size: 0.88rem; color: var(--color-text); margin-bottom: 12px;
+}
+.contact-card a { font-weight: 600; }
+
+/* Portal Footer */
+.portal-footer {
+    border-top: 1px solid var(--color-border); padding: 20px 0; margin-top: 48px;
+    font-size: 0.78rem; color: var(--color-text-light);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.portal-footer a { font-size: 0.78rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .portal-sidebar { display: none; }
+    .portal-main { padding: 24px 20px; }
+    .faq-question { flex-direction: column; align-items: flex-start; }
+    .faq-question .faq-toggle { margin-left: 0; margin-top: 8px; }
+    .assessment-selector-tab .selector-title { font-size: 0.88rem; }
+    .assessment-tabs { grid-template-columns: repeat(3, 1fr); }
+    .assessment-tab { padding: 14px 10px; font-size: 0.85rem; }
+}
+    </style>
+</head>
+<body class="portal-page">
+
+    <!-- Top Navigation -->
+    <nav class="portal-nav">
+        <div class="portal-nav-left">
+            <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
+            </a>
+            <div class="portal-nav-menu">
+                <a href="v1.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="overview.html">Overview</a>
+                <a href="modules.html">Modules</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="assessment.html" class="active">Assessment</a>
+            </div>
+        </div>
+        <div class="portal-nav-right">
+            <div class="portal-search">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" placeholder="Search lectures, modules..." id="searchInput">
+            </div>
+            <button class="ai-assistant-btn" id="aiAssistant" title="AI Study Assistant">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1.27a7 7 0 0 1-12.46 0H6a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="9.5" cy="15.5" r="1"/><circle cx="14.5" cy="15.5" r="1"/></svg>
+            </button>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar -->
+    <aside class="portal-sidebar">
+
+        <div class="sidebar-section">
+            <div class="sidebar-label">Course</div>
+            <a href="v1.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+            <a href="announcements.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128227;</span> Announcements
+            </a>
+            <a href="lectures.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127891;</span> Lectures
+            </a>
+            <a href="tutorials.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128172;</span> Tutorials
+            </a>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Assessment sub-pages -->
+        <div class="sidebar-section">
+            <div class="sidebar-label">Assessment</div>
+            <a href="assessment.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128203;</span> Overview
+            </a>
+            <a href="assessment-info.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128218;</span> Information &amp; Resources
+            </a>
+            <a href="assessment-criteria.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127942;</span> Criteria
+            </a>
+            <a href="assessment-faq.html" class="sidebar-link active">
+                <span class="sidebar-icon">&#10067;</span> FAQ
+            </a>
+            <a href="assessment-allocations.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128101;</span> Allocations
+            </a>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- University LMS links -->
+        <div class="sidebar-section">
+            <div class="sidebar-label">UNE MyLearn (External)</div>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Course Outline
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127942;</span> Grades
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128228;</span> Submit Assessment
+            </a>
+            <a href="file:///C:/Users/micha/OneDrive/Documents/Claude/Projects/0%20-%20UNE%20Website%20Update%20and%20Standalone%20Domain/thelawofsport.com/une/mylearn.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128488;</span> Discussion Forums
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; Assessment</div>
+            <h1>Assessment</h1>
+            <p>Course assessment structure, resources, and submission details.</p>
+        </div>
+
+        <!-- Assessment Sub-Tabs -->
+        <div class="assessment-tabs">
+            <a href="assessment.html" class="assessment-tab tab-overview"><span class="assessment-tab-icon">&#128203;</span> Overview</a>
+            <a href="assessment-info.html" class="assessment-tab tab-info"><span class="assessment-tab-icon">&#128218;</span> Information &amp; Resources</a>
+            <a href="assessment-criteria.html" class="assessment-tab tab-criteria"><span class="assessment-tab-icon">&#127942;</span> Criteria</a>
+            <a href="assessment-faq.html" class="assessment-tab tab-faq active"><span class="assessment-tab-icon">&#10067;</span> FAQ</a>
+            <a href="assessment-allocations.html" class="assessment-tab tab-allocations"><span class="assessment-tab-icon">&#128101;</span> Allocations</a>
+        </div>
+
+        <!-- Assessment Selector -->
+        <div class="assessment-selector" id="assessmentSelector">
+            <button class="assessment-selector-tab selector-tab-assess1 active" data-tab="assessment1">
+                <span class="selector-label">Assessment 1 · 40%</span>
+                <span class="selector-title">Plea of Mitigation or Aggravation</span>
+            </button>
+            <button class="assessment-selector-tab selector-tab-assess2" data-tab="assessment2">
+                <span class="selector-label">Assessment 2 · 60%</span>
+                <span class="selector-title">Sponsorship Review &amp; Analysis</span>
+            </button>
+        </div>
+
+        <!-- ==================== ASSESSMENT 1 TAB ==================== -->
+        <div id="assessment1" class="faq-tab-content" style="display: block;">
+
+            <!-- Navy Module Bar -->
+            <div style="background: linear-gradient(90deg, #2C3E90 0%, #36489E 100%); padding: 16px 24px; margin: 0; border-radius: 0; width: 100%; box-sizing: border-box;">
+                <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #78E8DE; letter-spacing: 0.5px;">
+                    Assessment 1 · FAQ
+                </div>
+            </div>
+            <!-- Forest Green Header Section -->
+            <div style="background: linear-gradient(135deg, #009878 0%, #00BA94 100%); padding: 40px 24px; margin: 0; border-radius: 0; width: 100%; box-sizing: border-box; position: relative; overflow: hidden;">
+                <!-- Decorative circles -->
+                <div style="position: absolute; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; top: -60px; right: -40px;"></div>
+                <div style="position: absolute; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.06); border-radius: 50%; bottom: -50px; left: 10%;"></div>
+                <div style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap;">
+                    <div>
+                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: white; margin: 0 0 8px 0; letter-spacing: -0.5px;">
+                            Frequently Asked Questions
+                        </div>
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 16px; color: white; margin: 0 0 20px 0; font-weight: 400; opacity: 0.95;">
+                            Plea of Mitigation / Aggravation Assessment
+                        </div>
+                        <div style="display: inline-block; background: #4EDBC8; color: #009878; padding: 6px 12px; border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 20px;">
+                            University of New England
+                        </div>
+                    </div>
+                    <a href="https://mylearn.une.edu.au/mod/resource/view.php?id=3516588" style="display:inline-block; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); color:#ffffff; font-family:'Barlow Condensed', 'Barlow', Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; padding:10px 20px; border-radius:4px; margin-top:8px;">📄 Download PDF Version →</a>
+                </div>
+            </div>
+            <!-- Teal accent bar -->
+            <div style="background: #78E8DE; height: 4px; width: 100%; margin: 0; border-radius: 0;"></div>
+            <!-- Body Section -->
+            <div style="background: white; border: 1px solid #E0E6EE; border-top: none; margin: 0; border-radius: 0; padding: 40px 24px; width: 100%; box-sizing: border-box;">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <!-- RECENT QUESTIONS HEADER -->
+                    <div style="background: linear-gradient(135deg, #2C3E90 0%, #36489E 100%); padding: 20px 24px; border-radius: 6px 6px 0 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: #78E8DE; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Recent Questions
+                        </div>
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 13px; color: rgba(255,255,255,0.7); font-style:italic;">
+                            Last updated: 4:00 pm, Monday 6 April 2026
+                        </div>
+                    </div>
+                    <!-- RECENT QUESTIONS BOX -->
+                    <div style="background:#ffffff; border:1px solid #E0E6EE; border-top:none; border-radius:0 0 6px 6px; padding:24px 28px; margin-bottom:40px;">
+                        <!-- Recent Q1 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 0;">
+                            Q: As Counsel Assisting, can my plea of aggravation support the sanction already proposed by the CA Board?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes — and in practice, this is the expected approach. Counsel Assisting acts on behalf of the sporting body, and in the overwhelming majority of cases will support the sanctions that the body has proposed. The Board has already considered the circumstances and determined what it considers to be the appropriate outcome; your role is to persuade the Commissioner that the Board's position is justified — grounded in the seriousness of the breach, the sanctioning framework, and the specific aggravating factors. To depart from the sporting body's proposed sanction would be unusual and would generally only arise in quite extreme circumstances — for example, where the evidence reveals matters significantly more serious than what the Board had before it, or where the framework clearly supports a sanction beyond what was originally proposed. Unless you have a strong and well‐reasoned basis for departing from the CA Board's position, most Counsel Assisting submissions will treat that position as both the starting point and the destination, and focus their advocacy on demonstrating why it is the right outcome.
+                        </p>
+                        <div style="height:1px; background:#E0E6EE; margin:16px 0;"></div>
+                        <!-- Recent Q2 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px;">
+                            Q: May I use footnotes instead of an Index of Sources at the end of my submission?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes. You are welcome to use footnotes instead of, or in addition to, an index of sources at the end of your submission. Either approach is acceptable. Formal AGLC4 citation is not required — a simple, consistent format is sufficient. For example: <em>i. CNN Sports report, March 27 2018 [hyperlink]</em>. The key is that your references are clear and allow the reader to locate the source if needed. Keep in mind, however, that this is a sanctioning submission, not a research essay. The need for extensive referencing is limited. Cite sources where they genuinely support a factual claim or provide authority for a key proposition, but do not over‐reference at the expense of advocacy. Your word count is tight, and every sentence should be working towards persuasion — not cataloguing materials.
+                        </p>
+                        <div style="height:1px; background:#E0E6EE; margin:16px 0;"></div>
+                        <!-- Recent Q3 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px;">
+                            Q: I want to quote someone influential who uses emotive or hyperbolic language. Is that permissible?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes — and it can be effective when used well. Quoting a prominent figure, commentator, or stakeholder who uses strong language can capture the gravity of the situation or reflect a widely held view in a way that lends weight to your submission. The key is to use such quotes sparingly and for a clear rhetorical purpose: to reinforce an argument you are already making, not to substitute for your own analysis. A well‐placed quote can be powerful; a submission that strings together the words of others, however forceful, will read as derivative rather than persuasive. The Commissioner is interested in <em>your</em> reasoning, <em>your</em> structure, and <em>your</em> advocacy. Deploy quotations strategically — as a complement to your argument, not as its foundation.
+                        </p>
+                        <div style="height:1px; background:#E0E6EE; margin:16px 0;"></div>
+                        <!-- Recent Q4 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px;">
+                            Q: Should I attach the Code of Conduct or other materials to my submission?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 0 0;">
+                            No. You should submit only your written plea (and the required AI Use Statement, if applicable). There is no need to attach the Code of Conduct, the scenario materials, media reports, or any other supporting documents. The Commissioner is taken to be fully familiar with all relevant materials — your task is to make submissions that stand on their own, drawing on and referring to those materials as needed within the body of your plea. Attaching external documents will not attract additional marks and is unnecessary.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION A: UNDERSTANDING THE TASK -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            A. Understanding the Task
+                        </div>
+                        <!-- Q1 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q1: What is the purpose of a Plea of Mitigation (or Aggravation)?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            A plea of mitigation or aggravation is a formal submission made after a breach has been admitted or proven. By the time you are writing this plea, the participant has either admitted breach or been found to have breached the relevant Code or Policy. The only remaining question is what sanction should be imposed. If you represent the Player, you prepare a plea of mitigation. If you act as Counsel Assisting, you prepare a plea of aggravation. Your submission should be focused, disciplined, and directed squarely at sanction — not liability.
+                        </p>
+                        <!-- Q2 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q2: What is the difference between mitigation and defence?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            A defence challenges whether the breach occurred at all. Mitigation (or aggravation) accepts the breach and argues about the appropriate sanction. In this assessment, liability is not in issue. If any part of your submission reads as though you are contesting breach — it will be treated as a fundamental misunderstanding of the task.
+                        </p>
+                        <!-- Q3 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q3: Am I "versing" another student?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            No. This is an individual task. You are not paired with or competing against another student.
+                        </p>
+                        <!-- Q4 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q4: Am I required to propose a specific sanction?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes. You must clearly articulate a specific sanction outcome that you say is appropriate. This should be done clearly and early in your submission, and justified throughout the body.
+                        </p>
+                        <!-- Q5 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q5: What scenarios are available, and how are they allocated?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Three scenarios based on Sandpapergate (2018): Steve Smith (Captain), David Warner (Vice-Captain), Cameron Bancroft (Junior Player). Each student is allocated one scenario through MyLearn.
+                        </p>
+                        <!-- Q6 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q6: What is the temporal cut-off for research materials?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Your scenario materials specify the date of the hearing (Monday, 30 April 2018 for the Bancroft scenario). You should only cite or rely on information available prior to that hearing date.
+                        </p>
+                        <!-- Q7 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q7: Should I address aggravating factors if I am writing a plea of mitigation (or vice versa)?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes. Strong submissions acknowledge the other side rather than ignoring it. This approach enhances credibility and shows the Tribunal that your proposed sanction is the product of considered judgment, not wilful blindness.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION B: MARKING CRITERIA -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            B. Marking Criteria
+                        </div>
+                        <!-- Q8 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q8: How is the assessment marked?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            The marking criteria are structured as follows:
+                        </p>
+                        <ul style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0; padding-left: 24px;">
+                            <li><strong>Approach:</strong> Structure (10%), Relevance &amp; Priority (10%)</li>
+                            <li><strong>Substance:</strong> Research, Understanding &amp; Insight (20%), Critical Thinking &amp; Persuasion (30%)</li>
+                            <li><strong>Execution:</strong> Language, Tone &amp; Writing (20%), Concision (10%)</li>
+                            <li><strong>Word Count:</strong> Deduction only (0%)</li>
+                        </ul>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Key observations: Substance is worth half the marks. Critical Thinking &amp; Persuasion (30%) is the largest single component. Word Count carries no positive marks — it can only result in deductions.
+                        </p>
+                        <!-- Q9 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q9: What does "Relevance and Priority" mean in the marking criteria?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            This criterion (10%) assesses whether you have identified the issues that genuinely matter and given them appropriate weight. A submission that treats all factors equally, or that devotes substantial word count to minor points while under-developing the strongest arguments, will score poorly.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION C: FORMAT, STRUCTURE & PRESENTATION -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            C. Format, Structure &amp; Presentation
+                        </div>
+                        <!-- Q10 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q10: What is the required word count? Is there any leeway?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            There is no leeway whatsoever on word limits. Undergraduate (LAW201): 2,000 words maximum. Postgraduate (LLM521): 2,500 words maximum. Marks will be deducted if you exceed the limit by even a small amount.
+                        </p>
+                        <!-- Q11 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q11: What counts towards the word count?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            All substantive text in the body, including headings, in-text references, and quoted material. It does not include a cover page, a "Sources Consulted" list, or the AI Use Statement.
+                        </p>
+                        <!-- Q12 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q12: What formatting and file requirements apply?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            No prescribed font, spacing, or margin requirement. Submissions must be clearly structured, easy to navigate, and professional in presentation. Must be submitted as PDF. File name: LAST NAME, First Name – SCENARIO – Role.pdf
+                        </p>
+                        <!-- Q13 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q13: How should the submission be structured?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            No single mandatory structure, but strong submissions typically include: Applicable Sanctioning Framework, Key Mitigating or Aggravating Factors (each with its own heading), Sanctioning Principles, Conclusion and Proposed Sanction.
+                        </p>
+                        <!-- Q14 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q14: How formal should the tone be?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Highly formal and professional throughout. This is a forensic submission addressing a Commissioner dealing with serious integrity issues. Write in a measured, restrained, and precise style.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION D: THE SANCTIONING FRAMEWORK -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            D. The Sanctioning Framework
+                        </div>
+                        <!-- Q15 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q15: What is the sanctioning framework, and why does it matter?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            The Cricket Australia Code of Conduct sets out a structured sanctioning process. Key provisions: Article 7.1 (Commissioner must impose sanction), Article 7.2 (determine level, consult Table of Permissible Sanctions), Article 7.3 (consider all relevant factors for mitigation or aggravation).
+                        </p>
+                        <!-- Q16 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q16: What is the permissible range of sanctions?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            For offences under Articles 2.2.3, 2.2.11, 2.3.4, 2.3.5, or 2.4.5, the Commissioner has broad discretion: suspension from one Suspension Point to a lifetime ban, a fine up to $10,000, bans from holding positions, reparation orders, counselling, community service, and/or reprimand.
+                        </p>
+                        <!-- Q17 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q17: Should I address the type of sanction (e.g. playing ban vs leadership ban)?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes. The sanctioning framework permits different types of sanctions, and combining them may be appropriate.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION E: RESEARCH & REFERENCING -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            E. Research &amp; Referencing
+                        </div>
+                        <!-- Q18 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q18: Can I go beyond the materials provided?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes — and you are expected to. Independent research is both permitted and rewarded under the Research, Understanding &amp; Insight criterion (worth 20%).
+                        </p>
+                        <!-- Q19 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q19: Do I need to reference cases or prior decisions?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Formal legal citation (AGLC) is not required. You are encouraged to draw on comparable sporting disciplinary matters. If you rely on prior decisions, ensure they are relevant, accurate, and genuinely comparable.
+                        </p>
+                        <!-- Q20 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q20: Do I need to attach evidence, reports, affidavits, or exhibits?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            No. This task assesses your ability to make persuasive written submissions, not to compile an evidentiary brief.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION F: CONTENT & ADVOCACY -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            F. Content &amp; Advocacy
+                        </div>
+                        <!-- Q21 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q21: How much factual background should I include?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Very little. By the sanctioning stage, the Commissioner is assumed to be fully familiar with the underlying facts. Use facts only where they directly support a specific argument.
+                        </p>
+                        <!-- Q22 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q22: How should I deal with parity and co-accused?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Parity is a powerful argument. When advancing a parity argument, identify comparable co-accused specifically, highlight similarities and differences, and explain why consistency supports your proposed sanction.
+                        </p>
+                        <!-- Q23 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q23: How should I handle public backlash, media coverage, and stakeholder impact?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            These can all be relevant but must be handled with care and precision. For mitigation, frame as consequences already suffered. For aggravation, ground in evidence rather than emotive rhetoric.
+                        </p>
+                        <!-- Q24 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q24: How do I balance deterrence and rehabilitation?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            This is one of the central tensions in sanctioning. Strong submissions acknowledge deterrence as legitimate, argue the proposed sanction achieves it without being disproportionate, and demonstrate how rehabilitation is served.
+                        </p>
+                        <!-- Q25 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q25: How should I prioritise my arguments?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Quality always outweighs quantity. The strongest submissions identify the two to four most compelling arguments and develop them thoroughly.
+                        </p>
+                        <!-- Q26 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q26: Should I consider stakeholder perspectives when refining my submission?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes. Consider how your submissions would be received by the Player, Counsel Assisting, Cricket Australia, and the Commissioner.
+                        </p>
+                    </div>
+                    <!-- Teal gradient divider -->
+                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #78E8DE, transparent); margin: 48px 0; border-radius: 1px;"></div>
+                    <!-- SECTION G: AI USE & ACADEMIC INTEGRITY -->
+                    <div style="margin-bottom: 48px;">
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #009878; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
+                            G. AI Use &amp; Academic Integrity
+                        </div>
+                        <!-- Q27 -->
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 15px; font-weight: 700; color: #2C3E90; margin-bottom: 8px; margin-top: 20px;">
+                            Q27: Is the use of AI permitted?
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Yes, within strict boundaries.
+                        </p>
+                        <div style="background: #F6FDFC; border-left: 3px solid #009878; padding: 16px; margin: 16px 0; border-radius: 0;">
+                            <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 8px 0;">
+                                <strong>Permitted:</strong> Research background facts, generate a skeleton outline, brainstorm high-level arguments.
+                            </p>
+                            <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0;">
+                                <strong>Not permitted:</strong> Draft the written submissions themselves, produce paragraph-level prose or advocacy, generate polished argument.
+                            </p>
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #3a3a3a; margin: 0 0 16px 0;">
+                            Include an AI Use Statement at the end of your submission.
+                        </p>
+                    </div>
+                    <!-- Closing section -->
+                    <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid #E0E6EE;">
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #6C7094; font-style: italic; margin: 0;">
+                            If you have a question not addressed here, post it to the Assessment 1 forum on MyLearn and it will be added to this page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end assessment1 tab -->
+
+        <!-- ==================== ASSESSMENT 2 TAB ==================== -->
+        <div id="assessment2" class="faq-tab-content" style="display: none;">
+
+            <!-- Navy Module Bar -->
+            <div style="background: linear-gradient(90deg, #2C3E90 0%, #36489E 100%); padding: 16px 24px; margin: 0; border-radius: 0; width: 100%; box-sizing: border-box;">
+                <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #78E8DE; letter-spacing: 0.5px;">
+                    Assessment 2 · FAQ
+                </div>
+            </div>
+            <!-- Forest Green Header Section -->
+            <div style="background: linear-gradient(135deg, #009878 0%, #00BA94 100%); padding: 40px 24px; margin: 0; border-radius: 0; width: 100%; box-sizing: border-box; position: relative; overflow: hidden;">
+                <!-- Decorative circles -->
+                <div style="position: absolute; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; top: -60px; right: -40px;"></div>
+                <div style="position: absolute; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.06); border-radius: 50%; bottom: -50px; left: 10%;"></div>
+                <div style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+                    <div>
+                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: white; margin: 0 0 8px 0; letter-spacing: -0.5px;">
+                            Frequently Asked Questions
+                        </div>
+                        <div style="font-family: 'Barlow', sans-serif; font-size: 16px; color: white; margin: 0 0 20px 0; font-weight: 400; opacity: 0.95;">
+                            Sponsorship Review &amp; Analysis Assessment
+                        </div>
+                        <div style="display: inline-block; background: #4EDBC8; color: #009878; padding: 6px 12px; border-radius: 3px; font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 20px;">
+                            University of New England
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Teal accent bar -->
+            <div style="background: #78E8DE; height: 4px; width: 100%; margin: 0; border-radius: 0;"></div>
+            <!-- Body Section -->
+            <div style="background: white; border: 1px solid #E0E6EE; border-top: none; margin: 0; border-radius: 0; padding: 40px 24px; width: 100%; box-sizing: border-box;">
+                <div style="max-width: 1200px; margin: 0 auto;">
+                    <div style="text-align: center; padding: 60px 24px;">
+                        <div style="font-size: 48px; margin-bottom: 16px; opacity: 0.3;">&#128221;</div>
+                        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: #2C3E90; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                            Coming Soon
+                        </div>
+                        <p style="font-family: 'Barlow', sans-serif; font-size: 14.5px; line-height: 1.75; color: #6C7094; max-width: 500px; margin: 0 auto;">
+                            FAQs for the Sponsorship Review &amp; Analysis assessment will be added here once assessment details are confirmed. Check back closer to the assessment release date.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end assessment2 tab -->
+
+        <!-- Still Have Questions Card -->
+        <div class="contact-card">
+            <h3>Still Have Questions?</h3>
+            <p>Can't find your answer above? Reach out to your lecturer or post in the Assessment Forum.</p>
+            <p><a href="https://mylearn.une.edu.au/mod/forum/view.php?id=3431319" target="_blank">Assessment Forum ↗</a></p>
+            <p><a href="contact.html">Contact page ↗</a></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="portal-footer">
+            <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <a href="#">Grades, submissions, extensions & policies are on your university's platform</a>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Dark mode toggle
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            toggle.textContent = '\u2600';
+        }
+        toggle.addEventListener('click', () => {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggle.textContent = '\u263E';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggle.textContent = '\u2600';
+            }
+        });
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+
+        // Assessment Selector Tab Switching
+        document.querySelectorAll('.assessment-selector-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+                document.querySelectorAll('.faq-tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.querySelectorAll('.assessment-selector-tab').forEach(b => {
+                    b.classList.remove('active');
+                });
+                document.getElementById(targetTab).style.display = 'block';
+                btn.classList.add('active');
+            });
+        });
+
+        // Sidebar links trigger tab switch
+        document.querySelectorAll('.sidebar-link[href="#assessment1"], .sidebar-link[href="#assessment2"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').replace('#', '');
+                const tabBtn = document.querySelector(`.assessment-selector-tab[data-tab="${targetId}"]`);
+                if (tabBtn) tabBtn.click();
+                window.scrollTo({ top: document.getElementById('assessmentSelector').offsetTop - 95, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>

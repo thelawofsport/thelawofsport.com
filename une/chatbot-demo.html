@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Assistant Demo — The Law of Sport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-navy: #0B1D3A;
+            --color-emerald: #1B7A5A;
+            --color-emerald-light: #22976E;
+            --color-gold: #D4A847;
+            --color-white: #FFFFFF;
+            --color-offwhite: #F7F8FA;
+            --color-text: #1F2937;
+            --color-text-light: #6B7280;
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F7F8FA;
+            --color-surface: #FFFFFF;
+            --color-border: #E5E7EB;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Merriweather', Georgia, serif;
+        }
+        [data-theme="dark"] {
+            --color-text: #E5E7EB;
+            --color-text-light: #9CA3AF;
+            --color-bg: #0F1729;
+            --color-bg-alt: #162036;
+            --color-surface: #1A2744;
+            --color-border: #2A3A5C;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+        }
+
+        /* Simple page to provide context for the widget */
+        .demo-header {
+            background: linear-gradient(135deg, #0B1D3A 0%, #132B52 100%);
+            color: white;
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .demo-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .demo-logo-icon {
+            font-size: 1.4rem;
+            color: var(--color-gold);
+        }
+        .demo-logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .demo-dark-toggle {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: inherit;
+        }
+
+        .demo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 32px;
+        }
+        .demo-content h1 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .demo-content h1 span {
+            color: var(--color-emerald);
+        }
+        .demo-content p {
+            color: var(--color-text-light);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .demo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4A847, #F0DCA0);
+            color: #0B1D3A;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .demo-section {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .demo-section h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .demo-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .demo-section li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--color-text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .demo-section li::before {
+            content: '→';
+            color: var(--color-emerald);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .demo-try {
+            background: linear-gradient(135deg, #1B7A5A, #22976E);
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 32px 0 16px;
+        }
+        .demo-try span { font-size: 20px; }
+
+        .demo-setup {
+            background: #0B1D3A;
+            color: #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 28px 0;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+        .demo-setup h2 {
+            color: var(--color-gold);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .demo-setup code {
+            background: rgba(255,255,255,0.08);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12.5px;
+            color: #F0DCA0;
+        }
+        .demo-setup pre {
+            background: rgba(0,0,0,0.3);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-size: 12.5px;
+            color: #22976E;
+        }
+        .demo-note {
+            font-size: 13px;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <div class="demo-logo">
+            <span class="demo-logo-icon">&#9878;</span>
+            <span class="demo-logo-text">The Law of Sport</span>
+        </div>
+        <button class="demo-dark-toggle" onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? '' : 'dark')">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <div class="demo-content">
+        <div class="demo-badge">Prototype</div>
+        <h1>AI <span>Study Assistant</span> — Demo</h1>
+        <p>
+            This page demonstrates the chatbot widget for The Law of Sport student portal. Click the green chat button in the bottom-right corner to open the assistant and try some queries.
+        </p>
+        <p>
+            The prototype runs with pre-built demo responses to show the interaction patterns. When connected to a live AI API, it will generate contextual answers using the system prompt and your full course content.
+        </p>
+
+        <div class="demo-section">
+            <h2>Try asking about...</h2>
+            <ul>
+                <li>"What topics does Module 4 cover?" — see how it navigates course content</li>
+                <li>"Where can I learn about anti-doping?" — see the guided discovery pattern</li>
+                <li>"I have an assessment question" — see the Q&A page redirect + guardrails</li>
+                <li>"How do player contracts work?" — see cross-referencing across lectures</li>
+                <li>"Can you give me legal advice about my situation?" — see the boundary response</li>
+                <li>"Tell me about match-fixing" — see how it links related topics</li>
+                <li>"What's the duty of care in sport?" — see negligence/injury topic handling</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>Response Behaviour</h2>
+            <ul>
+                <li><strong>Guided discovery:</strong> Directional answers, never absolute conclusions</li>
+                <li><strong>Source references:</strong> Every answer points to specific lectures/modules</li>
+                <li><strong>Assessment Q&A pages:</strong> Assessment queries redirect to your evolving Q&A bank</li>
+                <li><strong>Assessment guardrails:</strong> Tighter responses near due dates (configurable)</li>
+                <li><strong>Forum fallback:</strong> "Can't find it? Post on the discussion forum"</li>
+                <li><strong>Legal advice boundary:</strong> Politely declines real-world legal queries</li>
+                <li><strong>Context-aware:</strong> Detects which page the student is on</li>
+            </ul>
+        </div>
+
+        <div class="demo-try">
+            <span>↘</span> Click the green chat button to try it out
+        </div>
+
+        <div class="demo-setup">
+            <h2>Integration — How to add to your site</h2>
+            <p><strong>Step 1:</strong> Add one line before <code>&lt;/body&gt;</code> on any page:</p>
+            <pre>&lt;script src="chatbot-widget.js"&gt;&lt;/script&gt;</pre>
+
+            <p><strong>Step 2:</strong> For production, set up a backend API proxy. A minimal Node.js example:</p>
+<pre>// server.js — proxy to Anthropic Claude API
+const express = require('express');
+const Anthropic = require('@anthropic-ai/sdk');
+const app = express();
+
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+app.post('/api/chat', express.json(), async (req, res) => {
+    const response = await client.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 500,
+        system: req.body.system,
+        messages: req.body.messages
+    });
+    res.json({ content: response.content[0].text });
+});</pre>
+
+            <p><strong>Step 3:</strong> In <code>chatbot-widget.js</code>, set <code>this.isDemo = false</code> and update the <code>apiEndpoint</code>.</p>
+
+            <p><strong>Step 4:</strong> Configure assessment due dates in the <code>CHATBOT_CONFIG</code> object to activate tighter guardrails near submission deadlines.</p>
+
+            <p style="margin-top: 16px; opacity: 0.6; font-size: 12px;">
+                Estimated API cost: ~$0.01-0.03 per student query using Claude Sonnet. A class of 80 students asking 10 questions each per week ≈ $8-24/month.
+            </p>
+        </div>
+
+        <p class="demo-note">
+            The widget automatically matches dark mode, detects the current page context, and is fully responsive on mobile.
+        </p>
+    </div>
+
+    <!-- The chatbot widget — this single line is all you need on any page -->
+    <script src="chatbot-widget.js"></script>
+</body>
+</html>
