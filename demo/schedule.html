@@ -476,22 +476,60 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .portal-sidebar { display: none; }
     .portal-main { padding: 24px 20px; }
     .key-dates-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Hide the timeline vertical line */
+    .schedule-timeline::before { display: none; }
+
+    /* Keep horizontal layout but tighten the gap */
     .week-card {
-        flex-direction: column;
         gap: 12px;
+        padding-left: 0;
     }
+
+    /* Shrink the week number badge */
     .week-badge {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        width: auto;
+        width: 40px;
+        flex-shrink: 0;
+        padding-top: 16px;
     }
     .week-number {
-        width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
         margin-bottom: 0;
     }
+
+    /* Tighten card padding */
+    .week-content {
+        padding: 14px 16px;
+        margin-bottom: 12px;
+    }
+
+    /* Move module badge from absolute to inline-flow so it doesn't overlap title */
+    .module-badge {
+        position: static;
+        display: inline-flex;
+        margin-bottom: 8px;
+    }
+
+    /* Stack header vertically */
+    .week-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .week-title { font-size: 1rem; padding-right: 0; }
+    .week-dates { font-size: 0.8rem; }
+}
+@media (max-width: 600px) {
+    .key-dates-grid { grid-template-columns: 1fr; }
+    .key-dates-box { padding: 20px 16px; }
+    .page-header h1 { font-size: 1.4rem; }
+    .week-card { gap: 10px; }
+    .week-badge { width: 32px; padding-top: 14px; }
+    .week-number { width: 30px; height: 30px; font-size: 0.75rem; }
+    .week-content { padding: 12px; }
+    .week-title { font-size: 0.92rem; }
 }
     
 /* ===== Mobile Navigation ===== */
