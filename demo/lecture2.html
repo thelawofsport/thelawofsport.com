@@ -680,7 +680,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             id: 1,
             title: 'Introduction to Sports Governance',
             desc: 'Every dispute in sports law — about selection, eligibility, discipline, contracts, or commercial rights — assumes something more basic: that someone had the authority to decide in the first place. This lecture asks where that authority actually comes from. The answer is governance — and governance is not an administrative add-on. It is the threshold between informal activity and sport as a legal system. The lecture establishes how sporting authority is built and transmitted through private ordering and contract, examines how authority is structurally arranged through federated pyramids, and explores what happens when the system is tested — from breakaway competitions to the European Super League.',
-            vimeoId: '',
+            vimeoId: '1171199223?h=827962dc47',
             duration: '11:20'
         },
         {
@@ -764,7 +764,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
         // Update video player
         const player = document.getElementById('videoPlayer');
         if (v.vimeoId) {
-            player.innerHTML = `<iframe src="https://player.vimeo.com/video/${v.vimeoId}?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+            const sep = v.vimeoId.includes('?') ? '&' : '?';
+            player.innerHTML = `<iframe src="https://player.vimeo.com/video/${v.vimeoId}${sep}autoplay=0&title=0&byline=0&portrait=0&badge=0&autopause=0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        } else {
+            player.innerHTML = '<div class="video-placeholder"><div class="video-placeholder-icon">&#9654;</div><div class="video-placeholder-text">Video coming soon</div></div>';
         }
 
         // Scroll active playlist item into view
@@ -776,6 +779,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
     // Initial render
     renderPlaylist();
+    updatePage();
 
     // ============================
     // DARK MODE
@@ -820,6 +824,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     });
 })();
 </script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
 </html>
