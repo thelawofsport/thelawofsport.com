@@ -52,6 +52,52 @@
     --shadow-lg: 0 8px 30px var(--color-shadow);
     --transition: 0.2s ease;
 }
+/* --- Dark Mode Overrides --- */
+[data-theme="dark"] {
+    --color-text: #E5E7EB;
+    --color-text-light: #9CA3AF;
+    --color-bg: #0F1729;
+    --color-bg-alt: #162036;
+    --color-surface: #1A2744;
+    --color-border: #2A3A5C;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .pitch-values { background: var(--color-bg); }
+[data-theme="dark"] .value-card { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .value-card h3 { color: var(--color-white); }
+[data-theme="dark"] .pitch-course { background: var(--color-bg-alt); }
+[data-theme="dark"] .section-header h2 { color: var(--color-white); }
+[data-theme="dark"] .module-card { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .module-card h4 { color: var(--color-white); }
+[data-theme="dark"] .pitch-explore { background: var(--color-bg); }
+[data-theme="dark"] .pitch-approach { background: var(--color-bg-alt); }
+[data-theme="dark"] .approach-text h2 { color: var(--color-white); }
+[data-theme="dark"] .approach-list li { color: var(--color-text); }
+[data-theme="dark"] .approach-list li::before { background: var(--color-emerald-light); }
+[data-theme="dark"] .approach-list li strong { color: var(--color-white); }
+[data-theme="dark"] .pitch-approach div[style*="background: var(--color-emerald-pale)"] { background: rgba(27, 122, 90, 0.15) !important; }
+[data-theme="dark"] .pitch-approach div[style*="background: var(--color-emerald-pale)"] p { color: var(--color-text) !important; }
+[data-theme="dark"] .pitch-credentials { background: var(--color-bg); }
+[data-theme="dark"] .credentials-card { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .credentials-bio p { color: var(--color-text); }
+[data-theme="dark"] .credentials-bio p[style*="color: var(--color-navy)"] { color: var(--color-white) !important; }
+[data-theme="dark"] .credentials-logos { border-color: var(--color-border) !important; }
+[data-theme="dark"] .pitch-how { background: var(--color-bg-alt); }
+[data-theme="dark"] .how-step h4 { color: var(--color-white); }
+[data-theme="dark"] .pitch-why { background: var(--color-bg-alt); }
+[data-theme="dark"] .why-column h3 { color: var(--color-white); }
+[data-theme="dark"] .why-item { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .why-item-text h4 { color: var(--color-white); }
+[data-theme="dark"] .why-icon.inst { background: rgba(27, 122, 90, 0.2); }
+[data-theme="dark"] .why-icon.stud { background: rgba(212, 168, 71, 0.2); }
+/* Theme toggle */
+.theme-toggle {
+    background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center; transition: all var(--transition);
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); color: var(--color-white); }
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -424,6 +470,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="#credentials">Credentials</a>
                 <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -436,6 +483,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#credentials">Credentials</a>
             <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
+            <div class="mobile-divider"></div>
+            <button class="theme-toggle" id="mobileThemeToggle" title="Toggle dark mode" style="margin:0 auto;">&#9790;</button>
     </div>
 
     <!-- Hero Section -->
@@ -792,6 +841,31 @@ h1, h2, h3, h4 { line-height: 1.2; }
             document.body.style.overflow = '';
         });
     });
+})();
+
+// Dark mode toggle
+(function() {
+    var toggle = document.getElementById('themeToggle');
+    var mobileToggle = document.getElementById('mobileThemeToggle');
+    var html = document.documentElement;
+    function setTheme(dark) {
+        if (dark) {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        }
+        var icon = dark ? '\u2600' : '\u263E';
+        if (toggle) toggle.textContent = icon;
+        if (mobileToggle) mobileToggle.textContent = icon;
+    }
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
+    function handleClick() {
+        setTheme(html.getAttribute('data-theme') !== 'dark');
+    }
+    if (toggle) toggle.addEventListener('click', handleClick);
+    if (mobileToggle) mobileToggle.addEventListener('click', handleClick);
 })();
 </script>
 
