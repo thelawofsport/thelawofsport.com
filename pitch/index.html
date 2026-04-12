@@ -182,14 +182,43 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 /* Credentials */
 .pitch-credentials { padding: 80px 0; background: var(--color-bg); }
-.credentials-layout { display: flex; gap: 48px; align-items: flex-start; max-width: 800px; margin: 0 auto; }
-.credentials-photo { flex-shrink: 0; }
-.photo-placeholder { width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--color-gold-light); }
-.credentials-text h3 { font-size: 1.4rem; font-weight: 700; color: var(--color-navy); margin-bottom: 4px; }
-.credentials-role { font-size: 0.95rem; color: var(--color-emerald); font-weight: 600; margin-bottom: 16px; }
-.credentials-text > p { color: var(--color-text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; }
-.credentials-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag { font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: var(--color-emerald-pale); color: var(--color-emerald); }
+.credentials-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg); overflow: hidden; max-width: 960px; margin: 0 auto;
+}
+.credentials-header {
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
+    padding: 36px 40px; display: flex; gap: 32px; align-items: center;
+}
+.credentials-photo {
+    flex-shrink: 0; width: 200px; height: 200px; border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.1); border: 3px solid rgba(255,255,255,0.2);
+    overflow: hidden;
+}
+.credentials-photo img { width: 100%; height: 100%; object-fit: cover; }
+.credentials-header-info { flex: 1; }
+.credentials-header-info h3 {
+    font-family: var(--font-serif); font-size: 1.6rem; font-weight: 800;
+    color: var(--color-white); margin-bottom: 4px;
+}
+.credentials-role { font-size: 0.95rem; color: var(--color-gold-light); font-weight: 500; margin-bottom: 14px; }
+.credentials-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tag {
+    font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;
+    background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+}
+.credentials-video-link {
+    display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
+    border-radius: var(--radius-sm); background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2); color: var(--color-white);
+    font-size: 0.85rem; font-weight: 600; transition: all var(--transition);
+}
+.credentials-video-link:hover { background: rgba(255,255,255,0.22); color: var(--color-white); border-color: rgba(255,255,255,0.4); }
+.credentials-body { padding: 32px 40px; }
+.credentials-body p {
+    font-size: 0.93rem; color: var(--color-text); line-height: 1.75; margin-bottom: 16px;
+}
+.credentials-body p:last-child { margin-bottom: 0; }
 
 /* How It Works */
 .pitch-how { padding: 80px 0; background: var(--color-bg-alt); }
@@ -224,7 +253,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .explore-box { grid-template-columns: 1fr; padding: 32px 24px; }
     .approach-layout { grid-template-columns: 1fr; }
     .how-steps { grid-template-columns: 1fr; }
-    .credentials-layout { flex-direction: column; align-items: center; text-align: center; }
+    .credentials-header { flex-direction: column; align-items: center; text-align: center; padding: 28px 24px; }
+    .credentials-photo { width: 160px; height: 160px; }
+    .credentials-body { padding: 24px; }
     .pitch-nav-links { display: none; }
 }
 @media (max-width: 600px) { .pitch-hero h1 { font-size: 1.8rem; white-space: normal; } }
@@ -420,10 +451,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </div>
             <div class="module-grid">
                 <div class="module-card">
+                    <div class="module-number">Welcome</div>
+                    <h4>Welcome to Sports Law</h4>
+                    <p>Course orientation — meet your lecturer, understand how the course works, explore what a sports lawyer does, and the key themes and tensions in sports law.</p>
+                    <span class="module-meta">5 Intro Videos + Lecture 1</span>
+                </div>
+                <div class="module-card">
                     <div class="module-number">01</div>
-                    <h4>Intro &amp; Overview</h4>
-                    <p>What is sports law, sources of sports law, and how sports governance shapes the legal landscape.</p>
-                    <span class="module-meta">2 Lectures</span>
+                    <h4>Governance &amp; Systems</h4>
+                    <p>How is sport governed, how do sporting organisations shape the legal landscape, and what are the sources of sports law?</p>
+                    <span class="module-meta">1 Lecture</span>
                 </div>
                 <div class="module-card">
                     <div class="module-number">02</div>
@@ -541,22 +578,29 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <p class="section-eyebrow">Credentials</p>
                 <h2>Your course convenor</h2>
             </div>
-            <div class="credentials-layout">
-                <div class="credentials-photo">
-                    <div class="photo-placeholder">
-                        <span>MB</span>
+            <div class="credentials-card">
+                <div class="credentials-header">
+                    <div class="credentials-photo">
+                        <img src="../assets/Michael_Bricknell_-_Headshot.jpg" alt="Michael Bricknell">
+                    </div>
+                    <div class="credentials-header-info">
+                        <h3>Michael Bricknell</h3>
+                        <p class="credentials-role">Sports Lawyer &amp; University Lecturer</p>
+                        <div class="credentials-tags">
+                            <span class="tag">Sports Law</span>
+                            <span class="tag">University Lecturing</span>
+                            <span class="tag">Legal Practice</span>
+                            <span class="tag">Dispute Resolution</span>
+                            <span class="tag">Sports Media &amp; Broadcasting</span>
+                        </div>
+                        <a href="#" class="credentials-video-link">&#9654; Watch Bio Video</a>
                     </div>
                 </div>
-                <div class="credentials-text">
-                    <h3>Michael Bricknell</h3>
-                    <p class="credentials-role">Sports Lawyer &amp; University Lecturer</p>
-                    <p>A practising lawyer with deep expertise in sports law, combining active legal practice with a passion for teaching the next generation of sports lawyers. With experience across governance disputes, anti-doping matters, athlete contracts, and regulatory compliance, Michael brings the courtroom into the classroom.</p>
-                    <div class="credentials-tags">
-                        <span class="tag">Sports Law</span>
-                        <span class="tag">University Lecturing</span>
-                        <span class="tag">Legal Practice</span>
-                        <span class="tag">Dispute Resolution</span>
-                    </div>
+                <div class="credentials-body">
+                    <p>Michael Bricknell is a practising sports, media and entertainment lawyer and university lecturer who brings real-world legal experience directly into the classroom. Originally from Brisbane and now based in Sydney, Michael holds a Juris Doctor from UNSW and a Bachelor of Economics &amp; Business Management from the University of Queensland.</p>
+                    <p>As Vice President &amp; Counsel at TKO/IMG, Michael advises on some of the largest and most complex commercial arrangements in international sport. Previously, Michael held legal counsel roles at the NRL and Rugby Australia, working at the heart of two of Australia's major professional sporting organisations on integrity, governance, player contracting, and broadcasting.</p>
+                    <p>His career spans the full spectrum of the sports industry — from the governing bodies responsible for the rules of the game, through to global companies that commercialise sporting rights on a worldwide scale.</p>
+                    <p>Michael has over eight years' experience designing, coordinating and lecturing sports law subjects at the university level, and a further eight-plus years teaching contract law. His approach to teaching reflects his background as a practitioner: the course is built around the kinds of legal problems that actually arise in the sports industry — governance disputes, integrity investigations, player contracting, broadcasting deals, and sponsorship agreements.</p>
                 </div>
             </div>
         </div>
