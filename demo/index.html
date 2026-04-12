@@ -171,6 +171,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
     background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
     border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 12px; color: var(--color-white);
 }
+a.announcement-card-link { text-decoration: none; color: inherit; display: block; }
+a.announcement-card-link .announcement-card { transition: transform 0.15s ease, box-shadow 0.15s ease; cursor: pointer; }
+a.announcement-card-link:hover .announcement-card { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+a.announcements-heading-link { text-decoration: none; color: inherit; }
+a.announcements-heading-link:hover { text-decoration: underline; }
 .announcement-date { font-size: 0.75rem; color: var(--color-gold-light); font-weight: 600; margin-bottom: 4px; }
 .announcement-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
 .announcement-text { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
@@ -515,7 +520,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- University Banner -->
         <div class="uni-banner">
-            <span class="uni-banner-text">Welcome to <strong>Sports Law — The Law of Sport</strong> &nbsp;|&nbsp; Trimester 3, 2026</span>
+            <span class="uni-banner-text">Welcome to <strong>Sports Law — The Law of Sport</strong> &nbsp;|&nbsp; Trimester 1, 2027</span>
             <a href="#" class="uni-banner-link">Student Portal &#8599;</a>
         </div>
 
@@ -544,19 +549,23 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
             <!-- Left Column: Announcements -->
             <div class="home-left">
-                <h2 class="portal-section-heading">Recent Announcements</h2>
+                <a href="announcements.html" class="announcements-heading-link"><h2 class="portal-section-heading">Recent Announcements</h2></a>
 
+                <a href="announcements.html#admin" class="announcement-card-link">
                 <div class="announcement-card">
-                    <div class="announcement-date">7 October 2026</div>
+                    <div class="announcement-date">3 March 2027</div>
                     <div class="announcement-title">Welcome to Sports Law</div>
-                    <div class="announcement-text">Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome module below to get oriented, then move into Module 1.</div>
+                    <div class="announcement-text">Welcome to The Law of Sport for Trimester 1! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome module below to get oriented, then move into Module 1.</div>
                 </div>
+                </a>
 
+                <a href="announcements.html#assessment-news" class="announcement-card-link">
                 <div class="announcement-card">
-                    <div class="announcement-date">5 October 2026</div>
+                    <div class="announcement-date">1 March 2027</div>
                     <div class="announcement-title">Assessment 1 brief now available</div>
-                    <div class="announcement-text">The brief for Assessment 1 (Research Essay) is now available on the Assessment page. Due date: 6 November 2026. See the page for full details, marking criteria, and an explanatory video.</div>
+                    <div class="announcement-text">The brief for Assessment 1 (Research Essay) is now available on the Assessment page. Due date: 2 April 2027. See the page for full details, marking criteria, and an explanatory video.</div>
                 </div>
+                </a>
             </div>
 
             <!-- Right Column: Calendar -->
@@ -566,8 +575,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Oct</span>
-                            <span class="cal-day">8</span>
+                            <span class="cal-month">Mar</span>
+                            <span class="cal-day">5</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Lecture 1: What is Sports Law?</div>
@@ -577,8 +586,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Oct</span>
-                            <span class="cal-day">10</span>
+                            <span class="cal-month">Mar</span>
+                            <span class="cal-day">7</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Tutorial 1: Sports Governance</div>
@@ -588,8 +597,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Nov</span>
-                            <span class="cal-day">6</span>
+                            <span class="cal-month">Apr</span>
+                            <span class="cal-day">2</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Assessment 1 Due</div>
@@ -599,8 +608,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Oct</span>
-                            <span class="cal-day">15</span>
+                            <span class="cal-month">Mar</span>
+                            <span class="cal-day">12</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Lecture 2: Sports Governance</div>
