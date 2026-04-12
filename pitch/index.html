@@ -135,12 +135,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* Course / Modules */
 .pitch-course { padding: 80px 0; background: var(--color-bg-alt); }
 .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-.module-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 28px; transition: box-shadow var(--transition), transform var(--transition); }
+.module-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 28px; transition: box-shadow var(--transition), transform var(--transition); display: flex; flex-direction: column; }
 .module-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 .module-number { font-size: 0.75rem; font-weight: 700; color: var(--color-emerald); letter-spacing: 0.05em; margin-bottom: 8px; }
 .module-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: var(--color-navy); }
-.module-card p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: 12px; }
-.module-meta { font-size: 0.78rem; font-weight: 600; color: var(--color-gold); }
+.module-card p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: 12px; flex: 1; }
+.module-meta { font-size: 0.78rem; font-weight: 600; color: var(--color-gold); margin-top: auto; }
 
 /* Explore the Platform */
 .pitch-explore { padding: 80px 0; background: var(--color-bg); }
@@ -541,14 +541,18 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="approach-layout">
                 <div class="approach-text">
                     <p class="section-eyebrow">Teaching Philosophy</p>
-                    <h2>Taught by a practitioner,<br>not just an academic</h2>
-                    <p>This course bridges the gap between legal theory and the reality of sports law practice. Every lecture draws on real cases, real disputes, and the practical skills students need to advise clients in the sports industry.</p>
+                    <h2>Real problems. Real documents.<br>Real practical skills.</h2>
+                    <p>This isn't a course that simply talks about sports law in the abstract. Students work with the kinds of documents and problems that practising sports lawyers actually encounter — governance policies, anti-doping codes, player contracts, broadcasting agreements, and sponsorship deals. The course is designed and taught by a practitioner, and it shows in every lecture.</p>
                     <ul class="approach-list">
-                        <li><strong>Case-driven learning</strong> — Students engage with real-world disputes, not hypotheticals</li>
-                        <li><strong>Practice-ready skills</strong> — Drafting, advising, and problem-solving, not just essay writing</li>
-                        <li><strong>Industry perspective</strong> — Insights from active legal practice in the sports sector</li>
+                        <li><strong>Real sports documents</strong> — Students analyse actual policies, codes, and commercial contracts from the sports industry, not textbook hypotheticals</li>
+                        <li><strong>Real legal problems</strong> — Every module is built around genuine disputes and scenarios that arise in sports law practice</li>
+                        <li><strong>Real practical skills</strong> — Drafting, advising, interpreting, and problem-solving — the skills graduates need from day one</li>
+                        <li><strong>Industry perspective</strong> — Insights drawn directly from active legal practice across governing bodies, leagues, and global sports businesses</li>
                         <li><strong>Flexible delivery</strong> — Pre-recorded lectures and structured materials suit both online and blended models</li>
                     </ul>
+                    <div style="margin-top: 24px; padding: 16px 20px; background: var(--color-emerald-pale); border-left: 3px solid var(--color-emerald); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                        <p style="font-size: 0.88rem; color: var(--color-navy); line-height: 1.65; margin: 0;"><strong>Ahead of the curve:</strong> With LPAB reforms from 2028 requiring law degrees to place greater emphasis on practical legal skills, this course is already built around the model that regulators are moving toward — students learning to work with real documents, real problems, and the practical competencies the profession demands.</p>
+                    </div>
                 </div>
                 <div class="approach-stats">
                     <div class="stat-card">
