@@ -110,24 +110,19 @@ h1, h2, h3, h4 { line-height: 1.2; }
     justify-content: center; gap: 60px; min-height: 85vh;
 }
 .pitch-page .pitch-hero { padding-left: calc((100% - 1140px) / 2 + 24px); padding-right: calc((100% - 1140px) / 2 + 24px); }
-.hero-content { flex: 1; max-width: 620px; }
-.hero-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); margin-bottom: 16px; }
-.pitch-hero h1 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.2; white-space: nowrap; }
+.hero-content { flex: 1; max-width: 580px; min-width: 0; }
+.hero-eyebrow { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.06em; color: var(--color-gold); margin-bottom: 20px; }
+.pitch-hero h1 { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.25; }
+.hero-line { display: block; white-space: nowrap; }
 .hero-accent { color: var(--color-gold-light); }
 .hero-sub { color: rgba(255,255,255,0.75); font-size: 1.1rem; line-height: 1.7; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
-.hero-visual { flex: 0 0 380px; }
-.hero-card { background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-.hero-card-header { background: var(--color-gray-100); padding: 12px 16px; display: flex; gap: 6px; }
-.hero-card-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--color-gray-300); }
-.hero-card-body { padding: 20px; }
-.hero-card-nav { font-size: 0.65rem; color: var(--color-gray-400); margin-bottom: 16px; letter-spacing: 0.02em; }
-.hero-card-title { font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-navy); margin-bottom: 12px; font-weight: 700; }
-.hero-card-line { height: 8px; border-radius: 4px; background: var(--color-gray-100); margin-bottom: 8px; }
-.hero-card-line.w80 { width: 80%; } .hero-card-line.w60 { width: 60%; }
-.hero-card-line.w90 { width: 90%; } .hero-card-line.w70 { width: 70%; }
-.hero-card-video { background: var(--color-navy); border-radius: var(--radius-sm); height: 140px; display: flex; align-items: center; justify-content: center; margin: 16px 0; }
-.hero-card-play { color: var(--color-white); font-size: 2rem; opacity: 0.7; }
+.hero-visual { flex: 0 0 420px; }
+.hero-screenshot {
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.1);
+}
+.hero-screenshot img { width: 100%; height: auto; display: block; }
 
 /* Values */
 .pitch-values { padding: 80px 0; background: var(--color-bg); }
@@ -207,6 +202,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
     font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;
     background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
 }
+.credentials-logos {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px;
+}
+.credentials-logos img {
+    height: 36px; width: auto; opacity: 0.85; filter: brightness(0) invert(1);
+    transition: opacity var(--transition);
+}
+.credentials-logos img:hover { opacity: 1; }
 .credentials-video-link {
     display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
     border-radius: var(--radius-sm); background: rgba(255,255,255,0.12);
@@ -248,7 +251,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .pitch-hero { flex-direction: column; text-align: center; padding: 120px 24px 60px; min-height: auto; }
     .pitch-page .pitch-hero { padding-left: 24px; padding-right: 24px; }
     .hero-cta { justify-content: center; }
-    .hero-visual { flex: none; width: 100%; max-width: 340px; }
+    .hero-visual { flex: none; width: 100%; max-width: 480px; }
     .pitch-values .section-inner { grid-template-columns: 1fr; }
     .explore-box { grid-template-columns: 1fr; padding: 32px 24px; }
     .approach-layout { grid-template-columns: 1fr; }
@@ -258,7 +261,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .credentials-body { padding: 24px; }
     .pitch-nav-links { display: none; }
 }
-@media (max-width: 600px) { .pitch-hero h1 { font-size: 1.8rem; white-space: normal; } }
+@media (max-width: 600px) { .pitch-hero h1 { font-size: 1.6rem; } .hero-line { white-space: normal; } }
     
 /* ===== Mobile Navigation ===== */
 .mobile-menu-btn {
@@ -391,7 +394,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <header class="pitch-hero">
         <div class="hero-content">
             <p class="hero-eyebrow">A turnkey Sports Law unit for your institution</p>
-            <h1>World-class Sports Law education,<br><span class="hero-accent">delivered and ready to teach.</span></h1>
+            <h1><span class="hero-line">World-class Sports Law education,</span><span class="hero-line hero-accent">delivered and ready to teach.</span></h1>
             <p class="hero-sub">A comprehensive, professionally built Sports Law course — complete with lectures, assessments, and a purpose-built student platform — available for your university today.</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">Enquire About Partnership</a>
@@ -399,23 +402,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </div>
         </div>
         <div class="hero-visual">
-            <div class="hero-card">
-                <div class="hero-card-header">
-                    <span class="hero-card-dot"></span>
-                    <span class="hero-card-dot"></span>
-                    <span class="hero-card-dot"></span>
-                </div>
-                <div class="hero-card-body">
-                    <div class="hero-card-nav">Home &nbsp;|&nbsp; Modules &nbsp;|&nbsp; Assessment &nbsp;|&nbsp; Search</div>
-                    <div class="hero-card-title">Module 3: Anti-Doping</div>
-                    <div class="hero-card-line w80"></div>
-                    <div class="hero-card-line w60"></div>
-                    <div class="hero-card-video">
-                        <div class="hero-card-play">&#9654;</div>
-                    </div>
-                    <div class="hero-card-line w90"></div>
-                    <div class="hero-card-line w70"></div>
-                </div>
+            <div class="hero-screenshot">
+                <img src="../assets/demo-screenshot.png" alt="The Law of Sport — Student Platform Demo">
             </div>
         </div>
     </header>
@@ -593,6 +581,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             <span class="tag">Dispute Resolution</span>
                             <span class="tag">Sports Media &amp; Broadcasting</span>
                         </div>
+                        <div class="credentials-logos">
+                            <img src="../assets/NRL.png" alt="NRL" title="NRL — Legal Counsel">
+                            <img src="../assets/Rugby AU Logo.png" alt="Rugby Australia" title="Rugby Australia — Legal Counsel">
+                            <img src="../assets/UTS.png" alt="UTS" title="UTS — Lecturer">
+                            <img src="../assets/UNSW.png" alt="UNSW" title="UNSW — Juris Doctor">
+                        </div>
                         <a href="#" class="credentials-video-link">&#9654; Watch Bio Video</a>
                     </div>
                 </div>
@@ -617,7 +611,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="how-step">
                     <div class="step-number">1</div>
                     <h4>We Agree on Terms</h4>
-                    <p>Your institution engages the course for a trimester. We tailor dates, assessment weightings, and branding to suit your program.</p>
+                    <p>Your institution engages Michael for a trimester. We tailor dates, assessment weightings, and branding to suit your program.</p>
                 </div>
                 <div class="how-step">
                     <div class="step-number">2</div>
