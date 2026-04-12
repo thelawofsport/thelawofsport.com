@@ -210,7 +210,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* Approach */
 .pitch-approach { padding: 80px 0; background: var(--color-bg-alt); }
 .approach-layout { max-width: 820px; margin: 0 auto; }
-.approach-text h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--color-navy); margin-bottom: 16px; }
+.approach-text h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--color-navy); margin-bottom: 16px; width: fit-content; max-width: 100%; }
+.approach-text h2[style*="white-space:nowrap"] { font-size: clamp(1.2rem, 3.8vw, 2rem); }
 .approach-text > p { color: var(--color-text-light); font-size: 1rem; line-height: 1.7; margin-bottom: 24px; }
 .approach-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .approach-list li { font-size: 0.92rem; color: var(--color-text); padding-left: 20px; position: relative; line-height: 1.6; }
@@ -704,7 +705,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="approach-layout">
                 <div class="approach-text">
                     <p class="section-eyebrow">Teaching Philosophy</p>
-                    <h2>Real problems. Real documents. Real practical skills.</h2>
+                    <h2 style="white-space:nowrap;">Real problems. Real documents. Real&nbsp;practical&nbsp;skills.</h2>
                     <p>This isn't a course that simply talks about sports law in the abstract. Students work with the kinds of documents and problems that practising sports lawyers actually encounter — governance policies, anti-doping codes, player contracts, collective bargaining agreements, broadcasting agreements, and sponsorship deals. The course is designed and taught by a practitioner with significant academic experience, and it shows in every lecture.</p>
                     <ul class="approach-list">
                         <li><strong>Real sports documents</strong> — Students analyse actual policies, codes, and commercial contracts from the sports industry, not textbook hypotheticals</li>
