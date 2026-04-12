@@ -177,6 +177,40 @@ h1, h2, h3, h4 { line-height: 1.2; }
     transition: all var(--transition);
 }
 .contact-card:hover { box-shadow: var(--shadow-md); }
+
+/* ── Recommended / Primary contact card (Discussion Forums) ── */
+.contact-card.contact-card--primary {
+    border: 2px solid var(--color-emerald);
+    background: linear-gradient(135deg, rgba(27,122,90,0.06) 0%, var(--color-surface) 60%);
+    position: relative;
+    padding-top: 32px;
+}
+[data-theme="dark"] .contact-card.contact-card--primary {
+    background: linear-gradient(135deg, rgba(27,122,90,0.12) 0%, var(--color-surface) 60%);
+    border-color: var(--color-emerald);
+}
+.contact-card--primary .primary-ribbon {
+    position: absolute; top: -1px; left: 24px;
+    background: var(--color-emerald); color: #fff;
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; padding: 5px 16px 6px;
+    border-radius: 0 0 8px 8px;
+    display: flex; align-items: center; gap: 6px;
+    box-shadow: 0 2px 8px rgba(27,122,90,0.3);
+}
+.contact-card--primary .primary-ribbon::before {
+    content: '\2605'; font-size: 0.7rem;
+}
+.contact-card--primary::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--color-emerald), rgba(27,122,90,0.1));
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+.contact-card--primary:hover {
+    box-shadow: 0 4px 20px rgba(27,122,90,0.15);
+    border-color: var(--color-emerald-light, var(--color-emerald));
+}
+
 .contact-card-header {
     display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
 }
@@ -185,9 +219,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
     display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
 }
 .contact-card-icon.forums {
-    background: var(--color-emerald-pale); color: var(--color-emerald);
+    background: var(--color-emerald); color: #fff;
+    box-shadow: 0 2px 10px rgba(27,122,90,0.25);
 }
-[data-theme="dark"] .contact-card-icon.forums { background: rgba(27,122,90,0.2); }
+[data-theme="dark"] .contact-card-icon.forums { background: var(--color-emerald); color: #fff; }
 .contact-card-icon.email {
     background: #EFF6FF; color: #2563EB;
 }
@@ -200,9 +235,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .contact-card-badge {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.06em; padding: 3px 10px; border-radius: 10px;
-    background: var(--color-emerald-pale); color: var(--color-emerald);
+    background: var(--color-emerald); color: #fff;
+    animation: badge-pulse 2s ease-in-out infinite;
 }
-[data-theme="dark"] .contact-card-badge { background: rgba(27,122,90,0.2); }
+@keyframes badge-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(27,122,90,0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(27,122,90,0); }
+}
+[data-theme="dark"] .contact-card-badge { background: var(--color-emerald); color: #fff; }
 .contact-card p {
     font-size: 0.92rem; color: var(--color-text); line-height: 1.7; margin-bottom: 12px;
 }
@@ -791,7 +831,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="contact-cards">
 
             <!-- Discussion Forums — Primary -->
-            <div class="contact-card">
+            <div class="contact-card contact-card--primary">
+                <div class="primary-ribbon">Recommended First Step</div>
                 <div class="contact-card-header">
                     <div class="contact-card-icon forums">&#128488;</div>
                     <div>
@@ -803,10 +844,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <p>The <strong>best way to get a question answered</strong> is through the Discussion Forums on eLearning. Course-related questions posted there are visible to all students, which means others with the same question benefit from the answer too.</p>
                 <p>This includes questions about lecture content, tutorial activities, assessment requirements, readings, and anything else related to the substance of the course. If you're unsure about something, chances are someone else is too — so don't hesitate to ask.</p>
-                <p>I monitor the forums regularly and will respond there as a priority.</p>
-                <a href="#" class="quick-link" style="margin-top:8px; display:inline-flex; padding:10px 18px; gap:10px;">
+                <p>I monitor the forums regularly and <strong>will respond there as a priority over email</strong>.</p>
+                <a href="#" class="quick-link" style="margin-top:8px; display:inline-flex; padding:10px 18px; gap:10px; background:var(--color-emerald); border-radius:8px; text-decoration:none;">
                     <span style="font-size:1rem;">&#128488;</span>
-                    <span style="font-size:0.88rem; font-weight:600; color:var(--color-emerald);">Go to Discussion Forums on eLearning &#8599;</span>
+                    <span style="font-size:0.88rem; font-weight:600; color:#fff;">Go to Discussion Forums on eLearning &#8599;</span>
                 </a>
             </div>
 
@@ -815,9 +856,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="contact-card-header">
                     <div class="contact-card-icon email">&#9993;</div>
                     <div>
-                        <div class="contact-card-title">Email — Personal Questions</div>
+                        <div class="contact-card-title">Email — Personal Questions Only</div>
                     </div>
                 </div>
+                <p style="font-size:0.82rem; color:var(--color-emerald); background:rgba(27,122,90,0.08); padding:10px 14px; border-radius:6px; margin-bottom:14px; border-left:3px solid var(--color-emerald);"><strong>Have a course content question?</strong> Please use the <a href="#forums" style="color:var(--color-emerald); font-weight:600; text-decoration:underline;">Discussion Forums</a> above instead — your question (and the answer) will help other students too.</p>
                 <p>For questions of a <strong>personal or private nature</strong> — things like extension requests, personal circumstances affecting your study, or anything you'd prefer not to post publicly — please email me directly:</p>
                 <a href="mailto:mike@thelawofsport.com" class="email-address">&#9993; mike@thelawofsport.com</a>
                 <p style="margin-top:16px;">Please include <strong>"Sports Law"</strong> in the subject line so I can identify your email quickly. Where your question relates to a specific assessment or lecture, mention which one so I have the context I need to help you.</p>
