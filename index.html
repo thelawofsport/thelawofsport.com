@@ -37,15 +37,16 @@ body {
 }
 .landing-container {
     text-align: left;
-    max-width: 600px;
+    max-width: 680px;
+    width: 100%;
     padding: 40px 24px;
 }
 .landing-logo {
     margin-bottom: 40px;
 }
 .landing-logo img {
-    height: 64px;
-    width: auto;
+    width: 100%;
+    height: auto;
     display: block;
 }
 .landing-tagline {
@@ -70,8 +71,8 @@ body {
 .landing-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 36px 24px;
+    align-items: flex-start;
+    padding: 36px 28px;
     border-radius: var(--radius-md);
     border: 1px solid rgba(255,255,255,0.1);
     text-decoration: none;
@@ -95,9 +96,9 @@ body {
     margin-bottom: 8px;
 }
 .card-desc {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: rgba(255,255,255,0.55);
-    line-height: 1.5;
+    line-height: 1.55;
 }
 .card-arrow {
     margin-top: 16px;
@@ -114,7 +115,7 @@ body {
     font-size: 0.78rem;
     color: rgba(255,255,255,0.3);
 }
-@media (max-width: 500px) {
+@media (max-width: 560px) {
     .landing-cards { grid-template-columns: 1fr; }
     .landing-tagline { font-size: 1.3rem; }
 }
