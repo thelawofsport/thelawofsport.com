@@ -278,10 +278,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* How It Works */
 .pitch-how { padding: 80px 0; background: var(--color-bg-alt); }
 .how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.how-step { text-align: center; padding: 20px; }
-.step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--color-navy); color: var(--color-gold-light); font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-.how-step h4 { font-size: 1.05rem; font-weight: 700; color: var(--color-navy); margin-bottom: 8px; }
-.how-step p { color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; }
+.how-step { display: grid; grid-template-columns: 48px 1fr; grid-template-rows: auto 1fr; column-gap: 16px; row-gap: 4px; padding: 20px; align-items: start; }
+.step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--color-navy); color: var(--color-gold-light); font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; grid-row: 1 / -1; align-self: start; }
+.how-step h4 { font-size: 1.05rem; font-weight: 700; color: var(--color-navy); margin-bottom: 0; text-align: left; }
+.how-step p { color: var(--color-text-light); font-size: 0.9rem; line-height: 1.6; text-align: left; }
 
 /* Contact CTA */
 .pitch-contact { padding: 80px 0; background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%); }
