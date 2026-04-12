@@ -110,9 +110,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     justify-content: center; gap: 60px; min-height: 85vh;
 }
 .pitch-page .pitch-hero { padding-left: calc((100% - 1140px) / 2 + 24px); padding-right: calc((100% - 1140px) / 2 + 24px); }
-.hero-content { flex: 1; max-width: 560px; }
+.hero-content { flex: 1; max-width: 620px; }
 .hero-eyebrow { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); margin-bottom: 16px; }
-.pitch-hero h1 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.15; }
+.pitch-hero h1 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.2; white-space: nowrap; }
 .hero-accent { color: var(--color-gold-light); }
 .hero-sub { color: rgba(255,255,255,0.75); font-size: 1.1rem; line-height: 1.7; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -147,8 +147,27 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .module-card p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6; margin-bottom: 12px; }
 .module-meta { font-size: 0.78rem; font-weight: 600; color: var(--color-gold); }
 
+/* Explore the Platform */
+.pitch-explore { padding: 80px 0; background: var(--color-bg); }
+.explore-box {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
+    border-radius: var(--radius-lg); padding: 48px 52px; color: var(--color-white);
+}
+.explore-text h2 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-white); margin-bottom: 16px; }
+.explore-text > p { color: rgba(255,255,255,0.75); font-size: 0.95rem; line-height: 1.7; }
+.explore-visual { display: flex; flex-direction: column; gap: 16px; }
+.explore-feature {
+    display: flex; align-items: center; gap: 14px; padding: 14px 18px;
+    background: rgba(255,255,255,0.08); border-radius: var(--radius-sm);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.explore-icon { font-size: 1.4rem; flex-shrink: 0; }
+.explore-feature strong { display: block; font-size: 0.9rem; color: var(--color-white); margin-bottom: 2px; }
+.explore-feature span { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+
 /* Approach */
-.pitch-approach { padding: 80px 0; background: var(--color-bg); }
+.pitch-approach { padding: 80px 0; background: var(--color-bg-alt); }
 .approach-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
 .approach-text h2 { font-family: var(--font-serif); font-size: 2rem; color: var(--color-navy); margin-bottom: 16px; }
 .approach-text > p { color: var(--color-text-light); font-size: 1rem; line-height: 1.7; margin-bottom: 24px; }
@@ -162,7 +181,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .stat-label { font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.7); margin-top: 4px; }
 
 /* Credentials */
-.pitch-credentials { padding: 80px 0; background: var(--color-bg-alt); }
+.pitch-credentials { padding: 80px 0; background: var(--color-bg); }
 .credentials-layout { display: flex; gap: 48px; align-items: flex-start; max-width: 800px; margin: 0 auto; }
 .credentials-photo { flex-shrink: 0; }
 .photo-placeholder { width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--color-gold-light); }
@@ -173,7 +192,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .tag { font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: var(--color-emerald-pale); color: var(--color-emerald); }
 
 /* How It Works */
-.pitch-how { padding: 80px 0; background: var(--color-bg); }
+.pitch-how { padding: 80px 0; background: var(--color-bg-alt); }
 .how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .how-step { text-align: center; padding: 20px; }
 .step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--color-navy); color: var(--color-gold-light); font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
@@ -202,12 +221,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .hero-cta { justify-content: center; }
     .hero-visual { flex: none; width: 100%; max-width: 340px; }
     .pitch-values .section-inner { grid-template-columns: 1fr; }
+    .explore-box { grid-template-columns: 1fr; padding: 32px 24px; }
     .approach-layout { grid-template-columns: 1fr; }
     .how-steps { grid-template-columns: 1fr; }
     .credentials-layout { flex-direction: column; align-items: center; text-align: center; }
     .pitch-nav-links { display: none; }
 }
-@media (max-width: 600px) { .pitch-hero h1 { font-size: 2rem; } }
+@media (max-width: 600px) { .pitch-hero h1 { font-size: 1.8rem; white-space: normal; } }
     
 /* ===== Mobile Navigation ===== */
 .mobile-menu-btn {
@@ -433,6 +453,50 @@ h1, h2, h3, h4 { line-height: 1.2; }
         </div>
     </section>
 
+    <!-- Explore the Platform -->
+    <section class="pitch-explore">
+        <div class="section-inner">
+            <div class="explore-box">
+                <div class="explore-text">
+                    <p class="section-eyebrow">See It In Action</p>
+                    <h2>Explore the student platform</h2>
+                    <p>The best way to understand what your students will experience is to see it for yourself. Browse the live demo — navigate the modules, watch lecture previews, and see how the assessment framework is presented. Everything you see is what your students receive.</p>
+                    <a href="../demo/" class="btn btn-primary" style="margin-top: 20px;">Explore the Demo &rarr;</a>
+                </div>
+                <div class="explore-visual">
+                    <div class="explore-feature">
+                        <span class="explore-icon">&#128218;</span>
+                        <div>
+                            <strong>5 Modules</strong>
+                            <span>Full lecture videos and materials</span>
+                        </div>
+                    </div>
+                    <div class="explore-feature">
+                        <span class="explore-icon">&#128221;</span>
+                        <div>
+                            <strong>Assessment Framework</strong>
+                            <span>Briefs, criteria, FAQs, and guides</span>
+                        </div>
+                    </div>
+                    <div class="explore-feature">
+                        <span class="explore-icon">&#128203;</span>
+                        <div>
+                            <strong>Tutorial Tasks</strong>
+                            <span>Structured weekly activities</span>
+                        </div>
+                    </div>
+                    <div class="explore-feature">
+                        <span class="explore-icon">&#128197;</span>
+                        <div>
+                            <strong>Schedule &amp; Navigation</strong>
+                            <span>Week-by-week course progression</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Teaching Approach -->
     <section id="approach" class="pitch-approach">
         <div class="section-inner">
@@ -514,12 +578,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="how-step">
                     <div class="step-number">2</div>
                     <h4>Your Portal Goes Live</h4>
-                    <p>Students get a branded entry point at thelawofsport.com/youruniversity — with all lectures, materials, and progression built in.</p>
+                    <p>There are two delivery options. The preferred model is a dual-platform approach: students access lectures and course materials through a branded portal at thelawofsport.com, while your eLearning system handles everything else. Alternatively, all content can be built directly within your university's own platform.</p>
                 </div>
                 <div class="how-step">
                     <div class="step-number">3</div>
-                    <h4>You Handle the Admin</h4>
-                    <p>Grades, submissions, extensions, and policies stay on your LMS. The course content and delivery platform is handled for you.</p>
+                    <h4>Sensitive Information Stays With You</h4>
+                    <p>Grades, submissions, extensions, student records, and university policies all remain within your eLearning portal. Nothing sensitive sits on an external site — your systems handle what they're designed to handle.</p>
                 </div>
             </div>
         </div>
@@ -531,8 +595,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="contact-box">
                 <h2>Interested in offering Sports Law at your institution?</h2>
                 <p>Get in touch to discuss how this course can fit into your law program.</p>
-                <a href="mailto:bricknell.michael@gmail.com" class="btn btn-primary btn-large">Get In Touch</a>
-                <p class="contact-email">bricknell.michael@gmail.com</p>
+                <a href="mailto:mike@thelawofsport.com" class="btn btn-primary btn-large">Get In Touch</a>
+                <p class="contact-email">mike@thelawofsport.com</p>
             </div>
         </div>
     </section>
