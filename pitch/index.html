@@ -314,15 +314,82 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .pitch-values .section-inner { grid-template-columns: 1fr; }
     .explore-box { grid-template-columns: 1fr; padding: 32px 24px; }
     .approach-layout { grid-template-columns: 1fr; }
+    .approach-text h2[style*="white-space:nowrap"] { white-space: normal !important; font-size: 1.6rem !important; }
     .how-steps { grid-template-columns: 1fr; }
     .credentials-header { flex-direction: column; align-items: center; text-align: center; padding: 28px 24px; }
     .credentials-photo { width: 160px; height: 160px; }
+    .credentials-header-info { display: flex; flex-direction: column; align-items: center; }
+    .credentials-tags { justify-content: center; }
+    .credentials-video-link { margin-left: 0 !important; margin-top: 8px; }
     .credentials-body { padding: 24px; flex-direction: column; }
     .credentials-logos { flex-direction: row; flex-wrap: wrap; width: auto; justify-content: center; gap: 16px; padding-top: 16px; border-top: 1px solid var(--color-border); }
     .credentials-logos img { width: 70px; }
     .pitch-nav-links { display: none; }
+    /* Touch-friendly feedback for cards */
+    .why-item:active, .module-card:active { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 }
-@media (max-width: 600px) { .pitch-hero h1 { font-size: 1.6rem; } .hero-line { white-space: normal; } }
+@media (max-width: 600px) {
+    /* Hero */
+    .pitch-hero h1 { font-size: 1.6rem; }
+    .hero-line { white-space: normal; }
+    .hero-sub { font-size: 0.92rem; }
+    .hero-cta { flex-direction: column; align-items: center; gap: 12px; }
+    .hero-cta .btn { width: 100%; max-width: 320px; }
+
+    /* Section spacing — tighter on small screens */
+    .pitch-values, .pitch-course, .pitch-explore, .pitch-approach,
+    .pitch-credentials, .pitch-how, .pitch-contact, .pitch-why { padding: 52px 0; }
+    .section-inner { padding: 0 18px; }
+    .section-header { margin-bottom: 32px; }
+
+    /* Typography — scale down large headings */
+    .section-header h2 { font-size: 1.6rem; }
+    .contact-box h2 { font-size: 1.5rem; }
+    .explore-text h2 { font-size: 1.4rem; }
+    .approach-text h2 { font-size: 1.35rem !important; }
+
+    /* Improve small text readability */
+    .module-meta { font-size: 0.84rem; }
+    .tag { font-size: 0.78rem; padding: 5px 14px; }
+    .stat-label { font-size: 0.84rem; }
+    .footer-copy { font-size: 0.84rem; }
+    .credentials-logos-label { font-size: 0.74rem; }
+
+    /* Value cards */
+    .value-card { padding: 28px 22px; }
+
+    /* Explore box */
+    .explore-box { padding: 24px 18px; }
+
+    /* Credentials */
+    .credentials-header { padding: 24px 18px; }
+    .credentials-photo { width: 130px; height: 130px; }
+    .credentials-header-info h3 { font-size: 1.3rem; }
+    .credentials-video-link { font-size: 0.8rem; padding: 8px 14px; }
+    .credentials-body { padding: 20px 18px; }
+    .credentials-bio p { font-size: 0.9rem; }
+    .credentials-bio p[style*="font-size: 1.15rem"] { font-size: 1rem !important; }
+
+    /* Contact CTA buttons — full width stack */
+    .contact-box > div[style*="display:flex"] { flex-direction: column; align-items: center; }
+    .contact-box .btn-large { width: 100%; max-width: 320px; padding: 14px 24px !important; font-size: 1rem !important; }
+
+    /* How It Works step text */
+    .how-step p { font-size: 0.88rem; }
+
+    /* Why grid items */
+    .why-item { padding: 16px; }
+    .why-item-text p { font-size: 0.86rem; }
+
+    /* Module cards */
+    .module-card { padding: 22px; }
+
+    /* Footer */
+    .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+
+    /* Approach callout box */
+    .approach-text > div[style*="margin-top"] { padding: 14px 16px !important; }
+}
     
 /* ===== Mobile Navigation ===== */
 .mobile-menu-btn {
