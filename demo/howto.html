@@ -202,11 +202,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 /* Tab Navigation */
 .howto-tabs {
-    display: flex; gap: 6px; margin-bottom: 32px;
+    display: flex; gap: 0; margin-bottom: 32px;
     border-bottom: 2px solid var(--color-border); padding-bottom: 0;
 }
 .howto-tab {
-    padding: 10px 20px; font-size: 0.9rem; font-weight: 600;
+    flex: 1; text-align: center;
+    padding: 12px 20px; font-size: 0.9rem; font-weight: 600;
     color: var(--color-text-light); border: none; background: none; cursor: pointer;
     border-bottom: 2px solid transparent; margin-bottom: -2px;
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -596,6 +597,24 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                 </div>
 
+                <!-- Step 7 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">7</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Ask &amp; Discuss</div>
+                        <h3>Use the Discussion Forums</h3>
+                        <p>If you have a question — about the course content, an assessment, how something works, or anything else — <strong>post it in the discussion forums on your university's eLearning platform</strong> rather than emailing the course team directly.</p>
+                        <p>When you ask a question in the forum, the answer benefits every student in the course, not just you. Chances are, if you're wondering about something, other students are too. The forums are monitored regularly and your question will be answered there.</p>
+                        <div class="step-tip">
+                            <strong>Why forums over email?</strong> An answer posted to the forum is visible to all students immediately. An answer sent by email helps only one person — and often results in the same question being answered dozens of times. Using the forums makes the course better for everyone.
+                        </div>
+                        <a href="elearning.html" class="step-link">Go to eLearning Forums &#8594;</a>
+                    </div>
+                </div>
+
             </div><!-- /steps -->
         </div><!-- /panel-overall -->
 
@@ -706,6 +725,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <h3>Prepare for the Tutorial</h3>
                         <p>Before each live tutorial session, open the <strong>Tutorial</strong> section of the module page. The tutorial task will describe the activity for the session and any preparation you should complete beforehand.</p>
                         <p>Tutorials are your opportunity to apply concepts from the lectures to real scenarios and to work through problems with your peers. Coming prepared — having done the pre-reading and thought about the task — is what makes tutorial sessions worthwhile.</p>
+                        <p>If anything from the lectures or tutorial tasks is unclear, <strong>post your question in the discussion forums</strong> on eLearning. Other students will almost certainly have the same question, and a forum answer benefits everyone in the course.</p>
                         <div class="step-tip">
                             <strong>Tip:</strong> Each module's Connections section flags which assessment item the tutorial relates to. Keep that in mind as you work through tutorial tasks — they are often directly relevant to your assessment preparation.
                         </div>
@@ -773,8 +793,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <h3>Read the Information &amp; Resources Section</h3>
                         <p>For each assessment, the <strong>Information &amp; Resources</strong> tab contains the full task brief — what you're being asked to do, any scenario or documents you'll be working with, format requirements, and any additional resources (such as explanatory videos).</p>
                         <p>Read the full brief carefully before beginning any work. Misreading or skimming the task requirements is the most common source of avoidable errors.</p>
+                        <p>For certain assessments, the Information &amp; Resources section also includes <strong>Example Prior Submissions</strong> — real examples from previous students that illustrate the expected standard and approach. There are also <strong>How to Get Started</strong> guides that walk you through the first steps of tackling the task, so you're not staring at a blank page. Make sure you use both of these — they are among the most valuable resources available to you.</p>
                         <div class="step-tip">
-                            <strong>Tip:</strong> Where an explanatory video is available alongside the brief, watch it. It often clarifies aspects of the task that are difficult to convey in writing alone.
+                            <strong>Tip:</strong> Where an explanatory video is available alongside the brief, watch it. It often clarifies aspects of the task that are difficult to convey in writing alone. Combine this with the How to Get Started guide for the clearest picture of what's expected.
                         </div>
                         <a href="assessment-info.html" class="step-link">View Information &amp; Resources &#8594;</a>
                     </div>
@@ -818,9 +839,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <div class="step-body">
                         <div class="step-tag">Get Your Questions Answered</div>
-                        <h3>Check the FAQ Before Emailing</h3>
-                        <p>The <strong>FAQ</strong> tab collects the most common student questions about each assessment, along with clear answers. Before emailing the course team with a question, check here — your question has very likely already been answered.</p>
-                        <p>The FAQ is updated throughout the trimester as new questions arise. If your question isn't there yet, it may appear after you submit it via the Contact page.</p>
+                        <h3>Check the FAQ, Then Use the Forums</h3>
+                        <p>The <strong>FAQ</strong> tab collects the most common student questions about each assessment, along with clear answers. Check here first — your question has very likely already been answered.</p>
+                        <p>If your question isn't covered in the FAQ, <strong>post it in the discussion forums on eLearning</strong> rather than emailing directly. Forum answers are visible to every student, so your question — and the answer — helps the entire cohort. The FAQ is updated throughout the trimester as new questions arise, often drawn from forum discussions.</p>
                         <a href="assessment-faq.html" class="step-link">View Assessment FAQ &#8594;</a>
                     </div>
                 </div>
