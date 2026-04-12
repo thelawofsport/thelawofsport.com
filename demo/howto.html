@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Use This Course — The Law of Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --color-navy: #0B1D3A;
+    --color-navy-light: #132B52;
+    --color-navy-mid: #1A3A6B;
+    --color-emerald: #1B7A5A;
+    --color-emerald-light: #22976E;
+    --color-emerald-pale: #E8F5F0;
+    --color-gold: #D4A847;
+    --color-gold-light: #F0DCA0;
+    --color-white: #FFFFFF;
+    --color-offwhite: #F7F8FA;
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-gray-600: #4B5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1F2937;
+    --color-gray-900: #111827;
+    --color-text: #1F2937;
+    --color-text-light: #6B7280;
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F7F8FA;
+    --color-surface: #FFFFFF;
+    --color-border: #E5E7EB;
+    --color-shadow: rgba(11, 29, 58, 0.08);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 3px var(--color-shadow);
+    --shadow-md: 0 4px 12px var(--color-shadow);
+    --shadow-lg: 0 8px 30px var(--color-shadow);
+    --transition: 0.2s ease;
+}
+[data-theme="dark"] {
+    --color-text: #E5E7EB;
+    --color-text-light: #9CA3AF;
+    --color-bg: #0F1729;
+    --color-bg-alt: #162036;
+    --color-surface: #1A2744;
+    --color-border: #2A3A5C;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-offwhite: #162036;
+    --color-gray-50: #162036;
+    --color-gray-100: #1A2744;
+    --color-gray-200: #2A3A5C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
+body {
+    font-family: var(--font-sans); color: var(--color-text);
+    background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--color-emerald); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--color-emerald-light); }
+h1, h2, h3, h4 { line-height: 1.2; }
+
+/* Portal Layout */
+.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+
+/* Top Nav */
+.portal-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    background: var(--color-navy); display: flex; align-items: center;
+    justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
+}
+.portal-nav-left { display: flex; align-items: center; gap: 44px; }
+.portal-nav-menu { display: flex; gap: 4px; }
+.portal-nav-menu a {
+    color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
+    padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
+}
+.portal-nav-menu a:hover, .portal-nav-menu a.active {
+    color: var(--color-gold); background: rgba(255,255,255,0.1);
+}
+.portal-nav-right { display: flex; align-items: center; gap: 16px; }
+.portal-search {
+    display: flex; align-items: center; background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm); padding: 6px 12px; gap: 8px;
+}
+.portal-search input {
+    background: transparent; border: none; color: var(--color-white);
+    font-family: var(--font-sans); font-size: 0.84rem; outline: none; width: 180px;
+}
+.portal-search input::placeholder { color: rgba(255,255,255,0.4); }
+.search-icon { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+.theme-toggle {
+    background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7);
+    width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center; transition: all var(--transition);
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); color: var(--color-white); }
+
+/* Sidebar */
+.portal-sidebar {
+    width: 245px; background: var(--color-bg-alt); border-right: 1px solid var(--color-border);
+    padding: 24px 0; flex-shrink: 0; position: sticky; top: 77px;
+    height: calc(100vh - 77px); overflow-y: auto; display: flex; flex-direction: column;
+}
+.sidebar-section { padding: 0 16px; margin-bottom: 28px; }
+.sidebar-label {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--color-text-light); margin-bottom: 8px; padding: 0 8px;
+}
+.sidebar-link {
+    display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+    border-radius: var(--radius-sm); color: var(--color-text); font-size: 0.88rem;
+    font-weight: 500; transition: all var(--transition);
+}
+.sidebar-link:hover { background: var(--color-border); color: var(--color-text); }
+.sidebar-link.active { background: var(--color-emerald-pale); color: var(--color-emerald); font-weight: 600; }
+[data-theme="dark"] .sidebar-link.active { background: rgba(27,122,90,0.2); }
+.sidebar-icon { font-size: 1rem; width: 20px; text-align: center; }
+.sidebar-divider { height: 1px; background: var(--color-border); margin: 0 16px 28px; }
+
+/* Main */
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; max-width: 860px; }
+
+/* Breadcrumb */
+.page-breadcrumb { font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px; }
+.page-breadcrumb a { font-size: 0.78rem; }
+
+/* Page Hero */
+.howto-hero {
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
+    border-radius: var(--radius-lg); padding: 36px 40px; margin-bottom: 32px;
+    color: var(--color-white); position: relative; overflow: hidden;
+}
+.howto-hero::after {
+    content: ''; position: absolute; top: -60px; right: -40px;
+    width: 220px; height: 220px; background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+.howto-hero-label {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; opacity: 0.65; margin-bottom: 8px;
+}
+.howto-hero h1 {
+    font-family: var(--font-serif); font-size: 2rem; font-weight: 800; margin-bottom: 10px;
+}
+.howto-hero-desc {
+    font-size: 1rem; line-height: 1.6; opacity: 0.88; max-width: 620px;
+}
+
+/* Tab Navigation */
+.howto-tabs {
+    display: flex; gap: 6px; margin-bottom: 32px;
+    border-bottom: 2px solid var(--color-border); padding-bottom: 0;
+}
+.howto-tab {
+    padding: 10px 20px; font-size: 0.9rem; font-weight: 600;
+    color: var(--color-text-light); border: none; background: none; cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: all var(--transition); font-family: var(--font-sans);
+}
+.howto-tab:hover { color: var(--color-text); background: var(--color-gray-100); }
+.howto-tab.active {
+    color: var(--color-emerald); border-bottom-color: var(--color-emerald);
+    background: var(--color-emerald-pale);
+}
+[data-theme="dark"] .howto-tab.active { background: rgba(27,122,90,0.15); }
+
+/* Tab Panels */
+.howto-panel { display: none; }
+.howto-panel.active { display: block; }
+
+/* Step Cards */
+.steps-container { display: flex; flex-direction: column; gap: 0; }
+
+.step-card {
+    display: flex; gap: 0; position: relative;
+}
+.step-card:not(:last-child) .step-connector {
+    display: block;
+}
+.step-connector { display: none; }
+
+.step-left {
+    display: flex; flex-direction: column; align-items: center;
+    width: 56px; flex-shrink: 0; padding-top: 4px;
+}
+.step-number {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--color-emerald), var(--color-emerald-light));
+    color: var(--color-white); display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 800; font-family: var(--font-sans);
+    box-shadow: 0 2px 8px rgba(27,122,90,0.3); z-index: 1; position: relative;
+}
+.step-line {
+    width: 2px; flex: 1; background: var(--color-border);
+    min-height: 28px; margin: 6px 0;
+}
+.step-card:last-child .step-line { display: none; }
+
+.step-body {
+    flex: 1; padding: 0 0 28px 16px;
+}
+.step-tag {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--color-emerald); margin-bottom: 4px;
+}
+.step-body h3 {
+    font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700;
+    color: var(--color-navy); margin-bottom: 8px;
+}
+[data-theme="dark"] .step-body h3 { color: var(--color-white); }
+.step-body p {
+    font-size: 0.9rem; color: var(--color-text); line-height: 1.65; margin-bottom: 10px;
+}
+.step-body p:last-child { margin-bottom: 0; }
+
+/* Feature chips inside steps */
+.step-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.step-chip {
+    font-size: 0.76rem; font-weight: 600; padding: 4px 12px;
+    background: var(--color-gray-100); color: var(--color-text-light);
+    border-radius: 20px; border: 1px solid var(--color-border);
+    display: flex; align-items: center; gap: 5px;
+}
+[data-theme="dark"] .step-chip { background: var(--color-surface); border-color: var(--color-border); }
+
+/* Tip callout */
+.step-tip {
+    background: var(--color-emerald-pale); border-left: 3px solid var(--color-emerald);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 14px; margin-top: 10px; font-size: 0.84rem; color: var(--color-text);
+    line-height: 1.6;
+}
+[data-theme="dark"] .step-tip { background: rgba(27,122,90,0.15); }
+.step-tip strong { color: var(--color-emerald); font-weight: 700; }
+
+/* Quick link card at bottom of step */
+.step-link {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.84rem;
+    font-weight: 600; color: var(--color-emerald); margin-top: 8px;
+    padding: 5px 12px; border: 1px solid var(--color-emerald);
+    border-radius: var(--radius-sm); transition: all var(--transition);
+}
+.step-link:hover {
+    background: var(--color-emerald); color: var(--color-white);
+}
+
+/* Section intro */
+.panel-intro {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 28px;
+    font-size: 0.92rem; color: var(--color-text); line-height: 1.7;
+}
+.panel-intro strong { color: var(--color-navy); }
+[data-theme="dark"] .panel-intro strong { color: var(--color-white); }
+
+/* Assessment items */
+.assessment-item {
+    display: flex; gap: 18px; padding: 20px 24px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); margin-bottom: 12px;
+}
+.assessment-badge {
+    flex-shrink: 0; width: 52px; height: 52px; border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
+    color: var(--color-gold); display: flex; flex-direction: column;
+    align-items: center; justify-content: center; font-size: 0.62rem;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; gap: 2px;
+}
+.assessment-badge-num { font-size: 1.3rem; font-weight: 800; line-height: 1; color: var(--color-white); }
+.assessment-info h3 {
+    font-size: 0.95rem; font-weight: 700; color: var(--color-text); margin-bottom: 4px;
+}
+[data-theme="dark"] .assessment-info h3 { color: var(--color-white); }
+.assessment-info p {
+    font-size: 0.85rem; color: var(--color-text-light); line-height: 1.55; margin: 0;
+}
+.assessment-weight {
+    font-size: 0.75rem; font-weight: 700; color: var(--color-emerald);
+    background: var(--color-emerald-pale); padding: 2px 10px; border-radius: 12px;
+    display: inline-block; margin-top: 6px;
+}
+[data-theme="dark"] .assessment-weight { background: rgba(27,122,90,0.2); }
+
+/* Module mini-map */
+.module-minimap {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    margin-top: 10px;
+}
+.minimap-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm); padding: 12px 14px;
+    font-size: 0.82rem; color: var(--color-text-light);
+}
+.minimap-card strong { color: var(--color-text); font-size: 0.86rem; display: block; margin-bottom: 2px; }
+[data-theme="dark"] .minimap-card strong { color: var(--color-white); }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .portal-sidebar { display: none; }
+    .portal-main { padding: 20px; }
+    .howto-hero { padding: 24px; }
+    .howto-hero h1 { font-size: 1.5rem; }
+    .module-minimap { grid-template-columns: 1fr; }
+    .portal-nav-right { display: none; }
+    .portal-nav-menu { display: none; }
+}
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="portal-nav">
+    <div class="portal-nav-left">
+        <a href="v1.html" style="text-decoration:none;">
+            <img src="../assets/logo.svg" alt="The Law of Sport" style="height:48px; width:auto; display:block;">
+        </a>
+        <div class="portal-nav-menu">
+            <a href="v1.html">Home</a>
+            <a href="howto.html" class="active">How To</a>
+            <a href="contact.html">Contact</a>
+            <a href="overview.html">Overview</a>
+            <a href="modules.html">Modules</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="assessment.html">Assessment</a>
+        </div>
+    </div>
+    <div class="portal-nav-right">
+        <div class="portal-search">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" placeholder="Search lectures, modules...">
+        </div>
+        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
+    </div>
+</nav>
+
+<!-- Layout -->
+<div class="portal-page">
+
+    <!-- Left Sidebar -->
+    <aside class="portal-sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-label">How To</div>
+            <a href="#course-overall" class="sidebar-link active" id="sb-overall">
+                <span class="sidebar-icon">&#127968;</span> The Course Overall
+            </a>
+            <a href="#each-module" class="sidebar-link" id="sb-module">
+                <span class="sidebar-icon">&#128218;</span> Each Module
+            </a>
+            <a href="#assessments" class="sidebar-link" id="sb-assessment">
+                <span class="sidebar-icon">&#128221;</span> Assessments
+            </a>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+            <div class="sidebar-label">Course</div>
+            <a href="v1.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127968;</span> Home
+            </a>
+            <a href="announcements.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128227;</span> Announcements
+            </a>
+            <a href="modules.html" class="sidebar-link">
+                <span class="sidebar-icon">&#127891;</span> All Modules
+            </a>
+            <a href="schedule.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128197;</span> Schedule
+            </a>
+            <a href="assessment.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128221;</span> Assessment
+            </a>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+            <div class="sidebar-label">eLearning (External)</div>
+            <a href="elearning.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Course Outline
+            </a>
+            <a href="elearning.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128200;</span> Grades &amp; Feedback
+            </a>
+            <a href="elearning.html" class="sidebar-link">
+                <span class="sidebar-icon">&#128228;</span> Submit Assessment
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+
+        <div class="page-breadcrumb">
+            <a href="v1.html">Home</a> &nbsp;/&nbsp; How To Use This Course
+        </div>
+
+        <!-- Hero -->
+        <div class="howto-hero">
+            <div class="howto-hero-label">Student Guide</div>
+            <h1>How To Use This Course</h1>
+            <p class="howto-hero-desc">
+                A practical guide to navigating the course platform — how it's structured, how to work through each module, and how to approach your assessments.
+            </p>
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="howto-tabs" role="tablist">
+            <button class="howto-tab active" role="tab" data-panel="overall">The Course Overall</button>
+            <button class="howto-tab" role="tab" data-panel="module">Each Module</button>
+            <button class="howto-tab" role="tab" data-panel="assessments">Assessments</button>
+        </div>
+
+        <!-- ============================================================
+             PANEL 1: THE COURSE OVERALL
+             ============================================================ -->
+        <div class="howto-panel active" id="panel-overall">
+
+            <div class="panel-intro">
+                <strong>This site is your central hub for the course.</strong> Lectures, module materials, tutorial tasks, and assessment resources are all here — with your university's eLearning system (Moodle or equivalent) used for submitting assessments and accessing grades. The steps below explain how to find your way around.
+            </div>
+
+            <div class="steps-container">
+
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">1</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Start Here</div>
+                        <h3>Begin on the Home Page</h3>
+                        <p>The Home page is your weekly dashboard. It surfaces the most important things right now: recent announcements from your lecturer, upcoming dates, and quick links to the current week's lecture and tutorial activity.</p>
+                        <p>Check the Home page each time you log in — it's where any urgent course communications will appear first.</p>
+                        <div class="step-chips">
+                            <span class="step-chip">&#128227; Announcements</span>
+                            <span class="step-chip">&#128197; Upcoming dates</span>
+                            <span class="step-chip">&#9654; Current lecture</span>
+                            <span class="step-chip">&#128203; Tutorial activity</span>
+                        </div>
+                        <a href="v1.html" class="step-link">Go to Home &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">2</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Get the Big Picture</div>
+                        <h3>Read the Course Overview</h3>
+                        <p>The <strong>Overview</strong> page gives you a snapshot of the entire course: what Sports Law covers, how the five modules fit together, and what the course aims to achieve. It's worth spending a few minutes here at the start of trimester to understand the structure before diving into Module 1.</p>
+                        <div class="step-tip">
+                            <strong>Tip:</strong> The Overview is not just orientation — it gives you the conceptual map that ties every module together. Return to it when you're preparing for assessments.
+                        </div>
+                        <a href="overview.html" class="step-link">View Course Overview &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">3</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Know Your Schedule</div>
+                        <h3>Check the Schedule Page</h3>
+                        <p>The <strong>Schedule</strong> page contains the full week-by-week trimester plan. It shows you which module and topic is covered each week, when tutorials are held, and when assessments are due.</p>
+                        <p>Key items to note from the outset:</p>
+                        <div class="step-chips">
+                            <span class="step-chip">&#128197; Trimester start &amp; end</span>
+                            <span class="step-chip">&#9201; Census Day</span>
+                            <span class="step-chip">&#128203; Assessment due dates</span>
+                            <span class="step-chip">&#128197; Public holidays</span>
+                            <span class="step-chip">&#128197; Mid-semester break</span>
+                        </div>
+                        <a href="schedule.html" class="step-link">View Schedule &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">4</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Work Through Content</div>
+                        <h3>Navigate via the Modules Page</h3>
+                        <p>The <strong>Modules</strong> page lists all five modules in sequence. Each module has its own dedicated page with an overview, learning objectives, lecture videos, and tutorial tasks. Work through modules in order — each one builds on the last.</p>
+                        <p>Use the left sidebar within each module page to jump between sections (Overview, Objectives, Lectures, Tutorials) without scrolling.</p>
+                        <div class="module-minimap">
+                            <div class="minimap-card"><strong>Module 1</strong>Governance &amp; Systems</div>
+                            <div class="minimap-card"><strong>Module 2</strong>Challenging Decisions</div>
+                            <div class="minimap-card"><strong>Module 3</strong>Athlete, Contracts &amp; Control</div>
+                            <div class="minimap-card"><strong>Module 4</strong>Sports Integrity &amp; Regulation</div>
+                            <div class="minimap-card"><strong>Module 5</strong>Commercialising Sports Rights</div>
+                        </div>
+                        <a href="modules.html" class="step-link" style="margin-top:14px;">View All Modules &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">5</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Know What's Required</div>
+                        <h3>Understand Your Assessments Early</h3>
+                        <p>The <strong>Assessment</strong> page sets out everything you need to know about course assessments: what each task requires, the marking criteria, due dates, and how to submit. Visit this page early — don't wait until the assessment is due.</p>
+                        <div class="step-tip">
+                            <strong>Important:</strong> Submissions are made through your university's eLearning system (Moodle), not through this site. The Assessment page links you there directly.
+                        </div>
+                        <a href="assessment.html" class="step-link">View Assessments &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">6</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Stay Connected</div>
+                        <h3>Use the Sidebar to Navigate Quickly</h3>
+                        <p>Every page on this site has a left sidebar with quick links to key sections. The sidebar updates depending on which part of the site you're in — so when you're on a module page, the sidebar gives you links specific to that module.</p>
+                        <p>Use the <strong>search bar</strong> in the top navigation to find lectures, modules, or tutorials by keyword. Dark mode is available via the moon icon in the top right if you prefer a darker interface.</p>
+                    </div>
+                </div>
+
+            </div><!-- /steps -->
+        </div><!-- /panel-overall -->
+
+
+        <!-- ============================================================
+             PANEL 2: EACH MODULE
+             ============================================================ -->
+        <div class="howto-panel" id="panel-module">
+
+            <div class="panel-intro">
+                <strong>Every module follows the same structure.</strong> Once you know how to navigate one, you know how to navigate all five. The steps below walk you through the recommended order — from orientation through to tutorial preparation.
+            </div>
+
+            <div class="steps-container">
+
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">1</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Orient Yourself</div>
+                        <h3>Open the Module Page and Read the Overview</h3>
+                        <p>Each module begins with a written overview that explains what the module covers and why it matters. Read this first — before touching any lecture videos.</p>
+                        <p>The overview tells you what legal terrain the module covers and what conceptual framework you'll be building. It sets the context for everything else on the page.</p>
+                        <div class="step-tip">
+                            <strong>Tip:</strong> The module overview also situates the module within the broader course. Knowing how each module connects to the others helps you understand the big picture — and is useful for assessments.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">2</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Know What You're Learning</div>
+                        <h3>Review the Learning Objectives</h3>
+                        <p>Each module lists its learning objectives — the specific things you should be able to do or explain by the end. Read through them before starting the lectures.</p>
+                        <p>These objectives are not just administrative. They tell you exactly what the assessors are looking for and what level of analysis you're expected to reach. If you can answer each objective clearly by the end of a module, you're on track.</p>
+                        <div class="step-tip">
+                            <strong>Study tip:</strong> Return to the objectives after you've completed the module's lectures. Use them as a self-check — can you address each one in your own words?
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">3</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">See the Connections</div>
+                        <h3>Note How This Module Connects to Others</h3>
+                        <p>Below the learning objectives, each module page includes a <strong>Connections</strong> section. This maps how the module links to other modules in the course — and, where relevant, to assessment tasks.</p>
+                        <p>These connections are deliberate — Sports Law is a field where concepts build on each other. Understanding where each module sits in the broader architecture will improve the quality of your analysis.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">4</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Engage with Content</div>
+                        <h3>Watch the Lecture Videos</h3>
+                        <p>Work through the lecture videos in the order they appear on the module page. Each lecture is designed to stand alone as a complete learning unit, but they follow a logical sequence within the module.</p>
+                        <p>Take notes as you watch. The slides are available as a reference, but active engagement with the material — pausing, summarising, testing yourself — will produce better outcomes than passive viewing.</p>
+                        <div class="step-chips">
+                            <span class="step-chip">&#9654; Watch in sequence</span>
+                            <span class="step-chip">&#128196; Download slides</span>
+                            <span class="step-chip">&#9989; Check against objectives</span>
+                        </div>
+                        <div class="step-tip">
+                            <strong>Missed a lecture?</strong> All lecture recordings remain available throughout the trimester. You can re-watch at any time via the module page or the Lectures section in the left sidebar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">5</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Go Deeper</div>
+                        <h3>Complete Any Recommended Readings</h3>
+                        <p>Where readings are listed alongside lectures, work through them after watching the video. Readings are selected to complement and extend the lecture material — they introduce cases, legislation, or scholarship that the lecture introduces but doesn't fully explore.</p>
+                        <p>You are not required to read every source in depth. Focus on understanding the core argument or principle each reading contributes to the module's themes.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">6</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Apply Your Knowledge</div>
+                        <h3>Prepare for the Tutorial</h3>
+                        <p>Before each live tutorial session, open the <strong>Tutorial</strong> section of the module page. The tutorial task will describe the activity for the session and any preparation you should complete beforehand.</p>
+                        <p>Tutorials are your opportunity to apply concepts from the lectures to real scenarios and to work through problems with your peers. Coming prepared — having done the pre-reading and thought about the task — is what makes tutorial sessions worthwhile.</p>
+                        <div class="step-tip">
+                            <strong>Tip:</strong> Each module's Connections section flags which assessment item the tutorial relates to. Keep that in mind as you work through tutorial tasks — they are often directly relevant to your assessment preparation.
+                        </div>
+                        <a href="tutorials.html" class="step-link">View All Tutorial Tasks &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">7</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Catch Up if Needed</div>
+                        <h3>Watch the Tutorial Recording if You Miss the Live Session</h3>
+                        <p>If you miss a live tutorial, a recording will be available on the module page shortly after the session. The recording covers the same material discussed in the live session.</p>
+                        <p>Recorded tutorials are a fallback — the live sessions involve discussion and peer interaction that recordings can't fully replicate. Attend live where you can.</p>
+                    </div>
+                </div>
+
+            </div><!-- /steps -->
+        </div><!-- /panel-module -->
+
+
+        <!-- ============================================================
+             PANEL 3: ASSESSMENTS
+             ============================================================ -->
+        <div class="howto-panel" id="panel-assessments">
+
+            <div class="panel-intro">
+                <strong>The Assessment page is your single source of truth for all course assessments.</strong> It contains the task briefs, marking criteria, FAQs, and submission instructions. The steps below explain how to work through it and when to engage with each section.
+            </div>
+
+            <div class="steps-container">
+
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">1</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Know What's Required</div>
+                        <h3>Start with the Assessment Overview</h3>
+                        <p>The Assessment Overview tab gives you the high-level picture: how many assessment items there are, what each one involves, how much each is worth, and when they are due.</p>
+                        <p>Read this at the start of trimester — not when an assessment is imminent. Understanding the full assessment picture early means you can plan your time and pace your work through the modules accordingly.</p>
+                        <div class="step-chips">
+                            <span class="step-chip">&#128203; 2 assessment items</span>
+                            <span class="step-chip">&#9878; 100% of course grade</span>
+                            <span class="step-chip">&#128228; Submit via eLearning</span>
+                        </div>
+                        <a href="assessment.html" class="step-link">View Assessment Overview &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">2</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Understand the Task</div>
+                        <h3>Read the Information &amp; Resources Section</h3>
+                        <p>For each assessment, the <strong>Information &amp; Resources</strong> tab contains the full task brief — what you're being asked to do, any scenario or documents you'll be working with, format requirements, and any additional resources (such as explanatory videos).</p>
+                        <p>Read the full brief carefully before beginning any work. Misreading or skimming the task requirements is the most common source of avoidable errors.</p>
+                        <div class="step-tip">
+                            <strong>Tip:</strong> Where an explanatory video is available alongside the brief, watch it. It often clarifies aspects of the task that are difficult to convey in writing alone.
+                        </div>
+                        <a href="assessment-info.html" class="step-link">View Information &amp; Resources &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">3</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Know How You'll Be Marked</div>
+                        <h3>Study the Marking Criteria</h3>
+                        <p>The <strong>Criteria</strong> tab contains the marking rubric for each assessment. Read this before you start writing — not after. The rubric tells you what the markers are looking for at each grade level and how much weight each dimension carries.</p>
+                        <p>Use the rubric actively: as you draft your work, ask yourself whether your answer satisfies each criterion at the level you're aiming for.</p>
+                        <a href="assessment-criteria.html" class="step-link">View Marking Criteria &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">4</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">For Group Assessments</div>
+                        <h3>Check Your Allocation</h3>
+                        <p>Where an assessment involves assigned roles or allocated scenarios — such as Assessment 1, where students are assigned a specific player and role — the <strong>Allocations</strong> tab lists each student's allocation.</p>
+                        <p>Check your allocation as soon as it is published. If there is any error or ambiguity in your allocation, raise it with your lecturer immediately — don't wait until the due date.</p>
+                        <a href="assessment-allocations.html" class="step-link">View Allocations &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">5</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Get Your Questions Answered</div>
+                        <h3>Check the FAQ Before Emailing</h3>
+                        <p>The <strong>FAQ</strong> tab collects the most common student questions about each assessment, along with clear answers. Before emailing the course team with a question, check here — your question has very likely already been answered.</p>
+                        <p>The FAQ is updated throughout the trimester as new questions arise. If your question isn't there yet, it may appear after you submit it via the Contact page.</p>
+                        <a href="assessment-faq.html" class="step-link">View Assessment FAQ &#8594;</a>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-card">
+                    <div class="step-left">
+                        <div class="step-number">6</div>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-body">
+                        <div class="step-tag">Submit Your Work</div>
+                        <h3>Submit via eLearning — Not This Site</h3>
+                        <p>All assessment submissions are made through your university's eLearning system (Moodle). This site does not accept submissions directly.</p>
+                        <p>When you're ready to submit, use the <strong>Submit Assessment</strong> link in the left sidebar (under eLearning) — it will take you directly to the submission portal. Allow time before the deadline in case of technical issues.</p>
+                        <div class="step-tip">
+                            <strong>Grades &amp; feedback</strong> are also returned through eLearning. Check the Grades section in the sidebar once results have been released.
+                        </div>
+                        <a href="elearning.html" class="step-link">Go to eLearning Submission &#8594;</a>
+                    </div>
+                </div>
+
+            </div><!-- /steps -->
+        </div><!-- /panel-assessments -->
+
+    </main>
+</div>
+
+<script>
+// Tab switching
+const tabs = document.querySelectorAll('.howto-tab');
+const panels = { overall: document.getElementById('panel-overall'), module: document.getElementById('panel-module'), assessments: document.getElementById('panel-assessments') };
+const sbLinks = { overall: document.getElementById('sb-overall'), module: document.getElementById('sb-module'), assessment: document.getElementById('sb-assessment') };
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        Object.values(panels).forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const key = tab.dataset.panel;
+        if (panels[key]) panels[key].classList.add('active');
+        // Sidebar highlight
+        Object.values(sbLinks).forEach(l => l && l.classList.remove('active'));
+        if (key === 'overall' && sbLinks.overall) sbLinks.overall.classList.add('active');
+        if (key === 'module' && sbLinks.module) sbLinks.module.classList.add('active');
+        if (key === 'assessments' && sbLinks.assessment) sbLinks.assessment.classList.add('active');
+    });
+});
+
+// Sidebar links trigger tabs
+document.getElementById('sb-overall').addEventListener('click', (e) => { e.preventDefault(); tabs[0].click(); });
+document.getElementById('sb-module').addEventListener('click', (e) => { e.preventDefault(); tabs[1].click(); });
+document.getElementById('sb-assessment').addEventListener('click', (e) => { e.preventDefault(); tabs[2].click(); });
+
+// Dark mode
+const toggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+});
+</script>
+</body>
+</html>
