@@ -202,14 +202,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
     font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;
     background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
 }
-.credentials-logos {
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px;
-}
-.credentials-logos img {
-    height: 36px; width: auto; opacity: 0.85; filter: brightness(0) invert(1);
-    transition: opacity var(--transition);
-}
-.credentials-logos img:hover { opacity: 1; }
 .credentials-video-link {
     display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
     border-radius: var(--radius-sm); background: rgba(255,255,255,0.12);
@@ -217,11 +209,24 @@ h1, h2, h3, h4 { line-height: 1.2; }
     font-size: 0.85rem; font-weight: 600; transition: all var(--transition);
 }
 .credentials-video-link:hover { background: rgba(255,255,255,0.22); color: var(--color-white); border-color: rgba(255,255,255,0.4); }
-.credentials-body { padding: 32px 40px; }
-.credentials-body p {
+.credentials-body { padding: 32px 40px; display: flex; gap: 36px; }
+.credentials-bio { flex: 1; min-width: 0; }
+.credentials-bio p {
     font-size: 0.93rem; color: var(--color-text); line-height: 1.75; margin-bottom: 16px;
 }
-.credentials-body p:last-child { margin-bottom: 0; }
+.credentials-bio p:last-child { margin-bottom: 0; }
+.credentials-logos {
+    flex-shrink: 0; width: 120px; display: flex; flex-direction: column;
+    align-items: center; gap: 20px; padding-top: 4px;
+}
+.credentials-logos img {
+    width: 90px; height: auto; opacity: 0.8; transition: opacity var(--transition);
+}
+.credentials-logos img:hover { opacity: 1; }
+.credentials-logos-label {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--color-text-light); text-align: center;
+}
 
 /* How It Works */
 .pitch-how { padding: 80px 0; background: var(--color-bg-alt); }
@@ -258,7 +263,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .how-steps { grid-template-columns: 1fr; }
     .credentials-header { flex-direction: column; align-items: center; text-align: center; padding: 28px 24px; }
     .credentials-photo { width: 160px; height: 160px; }
-    .credentials-body { padding: 24px; }
+    .credentials-body { padding: 24px; flex-direction: column; }
+    .credentials-logos { flex-direction: row; flex-wrap: wrap; width: auto; justify-content: center; gap: 16px; padding-top: 16px; border-top: 1px solid var(--color-border); }
+    .credentials-logos img { width: 70px; }
     .pitch-nav-links { display: none; }
 }
 @media (max-width: 600px) { .pitch-hero h1 { font-size: 1.6rem; } .hero-line { white-space: normal; } }
@@ -581,20 +588,24 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             <span class="tag">Dispute Resolution</span>
                             <span class="tag">Sports Media &amp; Broadcasting</span>
                         </div>
-                        <div class="credentials-logos">
-                            <img src="../assets/NRL.png" alt="NRL" title="NRL — Legal Counsel">
-                            <img src="../assets/Rugby AU Logo.png" alt="Rugby Australia" title="Rugby Australia — Legal Counsel">
-                            <img src="../assets/UTS.png" alt="UTS" title="UTS — Lecturer">
-                            <img src="../assets/UNSW.png" alt="UNSW" title="UNSW — Juris Doctor">
-                        </div>
                         <a href="#" class="credentials-video-link">&#9654; Watch Bio Video</a>
                     </div>
                 </div>
                 <div class="credentials-body">
-                    <p>Michael Bricknell is a practising sports, media and entertainment lawyer and university lecturer who brings real-world legal experience directly into the classroom. Originally from Brisbane and now based in Sydney, Michael holds a Juris Doctor from UNSW and a Bachelor of Economics &amp; Business Management from the University of Queensland.</p>
-                    <p>As Vice President &amp; Counsel at TKO/IMG, Michael advises on some of the largest and most complex commercial arrangements in international sport. Previously, Michael held legal counsel roles at the NRL and Rugby Australia, working at the heart of two of Australia's major professional sporting organisations on integrity, governance, player contracting, and broadcasting.</p>
-                    <p>His career spans the full spectrum of the sports industry — from the governing bodies responsible for the rules of the game, through to global companies that commercialise sporting rights on a worldwide scale.</p>
-                    <p>Michael has over eight years' experience designing, coordinating and lecturing sports law subjects at the university level, and a further eight-plus years teaching contract law. His approach to teaching reflects his background as a practitioner: the course is built around the kinds of legal problems that actually arise in the sports industry — governance disputes, integrity investigations, player contracting, broadcasting deals, and sponsorship agreements.</p>
+                    <div class="credentials-bio">
+                        <p>Michael Bricknell is a practising sports, media and entertainment lawyer and university lecturer who brings real-world legal experience directly into the classroom. Originally from Brisbane and now based in Sydney, Michael holds a Juris Doctor from UNSW and a Bachelor of Economics &amp; Business Management from the University of Queensland.</p>
+                        <p>As Vice President &amp; Counsel at TKO/IMG, Michael advises on some of the largest and most complex commercial arrangements in international sport. Previously, Michael held legal counsel roles at the NRL and Rugby Australia, working at the heart of two of Australia's major professional sporting organisations on integrity, governance, player contracting, and broadcasting.</p>
+                        <p>His career spans the full spectrum of the sports industry — from the governing bodies responsible for the rules of the game, through to global companies that commercialise sporting rights on a worldwide scale.</p>
+                        <p>Michael has over eight years' experience designing, coordinating and lecturing sports law subjects at the university level, and a further eight-plus years teaching contract law. His approach to teaching reflects his background as a practitioner: the course is built around the kinds of legal problems that actually arise in the sports industry — governance disputes, integrity investigations, player contracting, broadcasting deals, and sponsorship agreements.</p>
+                    </div>
+                    <div class="credentials-logos">
+                        <span class="credentials-logos-label">Experience</span>
+                        <img src="../assets/NRL.png" alt="NRL" title="NRL — Legal Counsel">
+                        <img src="../assets/Rugby AU Logo.png" alt="Rugby Australia" title="Rugby Australia — Legal Counsel">
+                        <span class="credentials-logos-label">Teaching</span>
+                        <img src="../assets/UTS.png" alt="UTS" title="UTS — Lecturer">
+                        <img src="../assets/UNSW.png" alt="UNSW" title="UNSW — Juris Doctor">
+                    </div>
                 </div>
             </div>
         </div>
