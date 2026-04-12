@@ -370,6 +370,34 @@ h1, h2, h3, h4 { line-height: 1.2; }
     background: rgba(255,255,255,0.15);
     margin: 8px auto;
 }
+/* Why Sports Law */
+.pitch-why { padding: 80px 0; background: var(--color-bg-alt); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+.why-column h3 {
+    font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-navy);
+    margin-bottom: 8px;
+}
+.why-column > p.why-col-intro {
+    color: var(--color-text-light); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;
+}
+.why-item {
+    display: flex; gap: 14px; padding: 18px 20px; margin-bottom: 12px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); transition: box-shadow var(--transition), transform var(--transition);
+}
+.why-item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.why-icon {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.why-icon.inst { background: rgba(27, 122, 90, 0.1); }
+.why-icon.stud { background: rgba(212, 168, 71, 0.15); }
+.why-item-text h4 { font-size: 0.95rem; font-weight: 700; color: var(--color-navy); margin-bottom: 4px; }
+.why-item-text p { font-size: 0.88rem; color: var(--color-text-light); line-height: 1.6; }
+@media (max-width: 900px) {
+    .why-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
 @media (max-width: 900px) {
     .mobile-menu-btn { display: block; }
 }
@@ -385,21 +413,23 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:36px; width:auto; display:block;">
             </a>
             <div class="pitch-nav-links">
+                <a href="#why">Why Sports Law</a>
                 <a href="#course">The Course</a>
                 <a href="#approach">Approach</a>
                 <a href="#credentials">Credentials</a>
-                <a href="../demo/">Demo Student Portal</a>
+                <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
             </div>
-        
+
             <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <div class="mobile-nav-overlay">
+            <a href="#why">Why Sports Law</a>
             <a href="#course">The Course</a>
             <a href="#approach">Approach</a>
             <a href="#credentials">Credentials</a>
-            <a href="../demo/">Demo Student Portal</a>
+            <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
     </div>
 
@@ -438,6 +468,78 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="value-icon">&#9881;</div>
                 <h3>Customisable for Your Institution</h3>
                 <p>Your branding, your trimester dates, your assessment weightings. The core content is universal; the wrapper is yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Sports Law -->
+    <section id="why" class="pitch-why">
+        <div class="section-inner">
+            <div class="section-header">
+                <p class="section-eyebrow">Why Sports Law?</p>
+                <h2>A course students want to take — and institutions benefit from offering</h2>
+                <p class="section-desc">Sports law sits at the intersection of legal practice, commercial strategy, and cultural significance. It delivers proven student demand and genuine institutional value.</p>
+            </div>
+            <div class="why-grid">
+                <!-- Institutional Benefits -->
+                <div class="why-column">
+                    <h3>For Your Institution</h3>
+                    <p class="why-col-intro">A distinctive elective that strengthens your law program and attracts students across disciplines.</p>
+                    <div class="why-item">
+                        <div class="why-icon inst">&#128200;</div>
+                        <div class="why-item-text">
+                            <h4>Proven Student Demand</h4>
+                            <p>This course has consistently reached full enrolment, attracting over 160 students annually across undergraduate and JD cohorts. Sports law is not a niche offering — it is a reliable, high-demand elective.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon inst">&#127963;</div>
+                        <div class="why-item-text">
+                            <h4>Institutional Profile</h4>
+                            <p>A dynamic, industry-connected course enhances your university's reputation in both legal education and the broader sports sector — positioning your institution as forward-thinking and practice-oriented.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon inst">&#128256;</div>
+                        <div class="why-item-text">
+                            <h4>Interdisciplinary Appeal</h4>
+                            <p>Sports law intersects with business, ethics, media, and health — making it attractive to students well beyond the law school and opening pathways for cross-faculty engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Appeal -->
+                <div class="why-column">
+                    <h3>For Your Students</h3>
+                    <p class="why-col-intro">A subject that connects personal passion with professional development in ways few other electives can.</p>
+                    <div class="why-item">
+                        <div class="why-icon stud">&#127941;</div>
+                        <div class="why-item-text">
+                            <h4>Cultural Connection</h4>
+                            <p>Sport is culturally resonant and emotionally engaging. For many students, it offers a meaningful way to connect personal interests to professional aspirations in law.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon stud">&#9878;</div>
+                        <div class="why-item-text">
+                            <h4>Social Justice &amp; Inclusion</h4>
+                            <p>Sports law intersects with human rights, gender equity, and anti-discrimination — giving students a platform for engaging with systemic issues in high-visibility environments.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon stud">&#127891;</div>
+                        <div class="why-item-text">
+                            <h4>Career Preparation</h4>
+                            <p>The sports law sector is growing, with increasing demand for legal professionals across clubs, leagues, agencies, governing bodies, and regulatory organisations.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon stud">&#129513;</div>
+                        <div class="why-item-text">
+                            <h4>Cross-Disciplinary Depth</h4>
+                            <p>One subject, many areas of law — employment and industrial relations, intellectual property, immigration, competition law, tort, and contract. Sports law gives students a practical lens on doctrines they encounter across the degree.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -541,7 +643,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="approach-layout">
                 <div class="approach-text">
                     <p class="section-eyebrow">Teaching Philosophy</p>
-                    <h2>Real problems. Real documents.<br>Real practical skills.</h2>
+                    <h2>Real problems. Real documents. Real practical skills.</h2>
                     <p>This isn't a course that simply talks about sports law in the abstract. Students work with the kinds of documents and problems that practising sports lawyers actually encounter — governance policies, anti-doping codes, player contracts, collective bargaining agreements, broadcasting agreements, and sponsorship deals. The course is designed and taught by a practitioner with significant academic experience, and it shows in every lecture.</p>
                     <ul class="approach-list">
                         <li><strong>Real sports documents</strong> — Students analyse actual policies, codes, and commercial contracts from the sports industry, not textbook hypotheticals</li>
@@ -636,10 +738,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <section id="contact" class="pitch-contact">
         <div class="section-inner">
             <div class="contact-box">
-                <h2>Interested in offering Sports Law at your institution?</h2>
-                <p>Get in touch to discuss how this course can fit into your law program.</p>
-                <a href="mailto:mike@thelawofsport.com" class="btn btn-primary btn-large">Get In Touch</a>
-                <p class="contact-email">mike@thelawofsport.com</p>
+                <p class="section-eyebrow" style="color:var(--color-gold);">Ready to get started?</p>
+                <h2>Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
+                <p>Whether you're exploring a new elective, expanding your law program, or looking for a practice-ready course that students will genuinely enjoy — I'd love to hear from you. No commitment, just a conversation.</p>
+                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+                    <a href="mailto:mike@thelawofsport.com?subject=Sports%20Law%20Course%20—%20Enquiry" class="btn btn-primary btn-large" style="font-size:1.05rem; padding:16px 36px;">Email Me</a>
+                    <a href="https://tinyurl.com/2bgbmk5u" target="_blank" class="btn btn-large" style="font-size:1.05rem; padding:16px 36px; background:#25D366; color:#fff; border-color:#25D366;">WhatsApp Me</a>
+                </div>
+                <p class="contact-email"><a href="mailto:mike@thelawofsport.com?subject=Sports%20Law%20Course%20—%20Enquiry" style="color:rgba(255,255,255,0.5); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:1px; transition:all 0.2s ease;" onmouseover="this.style.color='rgba(255,255,255,0.8)';this.style.borderColor='rgba(255,255,255,0.5)'" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.borderColor='rgba(255,255,255,0.2)'">mike@thelawofsport.com</a></p>
             </div>
         </div>
     </section>
