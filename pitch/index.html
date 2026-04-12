@@ -268,8 +268,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 .credentials-logos img {
     width: 90px; height: auto; opacity: 0.8; transition: opacity var(--transition);
+    mix-blend-mode: multiply; border-radius: 6px;
 }
 .credentials-logos img:hover { opacity: 1; }
+[data-theme="dark"] .credentials-logos img { mix-blend-mode: screen; }
 .credentials-logos-label {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.08em; color: var(--color-text-light); text-align: center;
