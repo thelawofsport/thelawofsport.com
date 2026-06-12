@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modules — Sports Law | The Law of Sport</title>
+    <title>Welcome Module — The Law of Sport</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -45,6 +45,8 @@
     --shadow-md: 0 4px 12px var(--color-shadow);
     --shadow-lg: 0 8px 30px var(--color-shadow);
     --transition: 0.2s ease;
+    --module-color: #1B7A5A;
+    --module-color-light: #22976E;
 }
 [data-theme="dark"] {
     --color-text: #E5E7EB;
@@ -154,16 +156,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
 
 /* Page Header */
-.page-header {
-    margin-bottom: 32px; padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-border);
-}
-.page-header h1 {
-    font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800;
-    color: var(--color-navy); margin-bottom: 6px;
-}
-[data-theme="dark"] .page-header h1 { color: var(--color-white); }
-.page-header p { color: var(--color-text-light); font-size: 0.95rem; }
 .page-breadcrumb {
     font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
 }
@@ -171,7 +163,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 /* Module Tabs (Full-width sub-tabs) */
 .module-tabs {
-    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
     width: 100%;
 }
 .module-tab {
@@ -203,15 +195,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .tab-module5 { background: rgba(91, 45, 142, 0.2); color: var(--color-white); }
 .tab-module5.active { background: #5B2D8E; }
 
-/* Module Content Panels */
-.module-panel {
-    display: none; animation: fadeIn 0.3s ease-in-out;
-}
-.module-panel.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
 /* Module Hero Banner */
 .module-hero {
+    background: linear-gradient(135deg, var(--module-color), var(--module-color-light));
     border-radius: var(--radius-lg); padding: 36px 40px; margin-bottom: 36px;
     color: var(--color-white); position: relative; overflow: hidden;
 }
@@ -254,6 +240,29 @@ h1, h2, h3, h4 { line-height: 1.2; }
     font-size: 0.92rem; color: var(--color-text); line-height: 1.7; margin-bottom: 12px;
 }
 
+/* Themes panel */
+.themes-panel {
+    background: var(--color-emerald-pale); border-left: 4px solid var(--color-emerald);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 22px 26px;
+}
+[data-theme="dark"] .themes-panel { background: rgba(27,122,90,0.12); }
+.themes-panel p { margin-bottom: 14px; }
+.themes-list {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px;
+}
+.themes-list li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 0.9rem; line-height: 1.5; color: var(--color-text);
+    padding: 6px 0; border-bottom: 1px solid rgba(27,122,90,0.15);
+}
+.themes-list li:nth-last-child(-n+2) { border-bottom: none; }
+.theme-bullet { color: var(--color-emerald); font-weight: 700; flex-shrink: 0; }
+@media (max-width: 700px) {
+    .themes-list { grid-template-columns: 1fr; }
+    .themes-list li:nth-last-child(2) { border-bottom: 1px solid rgba(27,122,90,0.15); }
+}
+
 /* Learning objectives */
 .objectives-list {
     list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;
@@ -287,7 +296,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .connection-card p {
     font-size: 0.84rem; color: var(--color-text-light); line-height: 1.55; margin: 0;
 }
-.connection-icon { font-size: 1.1rem; }
+.connection-icon {
+    font-size: 1.1rem;
+}
 
 /* Lecture & Tutorial cards */
 .content-cards { display: flex; flex-direction: column; gap: 12px; }
@@ -300,11 +311,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 .content-card:hover {
     box-shadow: var(--shadow-md); transform: translateX(4px);
+    border-color: var(--module-color);
 }
 .content-card-icon {
     flex-shrink: 0; width: 48px; height: 48px; border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--module-color), var(--module-color-light));
     color: var(--color-white); display: flex; align-items: center;
     justify-content: center; font-size: 1.1rem;
+}
+.content-card-icon.tutorial {
+    background: linear-gradient(135deg, var(--color-emerald), var(--color-emerald-light));
 }
 .content-card-info { flex: 1; }
 .content-card-label {
@@ -322,7 +338,25 @@ h1, h2, h3, h4 { line-height: 1.2; }
     font-size: 1.1rem; color: var(--color-text-light); flex-shrink: 0;
     transition: transform 0.2s ease;
 }
-.content-card:hover .content-card-arrow { transform: translateX(4px); }
+.content-card:hover .content-card-arrow { transform: translateX(4px); color: var(--module-color); }
+
+/* Module navigation — prev/next */
+.module-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-border);
+}
+.module-nav-btn {
+    display: flex; align-items: center; gap: 10px; padding: 12px 20px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); color: var(--color-text);
+    font-size: 0.88rem; font-weight: 600; text-decoration: none;
+    transition: all var(--transition);
+}
+.module-nav-btn:hover { box-shadow: var(--shadow-md); border-color: var(--color-emerald); color: var(--color-emerald); }
+.module-nav-btn.disabled {
+    opacity: 0.4; pointer-events: none;
+}
+.module-nav-btn span { font-size: 0.7rem; font-weight: 500; color: var(--color-text-light); }
 
 /* Portal Footer */
 .portal-footer {
@@ -339,9 +373,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .module-hero { padding: 24px; }
     .module-hero h1 { font-size: 1.5rem; }
     .connection-cards { grid-template-columns: 1fr; }
-    .module-hero-stats { flex-wrap: wrap; }
 }
-    
+
 /* ===== Mobile Navigation ===== */
 .mobile-menu-btn {
     display: none;
@@ -462,7 +495,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </a>
             <div class="portal-nav-menu">
                 <a href="v1.html">Home</a>
-                
+
                 <a href="contact.html">Contact</a>
                 <a href="howto.html">How To</a>
                 <a href="overview.html">Overview</a>
@@ -482,12 +515,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </button>
             <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
         </div>
-    
+
         <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="mobile-nav-overlay">
         <a href="v1.html">Home</a>
-        
+
         <a href="contact.html">Contact</a>
         <a href="howto.html">How To</a>
         <a href="overview.html">Overview</a>
@@ -509,6 +542,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="announcements.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128227;</span> Announcements
             </a>
+            <a href="modules.html" class="sidebar-link active">
+                <span class="sidebar-icon">&#127891;</span> All Modules
+            </a>
             <a href="lectures.html" class="sidebar-link">
                 <span class="sidebar-icon">&#127891;</span> Lectures
             </a>
@@ -519,26 +555,26 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <div class="sidebar-divider"></div>
 
-        <!-- Modules sidebar links -->
+        <!-- Welcome Module contents -->
         <div class="sidebar-section">
-            <div class="sidebar-label">Modules</div>
-            <a href="#welcome" class="sidebar-link active" onclick="switchTab('welcome')">
-                <span class="sidebar-icon">&#9733;</span> Welcome
+            <div class="sidebar-label">Welcome Module</div>
+            <a href="#overview" class="sidebar-link">
+                <span class="sidebar-icon">&#128196;</span> Overview
             </a>
-            <a href="#module1" class="sidebar-link" onclick="switchTab('module1')">
-                <span class="sidebar-icon">1</span> Governance
+            <a href="#videos" class="sidebar-link">
+                <span class="sidebar-icon">&#9654;</span> Welcome Videos
             </a>
-            <a href="#module2" class="sidebar-link" onclick="switchTab('module2')">
-                <span class="sidebar-icon">2</span> Challenging Decisions
+            <a href="#themes" class="sidebar-link">
+                <span class="sidebar-icon">&#9878;</span> Themes &amp; Tensions
             </a>
-            <a href="#module3" class="sidebar-link" onclick="switchTab('module3')">
-                <span class="sidebar-icon">3</span> Athlete Contracts
+            <a href="#objectives" class="sidebar-link">
+                <span class="sidebar-icon">&#127919;</span> Objectives
             </a>
-            <a href="#module4" class="sidebar-link" onclick="switchTab('module4')">
-                <span class="sidebar-icon">4</span> Sports Integrity
+            <a href="#lecture" class="sidebar-link">
+                <span class="sidebar-icon">&#127891;</span> Lecture 1
             </a>
-            <a href="#module5" class="sidebar-link" onclick="switchTab('module5')">
-                <span class="sidebar-icon">5</span> Commercial
+            <a href="#connections" class="sidebar-link">
+                <span class="sidebar-icon">&#128279;</span> Connections
             </a>
         </div>
 
@@ -546,17 +582,17 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- University LMS links -->
         <div class="sidebar-section">
-            <div class="sidebar-label">eLearning</div>
-            <a href="#" class="sidebar-link" target="_blank">
+            <div class="sidebar-label">eLearning (External)</div>
+            <a href="elearning.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128196;</span> Course Outline
             </a>
-            <a href="#" class="sidebar-link" target="_blank">
+            <a href="elearning.html" class="sidebar-link">
                 <span class="sidebar-icon">&#127942;</span> Grades
             </a>
-            <a href="#" class="sidebar-link" target="_blank">
+            <a href="elearning.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128228;</span> Submit Assessment
             </a>
-            <a href="#" class="sidebar-link" target="_blank">
+            <a href="elearning.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128488;</span> Discussion Forums
             </a>
         </div>
@@ -566,483 +602,204 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <!-- Main Content -->
     <main class="portal-main">
 
-        <!-- Page Header -->
-        <div class="page-header">
-            <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; Modules</div>
-            <h1>Modules</h1>
-            <p>Explore the Welcome module and five core modules that make up the course.</p>
+        <!-- Breadcrumb -->
+        <div class="page-breadcrumb">
+            <a href="v1.html">Home</a> &nbsp;/&nbsp;
+            Modules &nbsp;/&nbsp;
+            Welcome Module
         </div>
 
         <!-- Module Tabs -->
         <div class="module-tabs">
-            <button class="module-tab tab-welcome active" onclick="switchTab('welcome')">
-                &#9733; Welcome
-            </button>
-            <button class="module-tab tab-module1" onclick="switchTab('module1')">
-                1 Governance
-            </button>
-            <button class="module-tab tab-module2" onclick="switchTab('module2')">
-                2 Challenging Decisions
-            </button>
-            <button class="module-tab tab-module3" onclick="switchTab('module3')">
-                3 Athlete Contracts
-            </button>
-            <button class="module-tab tab-module4" onclick="switchTab('module4')">
-                4 Sports Integrity
-            </button>
-            <button class="module-tab tab-module5" onclick="switchTab('module5')">
-                5 Commercial
-            </button>
+            <a href="modules.html" class="module-tab tab-welcome active">&#9733; Welcome</a>
+            <a href="module1.html" class="module-tab tab-module1">1 Governance</a>
+            <a href="module2.html" class="module-tab tab-module2">2 Challenging Decisions</a>
+            <a href="module3.html" class="module-tab tab-module3">3 Athlete Contracts</a>
+            <a href="module4.html" class="module-tab tab-module4">4 Sports Integrity</a>
+            <a href="module5.html" class="module-tab tab-module5">5 Commercial</a>
         </div>
 
-        <!-- WELCOME PANEL -->
-        <div class="module-panel active" id="panel-welcome">
-            <div class="module-hero" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">
-                <div class="module-hero-label">Welcome</div>
-                <h1>Welcome to Sports Law</h1>
-                <p class="module-hero-desc">Get oriented with the course, meet your lecturer, and understand how the unit is structured.</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#9654; 6 Welcome Videos</span>
-                    <span class="hero-stat">&#127891; 1 Lecture</span>
-                    <span class="hero-stat">&#128214; Week 1</span>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>Before you begin the substantive modules, take the time to watch these introductory videos. They introduce your lecturer, explain how the course is structured, and give you a sense of what sports law is all about — the tensions, the themes, and the real-world questions that make this area of law so distinctive. You'll learn how lectures, tutorials, and assessments fit together, what to expect from the platform, and how to get the most out of your study.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Welcome Videos</h2>
-                <div class="content-cards">
-                    <a href="welcome.html#video-1" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 1</div>
-                            <div class="content-card-title">Meet Your Lecturer</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="welcome.html#video-2" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 2</div>
-                            <div class="content-card-title">How the Course Works</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="welcome.html#video-3" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 3</div>
-                            <div class="content-card-title">What is a Sports Lawyer?</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="welcome.html#video-4" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 4</div>
-                            <div class="content-card-title">Key Themes &amp; Tensions</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="welcome.html#video-5" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 5</div>
-                            <div class="content-card-title">Intro to Sport</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="welcome.html#video-6" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Video 6</div>
-                            <div class="content-card-title">Lecture Architecture &amp; How to Listen</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Lecture</h2>
-                <div class="content-cards">
-                    <a href="lecture1.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 1</div>
-                            <div class="content-card-title">What is Sports Law?</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <a href="welcome.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Welcome Module &#8594;</a>
+        <!-- Module Hero Banner -->
+        <div class="module-hero" id="overview">
+            <div class="module-hero-label">Welcome Module &middot; Week 1</div>
+            <h1>Welcome to Sports Law</h1>
+            <p class="module-hero-desc">A conceptual and structural overview of the course and the legal environment in which sport operates — how the unit fits together, what sports lawyers actually do, and how to think about law in sporting contexts.</p>
+            <div class="module-hero-stats">
+                <span class="hero-stat">&#9654; 6 Welcome Videos</span>
+                <span class="hero-stat">&#127891; 1 Lecture</span>
+                <span class="hero-stat">&#128214; Week 1</span>
             </div>
         </div>
 
-        <!-- MODULE 1 PANEL -->
-        <div class="module-panel" id="panel-module1">
-            <div class="module-hero" style="background: linear-gradient(135deg, #0B1D3A, #1A3A6B);">
-                <div class="module-hero-label">Module 1</div>
-                <h1>Sports Governance</h1>
-                <p class="module-hero-desc">How is sport governed, and how do sporting organisations create the rules and regulatory structures that operate alongside the general law?</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#127891; 1 Lecture</span>
-                    <span class="hero-stat">&#128172; 1 Tutorial</span>
-                    <span class="hero-stat">&#128214; Weeks 2–3</span>
-                </div>
-            </div>
+        <!-- Overview Section -->
+        <div class="module-section">
+            <h2>Module Overview</h2>
+            <p>The Welcome Module provides a conceptual and structural overview of the course and the legal environment in which sport operates. Rather than introducing doctrine, this module is designed to re-orient how you think about law in sporting contexts and to establish the framework that underpins all later topics.</p>
+            <p>Sport is presented as a fast-moving, high-pressure environment in which legal decisions are made under commercial, regulatory, and reputational constraints. You are encouraged to move beyond seeing sports law as a collection of interesting disputes, and instead to understand it as a system of decision-making, risk management, and governance.</p>
+            <p>This module also introduces sports governance and sports integrity as two foundational pillars of modern sports law. Governance explains how authority is created, exercised, and reviewed within sporting systems, while integrity focuses on how sport protects fairness, safety, trust, and legitimacy through regulatory frameworks. Together, these concepts explain why sport relies so heavily on private rules, internal tribunals, and contractual consent — and why legal challenges in sport often turn on process, proportionality, and system design rather than simple rule-breaking.</p>
+            <p>By the end of this module, you should have a clear understanding of how the course fits together, what sports lawyers actually do, and why sports law must be studied as an interconnected legal system rather than a series of isolated topics.</p>
+        </div>
 
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>This module examines the governance of sport: how sporting organisations are constituted, where they derive their authority, and how they create the rules and regulatory structures that operate alongside the general law.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Key Topics</h2>
-                <p>Regulatory pyramid, governance structures, natural justice, court intervention in sport, sources of authority</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Lecture</h2>
-                <div class="content-cards">
-                    <a href="lecture2.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #0B1D3A, #1A3A6B);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 2</div>
-                            <div class="content-card-title">Sports Governance</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Tutorial</h2>
-                <div class="content-cards">
-                    <a href="tutorial1.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 1</div>
-                            <div class="content-card-title">Sports Governance</div>
-                            <div class="content-card-desc">Week 2</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Connection to Course</h2>
-                <p>This module provides the essential foundation for everything that follows. The governance frameworks and principles of natural justice you learn here will be directly relevant when you study challenging sporting decisions (Module 2), player contracts (Module 3), integrity matters (Module 4), and commercial arrangements (Module 5).</p>
-            </div>
-
-            <div class="module-section">
-                <a href="module1.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Full Module Page &#8594;</a>
+        <!-- Welcome Videos -->
+        <div class="module-section" id="videos">
+            <h2>Welcome Videos</h2>
+            <p>The Welcome videos explain how the course is structured, why sports law is treated as applied law, and what you are being trained to do by the end of the subject. They also introduce what sports lawyers actually do in practice and where they sit within the sports ecosystem — across governing bodies, leagues, clubs, athletes, agents, broadcasters, sponsors, integrity units, and regulators. Their work is primarily advisory and preventative, centred on contracts, regulatory design, governance frameworks, and internal dispute resolution, rather than courtroom litigation. Understanding this professional reality is essential to understanding why sports law functions differently from many other areas of law.</p>
+            <div class="content-cards">
+                <a href="welcome.html#video-1" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 1</div>
+                        <div class="content-card-title">Meet Your Lecturer</div>
+                        <div class="content-card-desc">Meet Michael Bricknell — practising sports lawyer, university lecturer, and your guide through the law of sport.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
+                <a href="welcome.html#video-2" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 2</div>
+                        <div class="content-card-title">How the Course Works</div>
+                        <div class="content-card-desc">How lectures, tutorials, and assessments are structured, what to expect each week, and how to use this platform.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
+                <a href="welcome.html#video-3" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 3</div>
+                        <div class="content-card-title">What is a Sports Lawyer?</div>
+                        <div class="content-card-desc">What does a sports lawyer actually do? The roles, the work, and where lawyers sit within the sports ecosystem.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
+                <a href="welcome.html#video-4" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 4</div>
+                        <div class="content-card-title">Key Themes &amp; Tensions</div>
+                        <div class="content-card-desc">The recurring tensions that run through sports law — your intellectual map for the whole subject.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
+                <a href="welcome.html#video-5" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 5</div>
+                        <div class="content-card-title">Intro to Sport</div>
+                        <div class="content-card-desc">A brief orientation to the world of sport — its structures, stakeholders, and the features that make it a unique context for legal analysis.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
+                <a href="welcome.html#video-6" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Video 6</div>
+                        <div class="content-card-title">Lecture Architecture &amp; How to Listen</div>
+                        <div class="content-card-desc">How each lecture is structured, what to focus on, and how to get the most out of the recordings — essential before you start the modules.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
             </div>
         </div>
 
-        <!-- MODULE 2 PANEL -->
-        <div class="module-panel" id="panel-module2">
-            <div class="module-hero" style="background: linear-gradient(135deg, #B45309, #D97706);">
-                <div class="module-hero-label">Module 2</div>
-                <h1>Challenging Decisions</h1>
-                <p class="module-hero-desc">When can sporting decisions be challenged in court, and what role does the Court of Arbitration for Sport play?</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#127891; 1 Lecture</span>
-                    <span class="hero-stat">&#128172; 1 Tutorial</span>
-                    <span class="hero-stat">&#128214; Week 4</span>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>This module examines what happens when participants in sport are dissatisfied with decisions made by sporting bodies. Whether it's a disciplinary tribunal imposing a ban, a selection panel overlooking an athlete, or a governing body changing its rules, the question is the same: what can be done about it? You will explore the internal dispute resolution mechanisms that sporting organisations use and the circumstances in which the general law provides an external avenue of challenge.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Key Topics</h2>
-                <p>Judicial review, CAS, administrative law in sport, privative clauses, domestic tribunals</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Lectures</h2>
-                <div class="content-cards">
-                    <a href="lecture3.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #B45309, #D97706);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 3</div>
-                            <div class="content-card-title">Sports Discipline &amp; Disputes</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Tutorial</h2>
-                <div class="content-cards">
-                    <a href="tutorial2.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 2</div>
-                            <div class="content-card-title">Sports Discipline &amp; Disputes</div>
-                            <div class="content-card-desc">Week 4</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Connection to Course</h2>
-                <p>Building directly on the governance frameworks from Module 1, this module examines what happens when those frameworks produce decisions that athletes or administrators want to challenge. The principles you learn here — particularly around judicial review and CAS — will resurface when you study integrity matters and disciplinary proceedings in Module 4.</p>
-            </div>
-
-            <div class="module-section">
-                <a href="module2.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Full Module Page &#8594;</a>
+        <!-- Key Themes & Tensions -->
+        <div class="module-section" id="themes">
+            <h2>Key Themes &amp; Tensions</h2>
+            <div class="themes-panel">
+                <p>These recurring themes provide an intellectual map for the subject and explain why legal issues in sport arise repeatedly across different contexts:</p>
+                <ul class="themes-list">
+                    <li><span class="theme-bullet">&#8226;</span> Autonomy versus state oversight</li>
+                    <li><span class="theme-bullet">&#8226;</span> Commercial expansion versus sporting integrity</li>
+                    <li><span class="theme-bullet">&#8226;</span> Athlete rights versus institutional authority</li>
+                    <li><span class="theme-bullet">&#8226;</span> National law versus global regulation</li>
+                    <li><span class="theme-bullet">&#8226;</span> Rules versus discretion</li>
+                    <li><span class="theme-bullet">&#8226;</span> Transparency versus confidentiality</li>
+                    <li><span class="theme-bullet">&#8226;</span> Innovation versus stability</li>
+                    <li><span class="theme-bullet">&#8226;</span> Cooperation versus competition</li>
+                </ul>
             </div>
         </div>
 
-        <!-- MODULE 3 PANEL -->
-        <div class="module-panel" id="panel-module3">
-            <div class="module-hero" style="background: linear-gradient(135deg, #1E4D6E, #2D6B8F);">
-                <div class="module-hero-label">Module 3</div>
-                <h1>Athlete, Contracts &amp; Control</h1>
-                <p class="module-hero-desc">How are player relationships structured, and what legal mechanisms govern the balance of power between athletes and sporting organisations?</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#127891; 2 Lectures</span>
-                    <span class="hero-stat">&#128172; 1 Tutorial</span>
-                    <span class="hero-stat">&#128214; Weeks 5–6</span>
-                </div>
-            </div>
+        <!-- Learning Objectives -->
+        <div class="module-section" id="objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="objectives-list">
+                <li>
+                    <span class="obj-icon">1</span>
+                    <span>Understand how the course is structured and why sports law is treated as applied law.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">2</span>
+                    <span>Identify the role of sports lawyers and where they operate within the sports ecosystem.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">3</span>
+                    <span>Recognise the key themes and recurring tensions that shape modern sports law.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">4</span>
+                    <span>Understand the foundational role of governance and integrity in sporting regulation.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">5</span>
+                    <span>Understand the meaning and scope of sports law, and recognise the dual structure of private sporting rules and public legal systems.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">6</span>
+                    <span>Develop a systems-based perspective on how law operates in sport.</span>
+                </li>
+            </ul>
+        </div>
 
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>This module turns to the contractual frameworks that govern the relationship between athletes and the organisations they play for. Player contracts in professional sport are unlike most employment agreements — they involve restraints on movement, salary caps, draft systems, and transfer mechanisms that would be unusual in any other industry. The module then moves to athlete representation — the legal and regulatory frameworks governing sports agents, managers, and intermediaries.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Key Topics</h2>
-                <p>Player contracts, restraint of trade, salary caps, transfer systems, collective bargaining</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Lectures</h2>
-                <div class="content-cards">
-                    <a href="lecture4.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1E4D6E, #2D6B8F);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 4</div>
-                            <div class="content-card-title">Player Contracting</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="lecture5.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1E4D6E, #2D6B8F);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 5</div>
-                            <div class="content-card-title">Player Representation &amp; Agency</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Tutorials</h2>
-                <div class="content-cards">
-                    <a href="tutorial3.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 3</div>
-                            <div class="content-card-title">Athletes, Contract &amp; Control</div>
-                            <div class="content-card-desc">Week 5</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Connection to Course</h2>
-                <p>The contractual frameworks you study here have direct implications for the integrity issues covered in Module 4 (where player conduct obligations intersect with anti-doping and match-fixing regulation) and the commercial arrangements in Module 5 (where player image rights and sponsorship obligations are typically governed by contract).</p>
-            </div>
-
-            <div class="module-section">
-                <a href="module3.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Full Module Page &#8594;</a>
+        <!-- Lecture -->
+        <div class="module-section" id="lecture">
+            <h2>Lecture 1: What is Sports Law?</h2>
+            <p>Lecture 1 introduces the concept of sports law and explores why it exists as a distinct, interdisciplinary area. Unlike traditional legal fields defined by subject matter (such as criminal law or contract law), sports law is defined by context — the unique combination of legal, regulatory, commercial, and organisational issues that arise within sport.</p>
+            <p>Sports law draws on many areas of general law: contract (athlete agreements, sponsorships), tort (player safety and negligence), competition and consumer law (broadcast markets and fan protection), intellectual property (branding, content, athlete image), employment law (coaching and playing contracts), and administrative law (selection appeals and tribunal review). On top of these sit sports-specific rules and regulatory frameworks — codes of conduct, integrity policies, anti-doping rules, disciplinary systems, and the constitutions of sporting bodies. The interaction between private sporting rules and public legal systems is at the heart of this unit: sporting organisations develop and enforce their own rules, yet they remain subject to the laws of the jurisdictions in which they operate.</p>
+            <div class="content-cards">
+                <a href="lecture1.html" class="content-card">
+                    <div class="content-card-icon">&#9654;</div>
+                    <div class="content-card-info">
+                        <div class="content-card-label">Lecture 1</div>
+                        <div class="content-card-title">What is Sports Law?</div>
+                        <div class="content-card-desc">Context, scope, and the dual structure of sporting regulation — why sport requires specialised legal frameworks.</div>
+                    </div>
+                    <span class="content-card-arrow">&#8594;</span>
+                </a>
             </div>
         </div>
 
-        <!-- MODULE 4 PANEL -->
-        <div class="module-panel" id="panel-module4">
-            <div class="module-hero" style="background: linear-gradient(135deg, #8B1A1A, #B82828);">
-                <div class="module-hero-label">Module 4</div>
-                <h1>Sports Integrity &amp; Regulation</h1>
-                <p class="module-hero-desc">How do sports maintain their integrity, and what legal frameworks exist to combat doping, match-fixing, and corruption?</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#127891; 3 Lectures</span>
-                    <span class="hero-stat">&#128172; 1 Tutorial</span>
-                    <span class="hero-stat">&#128214; Weeks 9–11</span>
+        <!-- Connections -->
+        <div class="module-section" id="connections">
+            <h2>How This Module Connects</h2>
+            <div class="connection-cards">
+                <div class="connection-card">
+                    <h3><span class="connection-icon">&#8594;</span> Module 1: Governance &amp; Systems</h3>
+                    <p>The governance pillar introduced this week — how authority is created, exercised, and reviewed within sporting systems — is developed in full in Module 1.</p>
                 </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>This module addresses the legal and regulatory frameworks designed to protect the integrity of sport. Anti-doping law is system-preservation technology — a regulatory architecture designed to protect the integrity of competition as a commercial and cultural asset. Sport and wagering are structurally entangled — commercially, economically, and legally — in ways that cannot be cleanly separated. And the law permits sport to be violent in ways it would prohibit in almost every other context. Understanding how integrity is regulated across these dimensions is central to advising in the sports industry.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Key Topics</h2>
-                <p>WADA Code, anti-doping, strict liability, match-fixing, disciplinary proceedings, integrity frameworks, CAS appeals</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Lectures</h2>
-                <div class="content-cards">
-                    <a href="lecture6.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #8B1A1A, #B82828);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 6</div>
-                            <div class="content-card-title">Clean Sport</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="lecture7.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #8B1A1A, #B82828);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 7</div>
-                            <div class="content-card-title">Corruption &amp; Wagering</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="lecture8.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #8B1A1A, #B82828);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 8</div>
-                            <div class="content-card-title">High Risk Sport &amp; Permitted Harm</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
+                <div class="connection-card">
+                    <h3><span class="connection-icon">&#8594;</span> Module 4: Sports Integrity &amp; Regulation</h3>
+                    <p>The integrity pillar — how sport protects fairness, safety, trust, and legitimacy — underpins Module 4's treatment of clean sport, corruption, and permitted harm.</p>
                 </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Tutorial</h2>
-                <div class="content-cards">
-                    <a href="tutorial4.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 4</div>
-                            <div class="content-card-title">Clean Sport &amp; Corruption</div>
-                            <div class="content-card-desc">Week 9</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
+                <div class="connection-card">
+                    <h3><span class="connection-icon">&#9878;</span> Themes Across the Course</h3>
+                    <p>The recurring tensions introduced this week resurface in every module. Use them as your map: when a new topic arises, ask which tensions are in play.</p>
                 </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Connection to Course</h2>
-                <p>This module is directly connected to your assessment. The Sandpapergate scenario you will work with for Assessment 1 is a real-world example of the disciplinary processes and integrity frameworks studied in this module. The principles of natural justice from Module 1 and the challenge mechanisms from Module 2 are both directly applicable here.</p>
-            </div>
-
-            <div class="module-section">
-                <a href="module4.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Full Module Page &#8594;</a>
+                <div class="connection-card">
+                    <h3><span class="connection-icon">&#127891;</span> Lecture 1 Link</h3>
+                    <p>Lecture 1 builds directly on the Welcome videos, defining sports law and introducing the dual structure of private rules and public legal systems that recurs throughout the unit.</p>
+                </div>
             </div>
         </div>
 
-        <!-- MODULE 5 PANEL -->
-        <div class="module-panel" id="panel-module5">
-            <div class="module-hero" style="background: linear-gradient(135deg, #5B2D8E, #7C3AED);">
-                <div class="module-hero-label">Module 5</div>
-                <h1>Commercialising Sports Rights</h1>
-                <p class="module-hero-desc">How are the commercial dimensions of sport structured and protected?</p>
-                <div class="module-hero-stats">
-                    <span class="hero-stat">&#127891; 3 Lectures</span>
-                    <span class="hero-stat">&#128172; 2 Tutorials</span>
-                    <span class="hero-stat">&#128214; Weeks 12–13</span>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Overview</h2>
-                <p>Every governance structure, every integrity system, and every athlete relationship studied in this course depends on commercial revenue to function. This module examines how that revenue enters sport, what it demands in return, and how contracts reconcile competing motivations — from broadcasting deals that reshape when competitions are played, through to sponsorship contracts where the core asset is association, not intellectual property.</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Key Topics</h2>
-                <p>Sponsorship agreements, ambush marketing, media rights, broadcasting, IP, trademarks, image rights</p>
-            </div>
-
-            <div class="module-section">
-                <h2>Lectures</h2>
-                <div class="content-cards">
-                    <a href="lecture9.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #5B2D8E, #7C3AED);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 9</div>
-                            <div class="content-card-title">From Right to Contract</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="lecture10.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #5B2D8E, #7C3AED);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 10</div>
-                            <div class="content-card-title">Sports Media</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="lecture11.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #5B2D8E, #7C3AED);">&#9654;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Lecture 11</div>
-                            <div class="content-card-title">Sports Sponsorship</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Tutorials</h2>
-                <div class="content-cards">
-                    <a href="tutorial5.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 5</div>
-                            <div class="content-card-title">Commercial Contracting</div>
-                            <div class="content-card-desc">Week 12</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                    <a href="tutorial6.html" class="content-card">
-                        <div class="content-card-icon" style="background: linear-gradient(135deg, #1B7A5A, #22976E);">&#128172;</div>
-                        <div class="content-card-info">
-                            <div class="content-card-label">Tutorial 6</div>
-                            <div class="content-card-title">Sports Media Rights &amp; Sponsorship</div>
-                            <div class="content-card-desc">Week 13</div>
-                        </div>
-                        <span class="content-card-arrow">&#8594;</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="module-section">
-                <h2>Connection to Course</h2>
-                <p>This module brings together many of the themes from earlier in the course. The contractual principles from Module 3 underpin sponsorship and broadcasting agreements. The governance structures from Module 1 determine who has the authority to grant commercial rights. And the integrity frameworks from Module 4 are increasingly intersecting with commercial interests as sports betting and sponsorship create new regulatory challenges.</p>
-            </div>
-
-            <div class="module-section">
-                <a href="module5.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-emerald); font-weight: 600;">Go to Full Module Page &#8594;</a>
-            </div>
+        <!-- Module Navigation -->
+        <div class="module-nav">
+            <a href="#" class="module-nav-btn disabled">
+                &#8592;&nbsp; <div><span>Start of</span><br>Course</div>
+            </a>
+            <a href="module1.html" class="module-nav-btn">
+                <div style="text-align:right;"><span>Next Module</span><br>Governance &amp; Systems</div> &nbsp;&#8594;
+            </a>
         </div>
 
         <!-- Footer -->
@@ -1059,73 +816,37 @@ h1, h2, h3, h4 { line-height: 1.2; }
         const html = document.documentElement;
         if (localStorage.getItem('theme') === 'dark') {
             html.setAttribute('data-theme', 'dark');
-            toggle.textContent = '\u2600';
+            toggle.textContent = '☀';
         }
         toggle.addEventListener('click', () => {
             const isDark = html.getAttribute('data-theme') === 'dark';
             if (isDark) {
                 html.removeAttribute('data-theme');
                 localStorage.setItem('theme', 'light');
-                toggle.textContent = '\u263E';
+                toggle.textContent = '☾';
             } else {
                 html.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
-                toggle.textContent = '\u2600';
+                toggle.textContent = '☀';
             }
         });
 
-        // Tab switching functionality
-        function switchTab(tabName) {
-            // Hide all panels
-            const panels = document.querySelectorAll('.module-panel');
-            panels.forEach(panel => panel.classList.remove('active'));
-
-            // Show selected panel
-            const selectedPanel = document.getElementById('panel-' + tabName);
-            if (selectedPanel) {
-                selectedPanel.classList.add('active');
-            }
-
-            // Update active tab styling
-            const tabs = document.querySelectorAll('.module-tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-
-            const activeTab = document.querySelector(`.module-tab.tab-${tabName}`);
-            if (activeTab) {
-                activeTab.classList.add('active');
-            }
-
-            // Update sidebar links
-            const sidebarLinks = document.querySelectorAll('.sidebar-section:nth-child(3) .sidebar-link');
-            sidebarLinks.forEach(link => link.classList.remove('active'));
-
-            const activeSidebarLink = document.querySelector(`.sidebar-section:nth-child(3) .sidebar-link[href="#${tabName}"]`);
-            if (activeSidebarLink) {
-                activeSidebarLink.classList.add('active');
-            }
-
-            // Update URL hash
-            window.location.hash = tabName;
-
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-
-        // On page load, check for hash and show corresponding module
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash && (hash === 'welcome' || hash.startsWith('module'))) {
-                switchTab(hash);
-            }
-        });
-
-        // Handle hash changes
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash && (hash === 'welcome' || hash.startsWith('module'))) {
-                switchTab(hash);
-            }
-        });
+        // Highlight active sidebar section on scroll
+        const sections = document.querySelectorAll('.module-section, .module-hero');
+        const sidebarLinks = document.querySelectorAll('.sidebar-section:nth-child(3) .sidebar-link');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sidebarLinks.forEach(link => link.classList.remove('active'));
+                    const id = entry.target.id;
+                    if (id) {
+                        const activeLink = document.querySelector(`.sidebar-link[href="#${id}"]`);
+                        if (activeLink) activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-64px 0px 0px 0px' });
+        sections.forEach(s => { if (s.id) observer.observe(s); });
     </script>
 
 

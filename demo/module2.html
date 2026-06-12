@@ -153,13 +153,52 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-sidebar > :nth-last-child(2) { margin-top: auto; }
 
 /* Main Content Area */
-.portal-main { flex: 1; padding: 32px 40px; min-width: 0; max-width: 860px; }
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
 
 /* Page Header */
 .page-breadcrumb {
     font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
 }
 .page-breadcrumb a { font-size: 0.78rem; }
+
+/* Module Tabs */
+.module-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; width: 100%;
+}
+.module-tab {
+    padding: 12px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+    color: rgba(255,255,255,0.8); cursor: pointer; transition: all var(--transition);
+    text-decoration: none; border: none; border-bottom: 3px solid transparent;
+    background: rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .module-tab { background: rgba(255,255,255,0.05); }
+.module-tab:hover { color: rgba(255,255,255,0.95); opacity: 0.9; }
+.module-tab.active { color: var(--color-white); opacity: 1; border-bottom-color: currentColor; }
+.tab-welcome { background: rgba(27, 122, 90, 0.2); color: var(--color-white); }
+.tab-welcome.active { background: #1B7A5A; }
+.tab-module1 { background: rgba(11, 29, 58, 0.2); color: var(--color-white); }
+.tab-module1.active { background: #0B1D3A; }
+.tab-module2 { background: rgba(180, 83, 9, 0.2); color: var(--color-white); }
+.tab-module2.active { background: #B45309; }
+.tab-module3 { background: rgba(30, 77, 110, 0.2); color: var(--color-white); }
+.tab-module3.active { background: #1E4D6E; }
+.tab-module4 { background: rgba(139, 26, 26, 0.2); color: var(--color-white); }
+.tab-module4.active { background: #8B1A1A; }
+.tab-module5 { background: rgba(91, 45, 142, 0.2); color: var(--color-white); }
+.tab-module5.active { background: #5B2D8E; }
+
+/* Central tension panel */
+.tension-panel {
+    background: var(--color-bg-alt); border-left: 4px solid var(--module-color);
+    border-radius: 0 10px 10px 0; padding: 22px 26px;
+}
+.tension-panel p { font-size: 0.92rem; line-height: 1.7; color: var(--color-text); margin-bottom: 0; }
+.tension-tagline {
+    font-style: italic; color: var(--color-text-light) !important;
+    border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: 14px;
+}
+
+
 
 /* Module Hero Banner */
 .module-hero {
@@ -504,6 +543,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#overview" class="sidebar-link active">
                 <span class="sidebar-icon">&#128196;</span> Overview
             </a>
+            <a href="#why" class="sidebar-link">
+                <span class="sidebar-icon">&#128161;</span> Why It Matters
+            </a>
+            <a href="#operates" class="sidebar-link">
+                <span class="sidebar-icon">&#9881;</span> How It Operates
+            </a>
+            <a href="#tension" class="sidebar-link">
+                <span class="sidebar-icon">&#9878;</span> Central Tension
+            </a>
             <a href="#objectives" class="sidebar-link">
                 <span class="sidebar-icon">&#127919;</span> Objectives
             </a>
@@ -549,6 +597,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
             Module 2: Challenging Decisions
         </div>
 
+        <!-- Module Tabs -->
+        <div class="module-tabs">
+            <a href="modules.html" class="module-tab tab-welcome">&#9733; Welcome</a>
+            <a href="module1.html" class="module-tab tab-module1">1 Governance</a>
+            <a href="module2.html" class="module-tab tab-module2 active">2 Challenging Decisions</a>
+            <a href="module3.html" class="module-tab tab-module3">3 Athlete Contracts</a>
+            <a href="module4.html" class="module-tab tab-module4">4 Sports Integrity</a>
+            <a href="module5.html" class="module-tab tab-module5">5 Commercial</a>
+        </div>
+
         <!-- Module Hero Banner -->
         <div class="module-hero" id="overview">
             <div class="module-hero-label">Module 2 of 5</div>
@@ -564,11 +622,32 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Overview Section -->
         <div class="module-section">
             <h2>Module Overview</h2>
-            <p>This module examines what happens when participants in sport are dissatisfied with decisions made by sporting bodies. Whether it's a disciplinary tribunal imposing a ban, a selection panel overlooking an athlete, or a governing body changing its rules, the question is the same: what can be done about it?
+            <p>Every dispute in sports law — whether about discipline, eligibility, selection, integrity, contracts, or commercial regulation — begins only after a more basic question has been answered: who has the authority to decide, and on what basis? This module examines what happens after governance power is exercised — when rules are enforced, sanctions are imposed, and decisions are challenged.</p>
+            <p>It builds directly on Sports Governance. If governance explains how authority is created, discipline explains how that authority is used, and disputes explain how its limits are exposed.</p>
+            <p>Modern sport enforces its rules primarily through internal disciplinary systems — commissions, tribunals, appeal boards, and arbitration — rather than courts. These bodies exercise powers that can determine careers, reshape competitions, and impose sanctions with enormous economic and reputational consequences.</p>
+        </div>
 
-You will explore the internal dispute resolution mechanisms that sporting organisations use — from appeals processes to arbitration panels — and the circumstances in which the general law provides an external avenue of challenge. The module examines the grounds on which sporting decisions can be reviewed, including procedural fairness, jurisdictional error, and the principles of natural justice.
+        <!-- Why It Matters -->
+        <div class="module-section" id="why">
+            <h2>Why Discipline &amp; Disputes Matter</h2>
+            <p>Discipline and disputes are not peripheral to sports law. They are where governance becomes real. A regulatory system that cannot enforce its rules, justify its sanctions, or withstand challenge is not a legal system at all.</p>
+            <p>Discipline is the mechanism through which private sporting authority is made effective; disputes are the mechanism through which its legitimacy is tested.</p>
+        </div>
 
-By the end of this module, you will understand the landscape of sports dispute resolution in Australia and internationally, including the role of the Court of Arbitration for Sport (CAS), and be able to advise on the options available to a party aggrieved by a sporting decision.</p>
+        <!-- How It Operates -->
+        <div class="module-section" id="operates">
+            <h2>How Disciplinary Systems Operate</h2>
+            <p>We examine how disciplinary authority operates as internal enforcement, not punishment: discipline in sport is about enforcing the conditions of participation in a private system. We analyse the threshold role of jurisdiction, the allocation of onus and standard of proof, and the purposes and principles that structure sporting sanctioning. Particular attention is paid to the distinction between legality and correctness — why appeal bodies and courts review process and reasoning rather than simply re-deciding outcomes.</p>
+            <p>Using Premier League PSR cases as a sustained worked example, we examine how enforcement decisions are challenged internally, what appeal bodies actually review, and why most challenges fail even when outcomes appear harsh. We also consider when disputes escape the internal system entirely — through courts, arbitration law, or competition law — and what that reveals about the fragility of sporting autonomy.</p>
+        </div>
+
+        <!-- Central Tension -->
+        <div class="module-section" id="tension">
+            <h2>The Central Tension</h2>
+            <div class="tension-panel">
+                <p>Sport disciplines its participants not by right, but by persuading the law that its systems are fair, rational, and legitimate. That tolerance is conditional — and discipline and disputes are where that condition is most severely tested. Understanding why some systems withstand scrutiny, and why others collapse into reform, litigation, or regulatory intervention, is what this module is about.</p>
+                <p class="tension-tagline">A system that cannot enforce its own rules is not a system at all — and one that cannot justify its enforcement will not remain one for long.</p>
+            </div>
         </div>
 
         <!-- Learning Objectives -->
@@ -577,23 +656,43 @@ By the end of this module, you will understand the landscape of sports dispute r
             <ul class="objectives-list">
                 <li>
                     <span class="obj-icon">1</span>
-                    <span>Identify and explain the internal dispute resolution mechanisms commonly used by sporting organisations, including appeals, mediation, and arbitration.</span>
+                    <span>Explain how sporting discipline operates as internal enforcement rather than punishment.</span>
                 </li>
                 <li>
                     <span class="obj-icon">2</span>
-                    <span>Analyse the grounds on which a sporting decision may be challenged, both internally and through the courts.</span>
+                    <span>Identify the different dimensions of jurisdiction in sports law and explain why jurisdiction is always the threshold question.</span>
                 </li>
                 <li>
                     <span class="obj-icon">3</span>
-                    <span>Apply the principles of natural justice and procedural fairness to evaluate whether a sporting tribunal's process was legally sound.</span>
+                    <span>Analyse how disciplinary authority is derived contractually rather than statutorily.</span>
                 </li>
                 <li>
                     <span class="obj-icon">4</span>
-                    <span>Explain the role and jurisdiction of the Court of Arbitration for Sport (CAS) and its significance in international sports disputes.</span>
+                    <span>Distinguish between misconduct, enforcement, and disputes, and explain why they are analytically separate.</span>
                 </li>
                 <li>
                     <span class="obj-icon">5</span>
-                    <span>Evaluate the tension between sporting autonomy and legal oversight in the context of disciplinary and selection disputes.</span>
+                    <span>Apply purposes and principles of sporting sanctioning to evaluate disciplinary outcomes.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">6</span>
+                    <span>Explain the distinction between legality and correctness, and why it shapes appeals and judicial restraint.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">7</span>
+                    <span>Analyse how onus and standard of proof operate in sporting disciplinary systems.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">8</span>
+                    <span>Evaluate when and why courts intervene in sporting disputes despite arbitration and internal review mechanisms.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">9</span>
+                    <span>Assess the legitimacy of a disciplinary system under pressure from high-stakes enforcement.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">10</span>
+                    <span>Apply the course's core question — how far should the law allow sporting autonomy to go? — to discipline, disputes, and sanctioning frameworks.</span>
                 </li>
             </ul>
         </div>

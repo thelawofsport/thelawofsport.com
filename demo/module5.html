@@ -153,13 +153,52 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-sidebar > :nth-last-child(2) { margin-top: auto; }
 
 /* Main Content Area */
-.portal-main { flex: 1; padding: 32px 40px; min-width: 0; max-width: 860px; }
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
 
 /* Page Header */
 .page-breadcrumb {
     font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
 }
 .page-breadcrumb a { font-size: 0.78rem; }
+
+/* Module Tabs */
+.module-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; width: 100%;
+}
+.module-tab {
+    padding: 12px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+    color: rgba(255,255,255,0.8); cursor: pointer; transition: all var(--transition);
+    text-decoration: none; border: none; border-bottom: 3px solid transparent;
+    background: rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .module-tab { background: rgba(255,255,255,0.05); }
+.module-tab:hover { color: rgba(255,255,255,0.95); opacity: 0.9; }
+.module-tab.active { color: var(--color-white); opacity: 1; border-bottom-color: currentColor; }
+.tab-welcome { background: rgba(27, 122, 90, 0.2); color: var(--color-white); }
+.tab-welcome.active { background: #1B7A5A; }
+.tab-module1 { background: rgba(11, 29, 58, 0.2); color: var(--color-white); }
+.tab-module1.active { background: #0B1D3A; }
+.tab-module2 { background: rgba(180, 83, 9, 0.2); color: var(--color-white); }
+.tab-module2.active { background: #B45309; }
+.tab-module3 { background: rgba(30, 77, 110, 0.2); color: var(--color-white); }
+.tab-module3.active { background: #1E4D6E; }
+.tab-module4 { background: rgba(139, 26, 26, 0.2); color: var(--color-white); }
+.tab-module4.active { background: #8B1A1A; }
+.tab-module5 { background: rgba(91, 45, 142, 0.2); color: var(--color-white); }
+.tab-module5.active { background: #5B2D8E; }
+
+/* Central tension panel */
+.tension-panel {
+    background: var(--color-bg-alt); border-left: 4px solid var(--module-color);
+    border-radius: 0 10px 10px 0; padding: 22px 26px;
+}
+.tension-panel p { font-size: 0.92rem; line-height: 1.7; color: var(--color-text); margin-bottom: 0; }
+.tension-tagline {
+    font-style: italic; color: var(--color-text-light) !important;
+    border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: 14px;
+}
+
+
 
 /* Module Hero Banner */
 .module-hero {
@@ -504,6 +543,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#overview" class="sidebar-link active">
                 <span class="sidebar-icon">&#128196;</span> Overview
             </a>
+            <a href="#why" class="sidebar-link">
+                <span class="sidebar-icon">&#128161;</span> Why It Matters
+            </a>
+            <a href="#operates" class="sidebar-link">
+                <span class="sidebar-icon">&#9881;</span> How It Operates
+            </a>
+            <a href="#tension" class="sidebar-link">
+                <span class="sidebar-icon">&#9878;</span> Central Tension
+            </a>
             <a href="#objectives" class="sidebar-link">
                 <span class="sidebar-icon">&#127919;</span> Objectives
             </a>
@@ -549,6 +597,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
             Module 5: Commercialising Sports Rights
         </div>
 
+        <!-- Module Tabs -->
+        <div class="module-tabs">
+            <a href="modules.html" class="module-tab tab-welcome">&#9733; Welcome</a>
+            <a href="module1.html" class="module-tab tab-module1">1 Governance</a>
+            <a href="module2.html" class="module-tab tab-module2">2 Challenging Decisions</a>
+            <a href="module3.html" class="module-tab tab-module3">3 Athlete Contracts</a>
+            <a href="module4.html" class="module-tab tab-module4">4 Sports Integrity</a>
+            <a href="module5.html" class="module-tab tab-module5 active">5 Commercial</a>
+        </div>
+
         <!-- Module Hero Banner -->
         <div class="module-hero" id="overview">
             <div class="module-hero-label">Module 5 of 5</div>
@@ -564,11 +622,33 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Overview Section -->
         <div class="module-section">
             <h2>Module Overview</h2>
-            <p>Every governance structure, every integrity system, and every athlete relationship studied in this course depends on commercial revenue to function. This module examines how that revenue enters sport, what it demands in return, and how contracts reconcile competing motivations.
+            <p>Every governance structure, every integrity system, and every athlete relationship studied in this course depends on commercial revenue to function. This module examines how that revenue enters sport, what it demands in return, and how contracts reconcile competing motivations.</p>
+            <p>The foundational reset is that modern sport survives on external capital — mobile, selective, and impatient. The module moves through the three pillars of that capital: commercial rights and contracting, media rights and broadcasting, and sponsorship and association.</p>
+            <p>As the final substantive module of the course, it closes a loop that began with governance: governance creates authority, contracts monetise trust in that authority, and sponsorship is where the monetisation is most directly dependent on the trust remaining intact.</p>
+        </div>
 
-You will begin with the foundational question: what is a 'right' in sport, and how does it become something that can be contracted for? The module introduces the three-layer rights bundle — intellectual property, contractual rights, and governance-derived authority — that defines what a sports right actually is. From there, it moves to two of the most significant commercial domains: media rights and broadcasting, where deals reshape when competitions are played and who can watch them; and sponsorship, where the core asset is association and reputation rather than intellectual property.
+        <!-- Why It Matters -->
+        <div class="module-section" id="why">
+            <h2>Why Commercialisation Matters</h2>
+            <p>Commercial arrangements are not peripheral finance — they are governance-shaping instruments. Broadcast deals determine when competitions are played, how they are presented, and what economic structures sustain the system; when a deal collapses, the effects cascade through salary caps, player markets, facility investment, and grassroots funding.</p>
+            <p>Live sport commands premium value because of four structural qualities — temporal irreversibility, outcome uncertainty, collective simultaneity, and spoiler sensitivity — that make it the last truly scarce form of television content. Understanding what makes that value, and what destroys it, is essential to understanding modern sport.</p>
+        </div>
 
-By the end of this module, you will understand how the commercial architecture of professional sport operates, be able to advise on the key legal issues in broadcasting and sponsorship agreements, and critically assess the tensions between commercial imperatives and the broader interests of sport.</p>
+        <!-- How It Operates -->
+        <div class="module-section" id="operates">
+            <h2>How Sports Commercialisation Operates</h2>
+            <p>Commercial value rests on the three-layer rights bundle that defines what a sports right actually is: intellectual property, contractual rights, and governance-derived authority. All three layers must hold simultaneously — a trademark licence without contractual exclusivity is commercially weak, and contractual exclusivity without governance authority is legally fragile. Contract design is organised around a single question — who bears the downside? — with every clause (scope, territory, exclusivity, term, force majeure, morality, termination) operating as an allocation of risk.</p>
+            <p>In broadcasting, the buyer market has fundamentally shifted — from traditional broadcasters using sport for schedule anchoring and advertising to digital platforms using sport for subscription acquisition and data lock-in — producing structurally different contracts, while anti-siphoning and listed events regulation assert state oversight over sporting autonomy.</p>
+            <p>Sponsorship is not a transaction for intellectual property but a reputation-transfer and association-control contract: termination dominates damages as the primary remedy, the morality clause is the most important clause in the contract, and sponsorship agreements now operate as private governance regimes regulating conduct, speech, and image.</p>
+        </div>
+
+        <!-- Central Tension -->
+        <div class="module-section" id="tension">
+            <h2>The Central Tension</h2>
+            <div class="tension-panel">
+                <p>Commercial value in sport is built on the trust and legitimacy that governance creates — and every commercial contract is an exercise in allocating the risk that this trust fails. Sport needs external capital to survive; capital demands certainty, control, and protection from sport's scandals and volatility. How far sport can commercialise itself without compromising the integrity and autonomy that make it valuable is the closing question of the course.</p>
+                <p class="tension-tagline">Every commercial clause in sport answers the same question — who bears the downside when things go wrong?</p>
+            </div>
         </div>
 
         <!-- Learning Objectives -->
@@ -577,27 +657,43 @@ By the end of this module, you will understand how the commercial architecture o
             <ul class="objectives-list">
                 <li>
                     <span class="obj-icon">1</span>
-                    <span>Explain how sporting rights are identified and characterised as legal interests capable of being contracted for.</span>
+                    <span>Identify the three-layer rights bundle — intellectual property, contractual rights, and governance-derived authority — and explain why all three layers must hold simultaneously.</span>
                 </li>
                 <li>
                     <span class="obj-icon">2</span>
-                    <span>Analyse the legal frameworks governing the sale and licensing of sports broadcasting and media rights.</span>
+                    <span>Apply the question "who bears the downside?" to evaluate risk allocation in commercial clauses.</span>
                 </li>
                 <li>
                     <span class="obj-icon">3</span>
-                    <span>Evaluate the competition law implications of exclusive broadcasting arrangements and collective selling models.</span>
+                    <span>Explain why sports commercial contracts favour rigidity and conservative design, and apply the contract reading framework: value, risk, discretion, exit.</span>
                 </li>
                 <li>
                     <span class="obj-icon">4</span>
-                    <span>Describe the key elements of sports sponsorship agreements and the legal issues that arise in brand association with sport.</span>
+                    <span>Explain why media rights function as governance-shaping instruments, not merely revenue sources.</span>
                 </li>
                 <li>
                     <span class="obj-icon">5</span>
-                    <span>Assess the legal protection of athlete image rights and the tensions between individual and organisational commercial interests.</span>
+                    <span>Identify the four structural qualities of live sport that generate premium commercial value.</span>
                 </li>
                 <li>
                     <span class="obj-icon">6</span>
-                    <span>Critically evaluate the impact of digital media and emerging technologies on the traditional commercial models of sport.</span>
+                    <span>Analyse the structural difference between traditional broadcasters and digital platforms as rights buyers.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">7</span>
+                    <span>Evaluate anti-siphoning and listed events regulation as state intervention in sporting autonomy.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">8</span>
+                    <span>Distinguish association rights from IP licences and explain why the distinction determines sponsorship contract structure.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">9</span>
+                    <span>Explain why termination dominates damages as the primary remedy in sponsorship disputes, and the role of the morality clause as a pre-authorised exit mechanism.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">10</span>
+                    <span>Connect commercialisation back to governance and integrity: explain how commercial value depends on the trust that governance creates.</span>
                 </li>
             </ul>
         </div>

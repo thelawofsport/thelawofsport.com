@@ -153,13 +153,52 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-sidebar > :nth-last-child(2) { margin-top: auto; }
 
 /* Main Content Area */
-.portal-main { flex: 1; padding: 32px 40px; min-width: 0; max-width: 860px; }
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
 
 /* Page Header */
 .page-breadcrumb {
     font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
 }
 .page-breadcrumb a { font-size: 0.78rem; }
+
+/* Module Tabs */
+.module-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; width: 100%;
+}
+.module-tab {
+    padding: 12px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+    color: rgba(255,255,255,0.8); cursor: pointer; transition: all var(--transition);
+    text-decoration: none; border: none; border-bottom: 3px solid transparent;
+    background: rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .module-tab { background: rgba(255,255,255,0.05); }
+.module-tab:hover { color: rgba(255,255,255,0.95); opacity: 0.9; }
+.module-tab.active { color: var(--color-white); opacity: 1; border-bottom-color: currentColor; }
+.tab-welcome { background: rgba(27, 122, 90, 0.2); color: var(--color-white); }
+.tab-welcome.active { background: #1B7A5A; }
+.tab-module1 { background: rgba(11, 29, 58, 0.2); color: var(--color-white); }
+.tab-module1.active { background: #0B1D3A; }
+.tab-module2 { background: rgba(180, 83, 9, 0.2); color: var(--color-white); }
+.tab-module2.active { background: #B45309; }
+.tab-module3 { background: rgba(30, 77, 110, 0.2); color: var(--color-white); }
+.tab-module3.active { background: #1E4D6E; }
+.tab-module4 { background: rgba(139, 26, 26, 0.2); color: var(--color-white); }
+.tab-module4.active { background: #8B1A1A; }
+.tab-module5 { background: rgba(91, 45, 142, 0.2); color: var(--color-white); }
+.tab-module5.active { background: #5B2D8E; }
+
+/* Central tension panel */
+.tension-panel {
+    background: var(--color-bg-alt); border-left: 4px solid var(--module-color);
+    border-radius: 0 10px 10px 0; padding: 22px 26px;
+}
+.tension-panel p { font-size: 0.92rem; line-height: 1.7; color: var(--color-text); margin-bottom: 0; }
+.tension-tagline {
+    font-style: italic; color: var(--color-text-light) !important;
+    border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: 14px;
+}
+
+
 
 /* Module Hero Banner */
 .module-hero {
@@ -504,6 +543,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#overview" class="sidebar-link active">
                 <span class="sidebar-icon">&#128196;</span> Overview
             </a>
+            <a href="#why" class="sidebar-link">
+                <span class="sidebar-icon">&#128161;</span> Why It Matters
+            </a>
+            <a href="#operates" class="sidebar-link">
+                <span class="sidebar-icon">&#9881;</span> How It Operates
+            </a>
+            <a href="#tension" class="sidebar-link">
+                <span class="sidebar-icon">&#9878;</span> Central Tension
+            </a>
             <a href="#objectives" class="sidebar-link">
                 <span class="sidebar-icon">&#127919;</span> Objectives
             </a>
@@ -549,6 +597,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
             Module 1: Governance &amp; Systems
         </div>
 
+        <!-- Module Tabs -->
+        <div class="module-tabs">
+            <a href="modules.html" class="module-tab tab-welcome">&#9733; Welcome</a>
+            <a href="module1.html" class="module-tab tab-module1 active">1 Governance</a>
+            <a href="module2.html" class="module-tab tab-module2">2 Challenging Decisions</a>
+            <a href="module3.html" class="module-tab tab-module3">3 Athlete Contracts</a>
+            <a href="module4.html" class="module-tab tab-module4">4 Sports Integrity</a>
+            <a href="module5.html" class="module-tab tab-module5">5 Commercial</a>
+        </div>
+
         <!-- Module Hero Banner -->
         <div class="module-hero" id="overview">
             <div class="module-hero-label">Module 1 of 5</div>
@@ -564,11 +622,32 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Overview Section -->
         <div class="module-section">
             <h2>Module Overview</h2>
-            <p>This module examines the governance of sport: how sporting organisations are constituted, where they derive their authority, and how they create the rules and regulatory structures that operate alongside (and sometimes in tension with) the general law. Understanding these governance frameworks is critical, because they form the backdrop against which disputes, contracts, integrity matters, and commercial dealings all take place.
+            <p>Every dispute in sports law — about selection, eligibility, discipline, contracts, or commercial rights — assumes something more basic: that someone had the authority to decide in the first place. This module asks where that authority actually comes from.</p>
+            <p>The answer is governance. And governance is not an administrative add-on — it is the threshold between informal activity and sport as a legal system. Sport only becomes legally meaningful once it is rule-bound, repeatable, and institutionally organised. Governance is what creates that system.</p>
+            <p>Modern sport is governed primarily through private ordering — regulation created by non-state actors whose rules and decisions are nevertheless recognised and enforced by law. This module establishes how that authority is built, transmitted, structured, and challenged.</p>
+        </div>
 
-You will explore the principles of natural justice as they apply to sporting governance, the constitutional frameworks of sporting organisations, and the legal consequences of failing to observe these principles. The module examines the relationship between sport and the general law, including the circumstances in which courts will and will not intervene in sporting matters.
+        <!-- Why It Matters -->
+        <div class="module-section" id="why">
+            <h2>Why Governance Matters</h2>
+            <p>Governance is the foundation for every topic in this course. Disputes, contracts, integrity systems, and commercial dealings all take place against the backdrop of governance frameworks — and most sports law disputes are, at their core, governance disputes.</p>
+            <p>Governance also allocates real outcomes. Powers over eligibility, discipline, and commercial regulation determine careers, income, and reputation. Understanding the distinction between governance and management — and how governing bodies control legitimacy rather than activity — is essential to understanding how sporting power actually works.</p>
+        </div>
 
-By the end of this module, you will have a working framework for understanding the legal architecture of sport — from international federations down to local clubs — and the principles that courts and tribunals apply when the law intersects with sporting decision-making.</p>
+        <!-- How It Operates -->
+        <div class="module-section" id="operates">
+            <h2>How Sports Governance Operates</h2>
+            <p>Contract is the operating system that makes private ordering possible: constitutions, licences, registration systems, and employment arrangements bind participants into governance frameworks without any single body needing to contract with everyone directly. We examine how this works in practice using the NRL as a detailed worked example.</p>
+            <p>From there, we examine how authority is structurally arranged — through federated pyramids that run from international federations down to athletes — and what kinds of power that structure actually exercises. We also look at what happens when the system is tested: sanctioning, breakaway competitions, the European Super League and the Court of Justice of the European Union, and the fundamentally different governance logic of esports, where ownership replaces recognition as the source of control.</p>
+        </div>
+
+        <!-- Central Tension -->
+        <div class="module-section" id="tension">
+            <h2>The Central Tension</h2>
+            <div class="tension-panel">
+                <p>Sport governs itself not by right, but by persuading the law it can do so responsibly. That autonomy is conditional, contested, and always under pressure. Understanding why — and what reform, judicial restraint, and legitimacy technologies do in response — is what this module is about.</p>
+                <p class="tension-tagline">Authority in sport is never self-evident — it is constructed, contracted, and always answerable to the question of whether it deserves to be trusted.</p>
+            </div>
         </div>
 
         <!-- Learning Objectives -->
@@ -577,27 +656,39 @@ By the end of this module, you will have a working framework for understanding t
             <ul class="objectives-list">
                 <li>
                     <span class="obj-icon">1</span>
-                    <span>Define sports law and critically assess whether it constitutes a distinct area of law or an application of general legal principles to sport.</span>
+                    <span>Explain why sport only becomes legally meaningful once it is governed, and what that threshold requires.</span>
                 </li>
                 <li>
                     <span class="obj-icon">2</span>
-                    <span>Identify and explain the principal sources of sports law, including legislation, common law, and the internal rules and regulations of sporting bodies.</span>
+                    <span>Identify how sporting authority is created through private ordering and transmitted through layered contractual mechanisms.</span>
                 </li>
                 <li>
                     <span class="obj-icon">3</span>
-                    <span>Describe the structure of the sporting regulatory pyramid — from international federations to national bodies and local associations — and explain how authority flows through this system.</span>
+                    <span>Describe the federated pyramid structure and explain how authority flows through it — and where conflicts arise.</span>
                 </li>
                 <li>
                     <span class="obj-icon">4</span>
-                    <span>Analyse the relationship between sport and the general law, including the circumstances in which courts will and will not intervene in sporting matters.</span>
+                    <span>Distinguish between governance and management, and explain why most sports law disputes are governance disputes.</span>
                 </li>
                 <li>
                     <span class="obj-icon">5</span>
-                    <span>Explain the principles of natural justice as they apply to sporting governance and identify the legal consequences of failing to observe these principles.</span>
+                    <span>Analyse how governance powers over eligibility, discipline, and commercial regulation allocate real outcomes for athletes and organisations.</span>
                 </li>
                 <li>
                     <span class="obj-icon">6</span>
-                    <span>Evaluate the constitutional and governance frameworks of sporting organisations, including the significance of incorporation, membership agreements, and the doctrine of restraint of trade.</span>
+                    <span>Explain how governing bodies control legitimacy rather than activity, and why that matters for sanctioning and breakaway competition.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">7</span>
+                    <span>Compare the governance logic of traditional sport with that of esports, identifying the risks inherent in each model.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">8</span>
+                    <span>Articulate the concept of responsible autonomy and the cycle of governance failure, external pressure, and reform.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">9</span>
+                    <span>Apply the core question of the course — how far should the law allow sporting autonomy to go — to governance, integrity, disputes, and commercial topics.</span>
                 </li>
             </ul>
         </div>

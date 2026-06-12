@@ -153,13 +153,52 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-sidebar > :nth-last-child(2) { margin-top: auto; }
 
 /* Main Content Area */
-.portal-main { flex: 1; padding: 32px 40px; min-width: 0; max-width: 860px; }
+.portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
 
 /* Page Header */
 .page-breadcrumb {
     font-size: 0.78rem; color: var(--color-text-light); margin-bottom: 12px;
 }
 .page-breadcrumb a { font-size: 0.78rem; }
+
+/* Module Tabs */
+.module-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; width: 100%;
+}
+.module-tab {
+    padding: 12px 20px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+    color: rgba(255,255,255,0.8); cursor: pointer; transition: all var(--transition);
+    text-decoration: none; border: none; border-bottom: 3px solid transparent;
+    background: rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .module-tab { background: rgba(255,255,255,0.05); }
+.module-tab:hover { color: rgba(255,255,255,0.95); opacity: 0.9; }
+.module-tab.active { color: var(--color-white); opacity: 1; border-bottom-color: currentColor; }
+.tab-welcome { background: rgba(27, 122, 90, 0.2); color: var(--color-white); }
+.tab-welcome.active { background: #1B7A5A; }
+.tab-module1 { background: rgba(11, 29, 58, 0.2); color: var(--color-white); }
+.tab-module1.active { background: #0B1D3A; }
+.tab-module2 { background: rgba(180, 83, 9, 0.2); color: var(--color-white); }
+.tab-module2.active { background: #B45309; }
+.tab-module3 { background: rgba(30, 77, 110, 0.2); color: var(--color-white); }
+.tab-module3.active { background: #1E4D6E; }
+.tab-module4 { background: rgba(139, 26, 26, 0.2); color: var(--color-white); }
+.tab-module4.active { background: #8B1A1A; }
+.tab-module5 { background: rgba(91, 45, 142, 0.2); color: var(--color-white); }
+.tab-module5.active { background: #5B2D8E; }
+
+/* Central tension panel */
+.tension-panel {
+    background: var(--color-bg-alt); border-left: 4px solid var(--module-color);
+    border-radius: 0 10px 10px 0; padding: 22px 26px;
+}
+.tension-panel p { font-size: 0.92rem; line-height: 1.7; color: var(--color-text); margin-bottom: 0; }
+.tension-tagline {
+    font-style: italic; color: var(--color-text-light) !important;
+    border-top: 1px solid var(--color-border); padding-top: 14px; margin-top: 14px;
+}
+
+
 
 /* Module Hero Banner */
 .module-hero {
@@ -504,6 +543,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#overview" class="sidebar-link active">
                 <span class="sidebar-icon">&#128196;</span> Overview
             </a>
+            <a href="#why" class="sidebar-link">
+                <span class="sidebar-icon">&#128161;</span> Why It Matters
+            </a>
+            <a href="#operates" class="sidebar-link">
+                <span class="sidebar-icon">&#9881;</span> How It Operates
+            </a>
+            <a href="#tension" class="sidebar-link">
+                <span class="sidebar-icon">&#9878;</span> Central Tension
+            </a>
             <a href="#objectives" class="sidebar-link">
                 <span class="sidebar-icon">&#127919;</span> Objectives
             </a>
@@ -549,6 +597,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
             Module 4: Sports Integrity &amp; Regulation
         </div>
 
+        <!-- Module Tabs -->
+        <div class="module-tabs">
+            <a href="modules.html" class="module-tab tab-welcome">&#9733; Welcome</a>
+            <a href="module1.html" class="module-tab tab-module1">1 Governance</a>
+            <a href="module2.html" class="module-tab tab-module2">2 Challenging Decisions</a>
+            <a href="module3.html" class="module-tab tab-module3">3 Athlete Contracts</a>
+            <a href="module4.html" class="module-tab tab-module4 active">4 Sports Integrity</a>
+            <a href="module5.html" class="module-tab tab-module5">5 Commercial</a>
+        </div>
+
         <!-- Module Hero Banner -->
         <div class="module-hero" id="overview">
             <div class="module-hero-label">Module 4 of 5</div>
@@ -564,11 +622,33 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Overview Section -->
         <div class="module-section">
             <h2>Module Overview</h2>
-            <p>This module addresses the legal and regulatory frameworks designed to protect the integrity of sport. Integrity in sport operates on multiple fronts — and the foundational insight is that integrity is a governance problem, not a moral one. A governance frame tells you how to design a regulatory system to prevent threats to competition, how to allocate the costs of prevention, and how to manage the inevitable tensions between individual rights and institutional protection.
+            <p>The foundational insight of this module is that integrity is a governance problem, not a moral one. A moral frame tells you that doping or match-fixing is wrong. A governance frame tells you how to design a regulatory system to prevent it, how to allocate the costs of prevention, and how to manage the inevitable tensions between individual rights and institutional protection.</p>
+            <p>The module spans three regulatory frontiers: clean sport and anti-doping, where strict liability protects competition at real cost to individual athletes; corruption and wagering, where sport and betting are structurally entangled and the legal response is market design rather than prohibition; and high-risk sport, where the law constructs a space in which serious physical harm is tolerated rather than prohibited.</p>
+            <p>Throughout, real cases stress-test the systems: the illicit drug boundary, the Shayna Jack case, the Essendon saga, and the concussion and cumulative harm evidence that is reshaping the conditions of legal permission for contact sport.</p>
+        </div>
 
-You will examine anti-doping as system-preservation technology, the structural entanglement between sport and wagering, and the legal permission that allows sport to be violent in ways that would be prohibited in almost every other context. Each topic forces the same question: who bears the cost of protecting the system — the athlete, the institution, or the public?
+        <!-- Why It Matters -->
+        <div class="module-section" id="why">
+            <h2>Why Integrity Matters</h2>
+            <p>Sport is commercially and culturally valuable because its outcomes are genuinely uncertain. Doping and corruption destroy that uncertainty. Integrity is not the ethical overlay of sport — it is the economic substrate, and integrity regulation is system-preservation technology.</p>
+            <p>The same logic extends to the body itself: the law's permission for sporting violence has always been conditional on informed consent to the kind of harm a sport ordinarily produces. As the evidence on concussion and cumulative harm grows, the conditions of that permission are narrowing — and institutions that fail to disclose, monitor, and manage harm face legal accountability.</p>
+        </div>
 
-By the end of this module, you will understand how integrity is regulated across multiple dimensions, be able to advise on the legal consequences of integrity breaches, and critically assess whether current frameworks strike the right balance between protecting sport and protecting the rights of individual participants.</p>
+        <!-- How It Operates -->
+        <div class="module-section" id="operates">
+            <h2>How Integrity Regulation Operates</h2>
+            <p>Anti-doping operates through a global private-law architecture: WADA as standard-setter, national anti-doping organisations as enforcers, and the Court of Arbitration for Sport as the ultimate appellate body. Because the system is private law rather than criminal law, it can impose strict liability, reverse the burden of proof, and limit judicial review. We trace the enforcement pipeline from testing to sanction, including whereabouts obligations and provisional suspension.</p>
+            <p>Wagering integrity operates through market design. The centrepiece is the Sports Controlling Body framework — the core of Australian wagering integrity regulation — which gives sporting bodies suspicious betting alerts, market suspension authority, and information-sharing channels with operators and law enforcement, layered within international frameworks and national legislation.</p>
+            <p>Permitted harm operates through three overlapping legal layers: internal sporting regulation (the rules and customs defining permitted conduct), civil liability (the modified negligence standard), and criminal law (the threshold at which sporting violence becomes a matter for prosecution).</p>
+        </div>
+
+        <!-- Central Tension -->
+        <div class="module-section" id="tension">
+            <h2>The Central Tension</h2>
+            <div class="tension-panel">
+                <p>Integrity systems impose real costs on individuals in order to protect the system as a whole: strict liability that can produce unjust outcomes, regulatory burdens that fall unevenly, and bodies that absorb the physical harm of contact sport. Whether that trade-off remains legitimate — and who should bear its costs: athletes, institutions, operators, or consumers — is the central question of this module.</p>
+                <p class="tension-tagline">Integrity is not what sport adds on top of its commercial value — it is what makes the commercial value possible in the first place.</p>
+            </div>
         </div>
 
         <!-- Learning Objectives -->
@@ -577,27 +657,47 @@ By the end of this module, you will understand how integrity is regulated across
             <ul class="objectives-list">
                 <li>
                     <span class="obj-icon">1</span>
-                    <span>Explain the structure and operation of the World Anti-Doping Code and the ASADA framework in Australia.</span>
+                    <span>Distinguish between disciplinary and integrity logics, and explain why anti-doping law is system-preservation technology rather than punishment.</span>
                 </li>
                 <li>
                     <span class="obj-icon">2</span>
-                    <span>Analyse the strict liability standard in anti-doping and evaluate the legal and ethical arguments for and against this approach.</span>
+                    <span>Explain why strict liability is a rational design choice under an integrity logic, even when it produces unjust individual outcomes.</span>
                 </li>
                 <li>
                     <span class="obj-icon">3</span>
-                    <span>Distinguish between performance-enhancing substances and illicit recreational drugs in the sporting context and explain the different regulatory approaches.</span>
+                    <span>Map the WADA architecture: standard-setting, national enforcement, and CAS appellate review.</span>
                 </li>
                 <li>
                     <span class="obj-icon">4</span>
-                    <span>Describe the legal frameworks governing match-fixing and corruption in sport, including the role of sports integrity units and law enforcement.</span>
+                    <span>Explain why anti-doping regulation operates as private law and what that means for procedural protections.</span>
                 </li>
                 <li>
                     <span class="obj-icon">5</span>
-                    <span>Analyse the relationship between sport and gambling, including the regulatory tensions created by the commercialisation of sports betting.</span>
+                    <span>Trace the enforcement pipeline from testing to sanction, including whereabouts obligations and provisional suspension.</span>
                 </li>
                 <li>
                     <span class="obj-icon">6</span>
-                    <span>Evaluate the legal principles that determine when participants in high-risk sport consent to the risk of harm, and the circumstances in which criminal or civil liability may arise.</span>
+                    <span>Explain why integrity functions as economic infrastructure rather than ethical overlay in the wagering context.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">7</span>
+                    <span>Explain the Sports Controlling Body framework and analyse why the legal response to wagering takes the form of market design rather than prohibition.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">8</span>
+                    <span>Distinguish between integrity regulation and social responsibility regulation.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">9</span>
+                    <span>Identify the three overlapping legal layers governing sporting violence and explain how consent operates as the threshold condition for legal permission.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">10</span>
+                    <span>Explain why the concussion and cumulative harm evidence is narrowing the scope of legal permission for contact sport.</span>
+                </li>
+                <li>
+                    <span class="obj-icon">11</span>
+                    <span>Assess who bears the costs of integrity regulation — athletes, sporting bodies, operators, or consumers.</span>
                 </li>
             </ul>
         </div>
