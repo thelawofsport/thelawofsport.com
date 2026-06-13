@@ -348,7 +348,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .pitch-hero { gap: 40px; }
 }
 @media (max-width: 900px) {
-    .pitch-hero { flex-direction: column; text-align: center; padding: 96px 24px 40px; min-height: auto; }
+    .pitch-hero { flex-direction: column; text-align: left; padding: 96px 24px 40px; min-height: auto; }
+    .pitch-hero h1, .pitch-hero .hero-sub { text-align: left; }
+    .hero-cta { justify-content: flex-start; }
     .pitch-page .pitch-hero { padding-left: 24px; padding-right: 24px; }
     .hero-cta { justify-content: center; }
     .hero-visual { flex: none; width: 100%; max-width: 480px; }
@@ -375,7 +377,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .pitch-hero h1 { font-size: 1.6rem; }
     .hero-line { white-space: normal; }
     .hero-sub { font-size: 0.92rem; }
-    .hero-cta { flex-direction: column; align-items: center; gap: 12px; }
+    .hero-cta { flex-direction: column; align-items: flex-start; gap: 12px; }
     .hero-cta .btn { width: 100%; max-width: 320px; }
 
     /* Section spacing — tighter on small screens */
