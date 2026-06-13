@@ -350,9 +350,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 .minimap-card {
     background: var(--color-surface); border: 1px solid var(--color-border);
+    border-left: 4px solid var(--minimap-color, var(--color-border));
     border-radius: var(--radius-sm); padding: 14px 16px;
     font-size: 0.84rem; color: var(--color-text-light); line-height: 1.5;
 }
+.minimap-card.mc-welcome { --minimap-color: #1B7A5A; background: rgba(27,122,90,0.04); }
+.minimap-card.mc-m1      { --minimap-color: #0B1D3A; background: rgba(11,29,58,0.04); }
+.minimap-card.mc-m2      { --minimap-color: #B45309; background: rgba(180,83,9,0.04); }
+.minimap-card.mc-m3      { --minimap-color: #1E4D6E; background: rgba(30,77,110,0.04); }
+.minimap-card.mc-m4      { --minimap-color: #8B1A1A; background: rgba(139,26,26,0.04); }
+.minimap-card.mc-m5      { --minimap-color: #5B2D8E; background: rgba(91,45,142,0.04); }
 .minimap-card strong { color: var(--color-text); font-size: 0.86rem; display: block; margin-bottom: 2px; }
 [data-theme="dark"] .minimap-card strong { color: var(--color-white); }
 
@@ -557,12 +564,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <p>From there, the <strong>Modules</strong> page lists all five modules in sequence. Each module has its own dedicated page with an overview, learning objectives, lecture videos, and tutorial tasks. Work through modules in order — each one builds on the last.</p>
                         <p>Use the left sidebar within each module page to jump between sections (Overview, Objectives, Lectures, Tutorials) without scrolling.</p>
                         <div class="module-minimap">
-                            <div class="minimap-card"><strong>Welcome</strong>Start Here — Course Orientation</div>
-                            <div class="minimap-card"><strong>Module 1</strong>Governance &amp; Systems</div>
-                            <div class="minimap-card"><strong>Module 2</strong>Challenging Decisions</div>
-                            <div class="minimap-card"><strong>Module 3</strong>Athlete, Contracts &amp; Control</div>
-                            <div class="minimap-card"><strong>Module 4</strong>Sports Integrity &amp; Regulation</div>
-                            <div class="minimap-card"><strong>Module 5</strong>Commercialising Sports Rights</div>
+                            <div class="minimap-card mc-welcome"><strong>Welcome</strong>Start Here — Course Orientation</div>
+                            <div class="minimap-card mc-m1"><strong>Module 1</strong>Governance &amp; Systems</div>
+                            <div class="minimap-card mc-m2"><strong>Module 2</strong>Challenging Decisions</div>
+                            <div class="minimap-card mc-m3"><strong>Module 3</strong>Athlete, Contracts &amp; Control</div>
+                            <div class="minimap-card mc-m4"><strong>Module 4</strong>Sports Integrity &amp; Regulation</div>
+                            <div class="minimap-card mc-m5"><strong>Module 5</strong>Commercialising Sports Rights</div>
                         </div>
                         <a href="modules.html" class="step-link" style="margin-top:14px;">View All Modules &#8594;</a>
                     </div>
