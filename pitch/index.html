@@ -117,6 +117,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
     letter-spacing: 0.1em; color: var(--color-emerald); margin-bottom: 8px;
 }
 .section-header { text-align: center; max-width: 820px; margin: 0 auto 48px; }
+.pitch-why .section-header h2,
+.pitch-course .section-header h2,
+.pitch-credentials .section-header h2,
+.pitch-how .section-header h2 { font-size: 3.44rem; font-weight: 800; }
 .section-header h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-navy); margin-bottom: 12px; }
 .section-desc { color: var(--color-text-light); font-size: 1.05rem; }
 .btn {
@@ -153,7 +157,20 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .demo-strip-link:hover { background: rgba(255,255,255,0.35); border-color: #fff; color: #fff; }
 @media (max-width: 600px) {
     .demo-strip-text { display: none; }
-    .demo-strip { justify-content: center; }
+    .demo-strip { justify-content: flex-start; padding-left: 24px; }
+}
+
+/* Justify body paragraphs in content sections */
+.pitch-values p, .pitch-course p, .pitch-explore p, .pitch-approach p,
+.pitch-credentials p, .pitch-how p, .pitch-why p, .pitch-contact p {
+    text-align: justify;
+    hyphens: auto;
+}
+/* Exclude section headers from justify */
+.section-header p, .section-header .section-eyebrow, .section-header .section-desc,
+.pitch-contact .section-eyebrow {
+    text-align: center;
+    hyphens: none;
 }
 
 /* Pitch Nav */
@@ -176,7 +193,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* Hero */
 .pitch-hero {
     background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
-    padding: 120px 24px 70px; display: flex; align-items: center;
+    padding: 137px 24px 70px; display: flex; align-items: center;
     justify-content: space-between; gap: 60px; min-height: auto;
 }
 .pitch-page .pitch-hero { padding-left: calc((100% - 1140px) / 2 + 24px); padding-right: calc((100% - 1140px) / 2 + 24px); }
@@ -184,7 +201,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .hero-eyebrow { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; color: var(--color-gold); margin-bottom: 20px; }
 .pitch-hero h1 { font-family: var(--font-serif); font-size: 2.1rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.25; }
 .hero-line { display: block; }
-.hero-accent { color: var(--color-gold-light); }
+.hero-accent { color: #C8952A; }
 .hero-sub { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-visual { flex: 0 0 380px; }
@@ -575,7 +592,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="#course">The Course</a>
                 <a href="#approach">Approach</a>
                 <a href="#credentials">Credentials</a>
-                <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
                 <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
             </div>
@@ -588,7 +604,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#course">The Course</a>
             <a href="#approach">Approach</a>
             <a href="#credentials">Credentials</a>
-            <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
             <div class="mobile-divider"></div>
             <button class="theme-toggle" id="mobileThemeToggle" title="Toggle dark mode" style="margin:0 auto;">&#9790;</button>
@@ -644,7 +659,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="why-grid">
                 <!-- Institutional Benefits -->
                 <div class="why-column">
-                    <h3 style="color: #E2C274;">For Your Institution</h3>
+                    <h3 style="color: #C8952A;">For Your Institution</h3>
                     <p class="why-col-intro">A distinctive elective that strengthens your law program and attracts students across disciplines.</p>
                     <div class="why-item">
                         <div class="why-icon inst">&#128200;</div>
@@ -671,13 +686,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="why-icon inst">&#9889;</div>
                         <div class="why-item-text">
                             <h4>Ahead of Regulatory Reform</h4>
-                            <p>Australian legal education is being reshaped. The LPAB's Interim Report has found the current PLT framework no longer fit for purpose, and LACC is now reviewing PLT competencies and accreditation nationally. This course is already built around the model regulators are moving toward: real documents, real problems, and the practical competencies the profession demands.</p>
+                            <p>Regulators in Australia including LPAB and LACC have indicated near term changes to tertiary and pre-admission legal education. This course is already built around the model regulators are moving toward: real documents, real problems, and the practical competencies the profession demands.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Student Appeal -->
                 <div class="why-column">
-                    <h3 style="color: #E2C274;">For Your Students</h3>
+                    <h3 style="color: #C8952A;">For Your Students</h3>
                     <p class="why-col-intro">A subject that connects personal passion with professional development in ways few other electives can.</p>
                     <div class="why-item">
                         <div class="why-icon stud">&#127941;</div>
@@ -767,7 +782,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="explore-box">
                 <div class="explore-text">
                     <p class="section-eyebrow">See It In Action</p>
-                    <h2>Explore the student platform</h2>
+                    <h2 style="color: #C8952A;">Explore the student platform</h2>
                     <p>The best way to understand what your students will experience is to see it for yourself. Browse the live demo — navigate the modules, watch lecture previews, explore the tutorial programme, and see how the assessment framework is presented. Everything you see is what your students receive.</p>
                     <a href="../demo/" class="btn btn-primary" style="margin-top: 20px;">Explore the Demo &rarr;</a>
                 </div>
@@ -811,7 +826,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="approach-layout">
                 <div class="approach-text">
                     <p class="section-eyebrow">Teaching Philosophy</p>
-                    <h2 style="white-space:nowrap; color: var(--color-gold-light);"><span class="approach-line">Real problems.</span> <span class="approach-line">Real documents.</span> <span class="approach-line">Real practical skills.</span></h2>
+                    <h2 style="white-space:nowrap; color: #C8952A;"><span class="approach-line">Real problems.</span> <span class="approach-line">Real documents.</span> <span class="approach-line">Real practical skills.</span></h2>
                     <p>This isn't a course that simply talks about sports law in the abstract. Video lectures deliver the core doctrine and legal frameworks, while live interactive tutorials are where students put that knowledge to work — analysing real documents, debating real scenarios, and developing the practical skills that employers value. The course is designed and taught by a practitioner with significant academic experience, and this practice-first philosophy runs through every element.</p>
                     <ul class="approach-list">
                         <li><strong>Real sports documents</strong> — Students analyse actual policies, codes, and commercial contracts from the sports industry, not textbook hypotheticals</li>
@@ -881,7 +896,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="section-inner">
             <div class="section-header">
                 <p class="section-eyebrow">How It Works</p>
-                <h2 style="color: var(--color-gold-light);">Simple partnership model</h2>
+                <h2 style="color: #C8952A;">Simple partnership model</h2>
             </div>
             <div class="how-steps">
                 <div class="how-step">
@@ -906,11 +921,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <!-- CTA / Contact -->
     <section id="contact" class="pitch-contact">
         <div class="section-inner">
-            <div class="contact-box">
-                <p class="section-eyebrow" style="color:var(--color-gold);">Ready to get started?</p>
-                <h2>Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
+            <div class="contact-box" style="text-align:left; max-width:654px; margin-left:64px; margin-right:0;">
+                <p class="section-eyebrow" style="color:var(--color-gold); text-align:left;">Ready to get started?</p>
+                <h2 style="text-align:left; font-size:1.6rem;">Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
                 <p>Whether you're exploring a new elective, expanding your law program, or looking for a practice-ready course that students will genuinely enjoy — I'd love to hear from you. No commitment, just a conversation.</p>
-                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-start; margin-bottom:20px;">
                     <a href="mailto:mike@thelawofsport.com?subject=Sports%20Law%20Course%20—%20Enquiry" class="btn btn-primary btn-large" style="font-size:1.05rem; padding:16px 36px;">Email Me</a>
                     <a href="https://www.linkedin.com/in/michael-bricknell-8a7b9221/" target="_blank" class="btn btn-large" style="font-size:1.05rem; padding:16px 36px; background:#0A66C2; color:#fff; border-color:#0A66C2;">LinkedIn Message</a>
 
