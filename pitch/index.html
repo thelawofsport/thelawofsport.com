@@ -120,11 +120,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .section-header h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-navy); margin-bottom: 12px; }
 .section-desc { color: var(--color-text-light); font-size: 1.05rem; }
 
-/* Justify body paragraphs in content sections */
+/* Justify body paragraphs in content sections (exclude section headers) */
 .pitch-values p, .pitch-course p, .pitch-explore p, .pitch-approach p,
 .pitch-credentials p, .pitch-how p, .pitch-why p, .pitch-contact p {
     text-align: justify;
     hyphens: auto;
+}
+.section-header p, .section-header .section-eyebrow, .section-header .section-desc,
+.pitch-contact .section-eyebrow {
+    text-align: center;
+    hyphens: none;
 }
 .btn {
     display: inline-block; font-family: var(--font-sans); font-weight: 600;
@@ -578,7 +583,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="#course">The Course</a>
                 <a href="#approach">Approach</a>
                 <a href="#credentials">Credentials</a>
-                <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
                 <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
             </div>
@@ -591,7 +595,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#course">The Course</a>
             <a href="#approach">Approach</a>
             <a href="#credentials">Credentials</a>
-            <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
             <div class="mobile-divider"></div>
             <button class="theme-toggle" id="mobileThemeToggle" title="Toggle dark mode" style="margin:0 auto;">&#9790;</button>
@@ -944,4 +947,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
     btn.addEventListener('click', function() {
         btn.classList.toggle('active');
         overlay.classList.toggle('open');
-        document.body.style.overflow = overlay.classList.contains('open') ? 'hi
+        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+    });
+    o
