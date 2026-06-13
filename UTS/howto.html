@@ -349,17 +349,17 @@ h1, h2, h3, h4 { line-height: 1.2; }
     margin-top: 16px;
 }
 .minimap-card {
-    background: var(--color-surface); border: 1px solid var(--color-border);
-    border-left: 4px solid var(--minimap-color, var(--color-border));
+    border: none;
     border-radius: var(--radius-sm); padding: 14px 16px;
-    font-size: 0.84rem; color: var(--color-text-light); line-height: 1.5;
+    font-size: 0.84rem; line-height: 1.5; color: #fff;
 }
-.minimap-card.mc-welcome { --minimap-color: #1B7A5A; background: rgba(27,122,90,0.04); }
-.minimap-card.mc-m1      { --minimap-color: #0B1D3A; background: rgba(11,29,58,0.04); }
-.minimap-card.mc-m2      { --minimap-color: #B45309; background: rgba(180,83,9,0.04); }
-.minimap-card.mc-m3      { --minimap-color: #1E4D6E; background: rgba(30,77,110,0.04); }
-.minimap-card.mc-m4      { --minimap-color: #8B1A1A; background: rgba(139,26,26,0.04); }
-.minimap-card.mc-m5      { --minimap-color: #5B2D8E; background: rgba(91,45,142,0.04); }
+.minimap-card strong { color: #fff !important; }
+.minimap-card.mc-welcome { background: linear-gradient(135deg, #1B7A5A, #22976E); }
+.minimap-card.mc-m1      { background: linear-gradient(135deg, #0B1D3A, #1A3A6B); }
+.minimap-card.mc-m2      { background: linear-gradient(135deg, #B45309, #D97706); }
+.minimap-card.mc-m3      { background: linear-gradient(135deg, #1E4D6E, #2B6B96); }
+.minimap-card.mc-m4      { background: linear-gradient(135deg, #8B1A1A, #B52828); }
+.minimap-card.mc-m5      { background: linear-gradient(135deg, #5B2D8E, #7C3DAF); }
 .minimap-card strong { color: var(--color-text); font-size: 0.86rem; display: block; margin-bottom: 2px; }
 [data-theme="dark"] .minimap-card strong { color: var(--color-white); }
 
