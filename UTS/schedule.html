@@ -930,6 +930,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Eve</div>
                         </div>
                         <div class="census-badge">&#128340; Census Date: Thu 27 August</div>
+                        <div class="assessment-badge">
+                            <span class="assessment-badge-icon">&#128462;</span>
+                            <span><strong>Written Plea (3A)</strong> &nbsp;Due: Sun 30 Aug 2026</span>
+                        </div>
                     </div>
                 </div>
 
@@ -973,7 +977,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         </div>
                         <div class="assessment-badge">
                             <span class="assessment-badge-icon">&#128462;</span>
-                            <span><strong>Written Plea (3A)</strong> Due: Sun 30 Aug &nbsp;|&nbsp; <strong>Oral (3B)</strong> In Class — Weeks 7–8</span>
+                            <span><strong>Oral Plea (3B)</strong> &nbsp;In Class — Weeks 7–8</span>
                         </div>
                     </div>
                 </div>
@@ -1076,6 +1080,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture11.html">Lecture 11: Sports Sponsorship</a></div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Oscar</div>
                         </div>
+                        <div class="assessment-badge">
+                            <span class="assessment-badge-icon">&#128462;</span>
+                            <span><strong>Take Home Released: Thu 15 Oct 2026</strong></span>
+                        </div>
                     </div>
                 </div>
 
@@ -1099,7 +1107,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
                         <div class="assessment-badge">
                             <span class="assessment-badge-icon">&#128462;</span>
-                            <span><strong>Take Home Released: 15 Oct</strong> &nbsp;|&nbsp; <strong>Due: 25 Oct 2026</strong></span>
+                            <span><strong>Take Home Due: Sun 25 Oct 2026</strong></span>
                         </div>
                     </div>
                 </div>
@@ -1171,18 +1179,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
             9:  new Date(2026, 8, 29),  // 29 Sep (after StuVac)
             10: new Date(2026, 9, 6),   // 6 Oct
             11: new Date(2026, 9, 13),  // 13 Oct
-            12: new Date(2026, 9, 20),  // 20 Oct
-        };
-
-        function getCurrentWeek() {
-            const now = new Date();
-            let currentWeek = 1;
-            for (let w = 14; w >= 1; w--) {
-                if (now >= weekStarts[w]) { currentWeek = w; break; }
-            }
-            return currentWeek;
-        }
-
-        function findNext(weekList) {
-            const current = getCurrentWeek();
-            // Find the current or next week th
+            12: new Date(2026, 9, 20
