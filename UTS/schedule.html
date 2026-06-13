@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule — Sports Law | The Law of Sport</title>
+    <script>if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -65,6 +66,12 @@
     --color-gray-50: #162036;
     --color-gray-100: #1A2744;
     --color-gray-200: #2A3A5C;
+    /* Lightened module colours for dark mode readability */
+    --color-module-navy: #4A7FBF;
+    --color-module-amber: #F59E0B;
+    --color-module-teal: #38BDF8;
+    --color-module-red: #F87171;
+    --color-module-purple: #A78BFA;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
@@ -461,7 +468,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     letter-spacing: 0.05em; margin-top: 12px;
     border: 1px solid rgba(139, 26, 26, 0.3);
 }
-[data-theme="dark"] .key-date-badge { background: rgba(139, 26, 26, 0.25); }
+[data-theme="dark"] .key-date-badge { background: rgba(139, 26, 26, 0.3); color: #f87171; border-color: rgba(139, 26, 26, 0.5); }
 
 .census-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -471,7 +478,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     letter-spacing: 0.05em; margin-top: 12px;
     border: 1px solid rgba(27, 77, 110, 0.3);
 }
-[data-theme="dark"] .census-badge { background: rgba(27, 77, 110, 0.25); }
+[data-theme="dark"] .census-badge { background: rgba(27, 77, 110, 0.3); color: #7dd3fc; border-color: rgba(27, 77, 110, 0.5); }
 
 .good-friday-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -481,7 +488,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     letter-spacing: 0.05em; margin-top: 12px;
     border: 1px solid rgba(180, 83, 9, 0.3);
 }
-[data-theme="dark"] .good-friday-badge { background: rgba(180, 83, 9, 0.25); }
+[data-theme="dark"] .good-friday-badge { background: rgba(180, 83, 9, 0.3); color: #fdba74; border-color: rgba(180, 83, 9, 0.5); }
 
 /* Portal Footer */
 .portal-footer {
@@ -1169,14 +1176,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
         // Session dates (Tuesday of each teaching week)
         const weekStarts = {
             1:  new Date(2026, 6, 28),  // 28 Jul
-            2:  new Date(2026, 7, 4),   // 4 Aug
-            3:  new Date(2026, 7, 11),  // 11 Aug
-            4:  new Date(2026, 7, 18),  // 18 Aug
-            5:  new Date(2026, 7, 25),  // 25 Aug
-            6:  new Date(2026, 8, 1),   // 1 Sep
-            7:  new Date(2026, 8, 8),   // 8 Sep
-            8:  new Date(2026, 8, 15),  // 15 Sep
-            9:  new Date(2026, 8, 29),  // 29 Sep (after StuVac)
-            10: new Date(2026, 9, 6),   // 6 Oct
-            11: new Date(2026, 9, 13),  // 13 Oct
-            12: new Date(2026, 9, 20
+            2:  new Date(2026, 
