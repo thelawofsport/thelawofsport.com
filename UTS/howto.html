@@ -86,6 +86,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 .portal-nav-menu a.btn-nav { background: var(--color-emerald); color: var(--color-white) !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
 .portal-nav-menu a.btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
+.portal-nav-menu a.btn-nav-gold { background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
+.portal-nav-menu a.btn-nav-gold:hover { background: #b07a1e; color: #fff !important; }
 .portal-nav-menu a:hover, .portal-nav-menu a.active {
     color: var(--color-gold); background: rgba(255,255,255,0.1);
 }
@@ -379,20 +381,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
         </a>
         <div class="portal-nav-menu">
             <a href="v1.html">Home</a>
-            <a href="contact.html">Contact</a>
             <a href="howto.html" class="btn-nav active">How To</a>
-            <a href="overview.html">Overview</a>
+            <a href="overview.html" class="btn-nav">Overview</a>
             <a href="modules.html">Modules</a>
             <a href="schedule.html">Schedule</a>
             <a href="assessment.html">Assessment</a>
         </div>
     </div>
     <div class="portal-nav-right">
-        <div class="portal-search">
-            <span class="search-icon">&#128269;</span>
-            <input type="text" placeholder="Search lectures, modules...">
-        </div>
-        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
+            <a href="contact.html" class="btn btn-nav-gold" style="font-size:0.85rem; padding:8px 20px; border-radius:4px; text-decoration:none; font-weight:600; white-space:nowrap;">Contact</a>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
     </div>
 </nav>
 
@@ -518,7 +516,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="step-tip">
                             <strong>Tip:</strong> The Overview is not just orientation — it gives you the conceptual map that ties every module together. Return to it when you're preparing for assessments.
                         </div>
-                        <a href="overview.html" class="step-link">View Course Overview &#8594;</a>
+                        <a href="overview.html" class="btn-nav" class="step-link">View Course Overview &#8594;</a>
                     </div>
                 </div>
 
