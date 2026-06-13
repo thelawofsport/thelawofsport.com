@@ -132,9 +132,34 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
 .btn-large { padding: 16px 40px; font-size: 1.05rem; }
 
+/* Demo Banner Strip */
+.demo-strip {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+    background: #C8952A;
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    padding: 8px 24px; height: 40px;
+}
+.demo-strip-text {
+    font-size: 0.82rem; font-weight: 600; color: #fff;
+    letter-spacing: 0.01em;
+}
+.demo-strip-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.2); border: 1.5px solid rgba(255,255,255,0.7);
+    color: #fff; font-size: 0.78rem; font-weight: 700;
+    padding: 3px 14px; border-radius: 20px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+}
+.demo-strip-link:hover { background: rgba(255,255,255,0.35); border-color: #fff; color: #fff; }
+@media (max-width: 600px) {
+    .demo-strip-text { display: none; }
+    .demo-strip { justify-content: center; }
+}
+
 /* Pitch Nav */
 .pitch-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 40px; left: 0; right: 0; z-index: 100;
     background: rgba(11, 29, 58, 0.95); backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -152,7 +177,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* Hero */
 .pitch-hero {
     background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
-    padding: 120px 24px 70px; display: flex; align-items: center;
+    padding: 137px 24px 70px; display: flex; align-items: center;
     justify-content: space-between; gap: 60px; min-height: auto;
 }
 .pitch-page .pitch-hero { padding-left: calc((100% - 1140px) / 2 + 24px); padding-right: calc((100% - 1140px) / 2 + 24px); }
@@ -528,6 +553,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 </style>
 </head>
 <body class="pitch-page">
+
+    <!-- Demo Banner Strip -->
+    <div class="demo-strip">
+        <span class="demo-strip-text">See what your students will experience —</span>
+        <a href="../demo/" class="demo-strip-link">&#9654; View Demo Student Portal</a>
+    </div>
 
     <!-- Navigation -->
     <nav class="pitch-nav">
@@ -910,39 +941,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
     });
     overlay.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
-            btn.classList.remove('active');
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-    });
-})();
-
-// Dark mode toggle
-(function() {
-    var toggle = document.getElementById('themeToggle');
-    var mobileToggle = document.getElementById('mobileThemeToggle');
-    var html = document.documentElement;
-    function setTheme(dark) {
-        if (dark) {
-            html.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            html.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        }
-        var icon = dark ? '\u2600' : '\u263E';
-        if (toggle) toggle.textContent = icon;
-        if (mobileToggle) mobileToggle.textContent = icon;
-    }
-    if (localStorage.getItem('theme') === 'dark') setTheme(true);
-    function handleClick() {
-        setTheme(html.getAttribute('data-theme') !== 'dark');
-    }
-    if (toggle) toggle.addEventListener('click', handleClick);
-    if (mobileToggle) mobileToggle.addEventListener('click', handleClick);
-})();
-</script>
-
-</body>
-</html>
-                                          
+            btn.classList.
