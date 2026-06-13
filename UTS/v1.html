@@ -88,16 +88,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
     color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
     padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
 }
-.portal-nav-menu a.btn-nav { background: var(--color-emerald); color: var(--color-white) !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
-.portal-nav-menu a.btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
-.portal-nav-menu a.btn-nav-gold { background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
-.portal-nav-menu a.btn-nav-gold:hover { background: #b07a1e; color: #fff !important; }
-.btn-nav-gold { display: inline-flex; align-items: center; background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; border: none; cursor: pointer; }
-.btn-nav-gold:hover { background: #b07a1e; color: #fff !important; }
 .portal-nav-menu a:hover, .portal-nav-menu a.active {
     color: var(--color-gold); background: rgba(255,255,255,0.1);
 }
 .portal-nav-right { display: flex; align-items: center; gap: 16px; }
+.btn-nav { display: inline-flex; align-items: center; background: var(--color-emerald); color: #fff !important; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; border: none; cursor: pointer; }
+.btn-nav:hover { background: #145f46; }
+.btn-nav-gold { display: inline-flex; align-items: center; background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; border: none; cursor: pointer; }
+.btn-nav-gold:hover { background: #a67520; }
 .portal-search {
     display: flex; align-items: center; background: rgba(255,255,255,0.1);
     border-radius: var(--radius-sm); padding: 6px 12px; gap: 8px;
@@ -177,9 +175,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     background: linear-gradient(135deg, var(--color-navy), var(--color-navy-mid));
     border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 12px; color: var(--color-white);
 }
-.announcement-date { font-size: 0.88rem; color: var(--color-gold-light); font-weight: 600; margin-bottom: 6px; }
-.announcement-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 16px; }
-.announcement-text { font-size: 1.15rem; color: rgba(255,255,255,0.75); line-height: 1.85; }
+.announcement-date { font-size: 0.75rem; color: var(--color-gold-light); font-weight: 600; margin-bottom: 4px; }
+.announcement-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+.announcement-text { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
 
 /* Calendar Widget */
 .calendar-widget {
@@ -399,14 +397,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
     color: #D4A847;
     background: rgba(255,255,255,0.06);
 }
-.mobile-nav-overlay .btn-nav-gold {
-    background: #C8952A;
-    color: #fff !important;
-    text-align: center;
-    margin-top: 8px;
-    border-radius: var(--radius-sm);
-    padding: 10px 20px;
-}
 .mobile-nav-overlay .btn-nav {
     background: #1B7A5A;
     color: #fff !important;
@@ -473,22 +463,22 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </div>
         </div>
         <div class="portal-nav-right">
-            <a href="contact.html" class="btn-nav-gold" style="font-size:0.85rem; padding:8px 20px; border-radius:4px; text-decoration:none; font-weight:600; white-space:nowrap;">Contact</a>
             <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
+            <a href="contact.html" class="btn-nav-gold">Contact</a>
         </div>
     
         <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="mobile-nav-overlay">
         <a href="v1.html" class="active">Home</a>
-        <a href="howto.html" class="btn-nav">How To</a>
-        <a href="overview.html" class="btn-nav">Overview</a>
+        <a href="howto.html">How To</a>
+        <a href="overview.html">Overview</a>
+        <a href="contact.html" style="display:block; text-align:center; margin-top:8px; padding:10px 20px; text-decoration:none; font-weight:600; background:#C8952A; color:#fff; border-radius:6px;">Contact</a>
         <a href="modules.html">Modules</a>
         <a href="schedule.html">Schedule</a>
         <a href="assessment.html">Assessment</a>
         <div class="mobile-divider"></div>
-        <a href="contact.html" class="btn-nav-gold" style="display:block; text-align:center; margin-top:8px; padding:10px 20px; text-decoration:none; font-weight:600;">Contact</a>
-        </div>
+    </div>
 
     <!-- Left Sidebar -->
     <aside class="portal-sidebar">
@@ -581,20 +571,56 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Home Grid -->
         <div class="home-grid">
 
-            <!-- Left Column: Announcements -->
+            <!-- Left Column: Welcome -->
             <div class="home-left">
                 <h2 class="portal-section-heading">Welcome</h2>
 
                 <div class="announcement-card">
                     <div class="announcement-date">28 July 2026</div>
-                    <div class="announcement-title">Welcome to Sports Law, Spring 2026</div>
-                    <div class="announcement-text"><span style="display:block; margin-bottom:8px;">Welcome to The Law of Sport — glad to have you with us this Term.</span><span style="display:block; margin-bottom:8px;">This site is your central hub for everything in the course: lectures, tutorials, assessment information, and more.</span><span style="display:block; margin-bottom:8px;">Before diving in, we recommend:</span><ol style="margin: 12px 0 0 20px; display: flex; flex-direction: column; gap: 10px;"><li>Starting with the <a href="howto.html" style="color:var(--color-gold-light); text-decoration:underline; text-underline-offset:2px;">How To</a> page — it walks you through how this platform works and how to get the most out of it.</li><li>From there, head to the <a href="overview.html" style="color:var(--color-gold-light); text-decoration:underline; text-underline-offset:2px;">Overview</a> to get a sense of the course structure, themes, and what to expect across the semester.</li></ol></div>
+                    <div class="announcement-title" style="font-size: 1.2rem; margin-bottom: 16px;">Welcome to Sports Law, Spring 2026</div>
+                    <div class="announcement-text" style="font-size: 1.15rem; line-height: 1.85;"><span style="display:block; margin-bottom:8px;">Welcome to The Law of Sport — glad to have you with us this Term.</span><span style="display:block; margin-bottom:8px;">This site is your central hub for everything in the course: lectures, tutorials, assessment information, and more.</span><span style="display:block; margin-bottom:8px;">Before diving in, we recommend:</span><ol style="margin: 12px 0 0 20px; display: flex; flex-direction: column; gap: 10px;"><li>Starting with the <a href="howto.html" style="color:var(--color-gold-light); text-decoration:underline; text-underline-offset:2px;">How To</a> page — it walks you through how this platform works and how to get the most out of it.</li><li>From there, head to the <a href="overview.html" style="color:var(--color-gold-light); text-decoration:underline; text-underline-offset:2px;">Overview</a> to get a sense of the course structure, themes, and what to expect across the semester.</li></ol></div>
                 </div>
             </div>
 
             <!-- Right Column: Calendar -->
-            <div class="home-right">
+                        <div class="home-right">
                 <div class="calendar-widget key-dates-widget"></div>
+            </div>
+        </div>
+
+                    <div class="calendar-item">
+                        <div class="cal-date">
+                            <span class="cal-month">Mar</span>
+                            <span class="cal-day">7</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-title">Tutorial 1: Sports Governance</div>
+                            <div class="cal-type">Tutorial</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-item">
+                        <div class="cal-date">
+                            <span class="cal-month">Apr</span>
+                            <span class="cal-day">2</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-title">Assessment 1 Due</div>
+                            <div class="cal-type assessment">Assessment</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-item">
+                        <div class="cal-date">
+                            <span class="cal-month">Mar</span>
+                            <span class="cal-day">12</span>
+                        </div>
+                        <div class="cal-info">
+                            <div class="cal-title">Lecture 2: Sports Governance</div>
+                            <div class="cal-type">Lecture</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -685,5 +711,34 @@ h1, h2, h3, h4 { line-height: 1.2; }
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim().toLowerCase();
-                if
+                if (!query) return;
+                // In production, this would search across all pages
+                alert('Search for: "' + searchInput.value + '"\n\nFull search functionality will be connected when content is populated.');
+            }
+        });
+    </script>
+
+
+<script>
+(function() {
+    var btn = document.querySelector('.mobile-menu-btn');
+    var overlay = document.querySelector('.mobile-nav-overlay');
+    if (!btn || !overlay) return;
+    btn.addEventListener('click', function() {
+        btn.classList.toggle('active');
+        overlay.classList.toggle('open');
+        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+    });
+    overlay.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            btn.classList.remove('active');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+})();
+</script>
+
 <script src="key-dates.js"></script>
+</body>
+</html>
