@@ -113,28 +113,12 @@ img { max-width: 100%; display: block; }
 h1, h2, h3, h4 { line-height: 1.2; }
 .section-inner { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 .section-eyebrow {
-    font-size: 1rem; font-weight: 600; text-transform: uppercase;
+    font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.1em; color: var(--color-emerald); margin-bottom: 8px;
 }
 .section-header { text-align: center; max-width: 820px; margin: 0 auto 48px; }
 .section-header h2 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-navy); margin-bottom: 12px; }
-.pitch-why .section-eyebrow,
-.pitch-course .section-eyebrow,
-.pitch-credentials .section-eyebrow,
-.pitch-how .section-eyebrow { font-size: 1.25rem !important; font-weight: 700 !important; }
 .section-desc { color: var(--color-text-light); font-size: 1.05rem; }
-
-/* Justify body paragraphs in content sections (exclude section headers) */
-.pitch-values p, .pitch-course p, .pitch-explore p, .pitch-approach p,
-.pitch-credentials p, .pitch-how p, .pitch-why p, .pitch-contact p {
-    text-align: justify;
-    hyphens: auto;
-}
-.section-header p, .section-header .section-eyebrow, .section-header .section-desc,
-.pitch-contact .section-eyebrow {
-    text-align: center;
-    hyphens: none;
-}
 .btn {
     display: inline-block; font-family: var(--font-sans); font-weight: 600;
     font-size: 0.95rem; padding: 12px 28px; border-radius: var(--radius-sm);
@@ -148,34 +132,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
 .btn-large { padding: 16px 40px; font-size: 1.05rem; }
 
-/* Demo Banner Strip */
-.demo-strip {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 101;
-    background: #C8952A;
-    display: flex; align-items: center; justify-content: center; gap: 14px;
-    padding: 8px 24px; height: 40px;
-}
-.demo-strip-text {
-    font-size: 0.82rem; font-weight: 600; color: #fff;
-    letter-spacing: 0.01em;
-}
-.demo-strip-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.2); border: 1.5px solid rgba(255,255,255,0.7);
-    color: #fff; font-size: 0.78rem; font-weight: 700;
-    padding: 3px 14px; border-radius: 20px;
-    transition: background 0.2s ease, border-color 0.2s ease;
-    text-decoration: none;
-}
-.demo-strip-link:hover { background: rgba(255,255,255,0.35); border-color: #fff; color: #fff; }
-@media (max-width: 600px) {
-    .demo-strip-text { display: none; }
-    .demo-strip { justify-content: flex-start; padding-left: 18px; }
-}
-
 /* Pitch Nav */
 .pitch-nav {
-    position: fixed; top: 40px; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(11, 29, 58, 0.95); backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -193,7 +152,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 /* Hero */
 .pitch-hero {
     background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
-    padding: 137px 24px 70px; display: flex; align-items: center;
+    padding: 120px 24px 70px; display: flex; align-items: center;
     justify-content: space-between; gap: 60px; min-height: auto;
 }
 .pitch-page .pitch-hero { padding-left: calc((100% - 1140px) / 2 + 24px); padding-right: calc((100% - 1140px) / 2 + 24px); }
@@ -201,7 +160,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .hero-eyebrow { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; color: var(--color-gold); margin-bottom: 20px; }
 .pitch-hero h1 { font-family: var(--font-serif); font-size: 2.1rem; font-weight: 800; color: var(--color-white); margin-bottom: 20px; line-height: 1.25; }
 .hero-line { display: block; white-space: nowrap; }
-.hero-accent { color: #C8952A; }
+.hero-accent { color: var(--color-gold-light); }
 .hero-sub { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-visual { flex: 0 0 380px; }
@@ -374,6 +333,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 @media (max-width: 600px) {
     /* Hero */
+    /* Contact */
+    .contact-box { margin-left: 0 !important; text-align: left !important; }
+    .contact-box .btn { align-self: flex-start; }
     .pitch-hero h1 { font-size: 1.6rem; }
     .hero-line { white-space: normal; }
     .hero-sub { font-size: 0.92rem; }
@@ -414,9 +376,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .credentials-bio p { font-size: 0.9rem; }
     .credentials-bio p[style*="font-size: 1.15rem"] { font-size: 1rem !important; }
 
-    /* Contact CTA — left-align, remove desktop indent */
-    .contact-box { margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; text-align: left !important; }
-    .contact-box > div[style*="display:flex"] { flex-direction: column; align-items: flex-start; }
+    /* Contact CTA buttons — full width stack */
+    .contact-box > div[style*="display:flex"] { flex-direction: column; align-items: center; }
     .contact-box .btn-large { width: 100%; max-width: 320px; padding: 14px 24px !important; font-size: 1rem !important; }
 
     /* How It Works step text */
@@ -569,21 +530,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .mobile-menu-btn { display: block; }
 }
 
-/* Section eyebrow overrides — must stay last */
-.pitch-why .section-eyebrow,
-.pitch-course .section-eyebrow,
-.pitch-credentials .section-eyebrow,
-.pitch-how .section-eyebrow { font-size: 1.25rem !important; font-weight: 700 !important; }
-
 </style>
 </head>
 <body class="pitch-page">
-
-    <!-- Demo Banner Strip -->
-    <div class="demo-strip">
-        <span class="demo-strip-text">See what your students will experience —</span>
-        <a href="../demo/" class="demo-strip-link">&#9654; View Demo Student Portal</a>
-    </div>
 
     <!-- Navigation -->
     <nav class="pitch-nav">
@@ -596,6 +545,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="#course">The Course</a>
                 <a href="#approach">Approach</a>
                 <a href="#credentials">Credentials</a>
+                <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
                 <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
             </div>
@@ -608,6 +558,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#course">The Course</a>
             <a href="#approach">Approach</a>
             <a href="#credentials">Credentials</a>
+            <a href="../demo/" style="color:var(--color-gold); font-weight:600;">Demo Student Portal</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
             <div class="mobile-divider"></div>
             <button class="theme-toggle" id="mobileThemeToggle" title="Toggle dark mode" style="margin:0 auto;">&#9790;</button>
@@ -663,7 +614,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="why-grid">
                 <!-- Institutional Benefits -->
                 <div class="why-column">
-                    <h3 style="color: #C8952A;">For Your Institution</h3>
+                    <h3 style="color: #E2C274;">For Your Institution</h3>
                     <p class="why-col-intro">A distinctive elective that strengthens your law program and attracts students across disciplines.</p>
                     <div class="why-item">
                         <div class="why-icon inst">&#128200;</div>
@@ -690,13 +641,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="why-icon inst">&#9889;</div>
                         <div class="why-item-text">
                             <h4>Ahead of Regulatory Reform</h4>
-                            <p>Regulators in Australia including LPAB and LACC have indicated near term changes to tertiary and pre-admission legal education. This course is already built around the model regulators are moving toward: real documents, real problems, and the practical competencies the profession demands.</p>
+                            <p>Australian legal education is being reshaped. The LPAB's Interim Report has found the current PLT framework no longer fit for purpose, and LACC is now reviewing PLT competencies and accreditation nationally. This course is already built around the model regulators are moving toward: real documents, real problems, and the practical competencies the profession demands.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Student Appeal -->
                 <div class="why-column">
-                    <h3 style="color: #C8952A;">For Your Students</h3>
+                    <h3 style="color: #E2C274;">For Your Students</h3>
                     <p class="why-col-intro">A subject that connects personal passion with professional development in ways few other electives can.</p>
                     <div class="why-item">
                         <div class="why-icon stud">&#127941;</div>
@@ -786,7 +737,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="explore-box">
                 <div class="explore-text">
                     <p class="section-eyebrow">See It In Action</p>
-                    <h2 style="color: #C8952A;">Explore the student platform</h2>
+                    <h2>Explore the student platform</h2>
                     <p>The best way to understand what your students will experience is to see it for yourself. Browse the live demo — navigate the modules, watch lecture previews, explore the tutorial programme, and see how the assessment framework is presented. Everything you see is what your students receive.</p>
                     <a href="../demo/" class="btn btn-primary" style="margin-top: 20px;">Explore the Demo &rarr;</a>
                 </div>
@@ -830,7 +781,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="approach-layout">
                 <div class="approach-text">
                     <p class="section-eyebrow">Teaching Philosophy</p>
-                    <h2 style="white-space:nowrap; color: #C8952A;"><span class="approach-line">Real problems.</span> <span class="approach-line">Real documents.</span> <span class="approach-line">Real practical skills.</span></h2>
+                    <h2 style="white-space:nowrap; color: var(--color-gold-light);"><span class="approach-line">Real problems.</span> <span class="approach-line">Real documents.</span> <span class="approach-line">Real practical skills.</span></h2>
                     <p>This isn't a course that simply talks about sports law in the abstract. Video lectures deliver the core doctrine and legal frameworks, while live interactive tutorials are where students put that knowledge to work — analysing real documents, debating real scenarios, and developing the practical skills that employers value. The course is designed and taught by a practitioner with significant academic experience, and this practice-first philosophy runs through every element.</p>
                     <ul class="approach-list">
                         <li><strong>Real sports documents</strong> — Students analyse actual policies, codes, and commercial contracts from the sports industry, not textbook hypotheticals</li>
@@ -875,7 +826,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <div class="credentials-body">
                     <div class="credentials-bio">
-                        <p style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: #C8952A; margin-bottom: 16px;">Taught by a practicing sports lawyer, with significant academic experience.</p>
+                        <p style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-gold-light); margin-bottom: 16px;">Taught by a practicing sports lawyer, with significant academic experience.</p>
                         <p>Michael Bricknell is a practising sports, media and entertainment lawyer and university lecturer who brings real-world legal experience directly into the classroom. Originally from Brisbane and now based in Sydney, Michael holds a Juris Doctor from UNSW and a Bachelor of Economics &amp; Business Management from the University of Queensland.</p>
                         <p>As Vice President &amp; Counsel at TKO/IMG, Michael advises on some of the largest and most complex commercial arrangements in international sport. Previously, Michael held legal counsel roles at the NRL and Rugby Australia, working at the heart of two of Australia's major professional sporting organisations on integrity, governance, player contracting, and commercial arrangements (including sponsorship, broadcast and licensing).</p>
                         <p>His career spans the full spectrum of the sports industry — from the governing bodies responsible for the rules of the game, through to global companies that commercialise sporting rights on a worldwide scale.</p>
@@ -900,7 +851,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="section-inner">
             <div class="section-header">
                 <p class="section-eyebrow">How It Works</p>
-                <h2 style="color: #C8952A;">Simple partnership model</h2>
+                <h2 style="color: var(--color-gold-light);">Simple partnership model</h2>
             </div>
             <div class="how-steps">
                 <div class="how-step">
@@ -925,11 +876,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <!-- CTA / Contact -->
     <section id="contact" class="pitch-contact">
         <div class="section-inner">
-            <div class="contact-box" style="text-align:left; max-width:654px; margin-left:64px; margin-right:0;">
-                <p class="section-eyebrow" style="color:var(--color-gold); text-align:left;">Ready to get started?</p>
-                <h2 style="text-align:left; font-size:1.6rem;">Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
+            <div class="contact-box">
+                <p class="section-eyebrow" style="color:var(--color-gold);">Ready to get started?</p>
+                <h2>Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
                 <p>Whether you're exploring a new elective, expanding your law program, or looking for a practice-ready course that students will genuinely enjoy — I'd love to hear from you. No commitment, just a conversation.</p>
-                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-start; margin-bottom:20px;">
+                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
                     <a href="mailto:mike@thelawofsport.com?subject=Sports%20Law%20Course%20—%20Enquiry" class="btn btn-primary btn-large" style="font-size:1.05rem; padding:16px 36px;">Email Me</a>
                     <a href="https://www.linkedin.com/in/michael-bricknell-8a7b9221/" target="_blank" class="btn btn-large" style="font-size:1.05rem; padding:16px 36px; background:#0A66C2; color:#fff; border-color:#0A66C2;">LinkedIn Message</a>
 
@@ -943,4 +894,59 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <footer class="pitch-footer">
         <div class="section-inner">
             <div class="footer-inner">
-    
+                <div class="footer-brand">
+                    <img src="../assets/logo.svg" alt="The Law of Sport" style="height:32px; width:auto; display:block;">
+                </div>
+                <p class="footer-copy">&copy; 2026 Michael Bricknell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+(function() {
+    var btn = document.querySelector('.mobile-menu-btn');
+    var overlay = document.querySelector('.mobile-nav-overlay');
+    if (!btn || !overlay) return;
+    btn.addEventListener('click', function() {
+        btn.classList.toggle('active');
+        overlay.classList.toggle('open');
+        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+    });
+    overlay.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            btn.classList.remove('active');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+})();
+
+// Dark mode toggle
+(function() {
+    var toggle = document.getElementById('themeToggle');
+    var mobileToggle = document.getElementById('mobileThemeToggle');
+    var html = document.documentElement;
+    function setTheme(dark) {
+        if (dark) {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        }
+        var icon = dark ? '\u2600' : '\u263E';
+        if (toggle) toggle.textContent = icon;
+        if (mobileToggle) mobileToggle.textContent = icon;
+    }
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
+    function handleClick() {
+        setTheme(html.getAttribute('data-theme') !== 'dark');
+    }
+    if (toggle) toggle.addEventListener('click', handleClick);
+    if (mobileToggle) mobileToggle.addEventListener('click', handleClick);
+})();
+</script>
+
+</body>
+</html>
