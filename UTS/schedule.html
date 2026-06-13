@@ -192,8 +192,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
     margin-bottom: 20px; color: var(--color-white);
 }
 .key-dates-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
+.key-dates-row-label {
+    grid-column: 1 / -1; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(255,255,255,0.5); padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.15); margin-top: 4px;
+}
+.key-dates-row-label:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 .key-date-item {
     display: flex; flex-direction: column; gap: 6px;
 }
@@ -490,6 +496,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .portal-sidebar { display: none; }
     .portal-main { padding: 24px 20px; }
     .key-dates-grid { grid-template-columns: repeat(2, 1fr); }
+    .key-dates-row-label { grid-column: 1 / -1; }
 
     /* Hide the timeline vertical line */
     .schedule-timeline::before { display: none; }
@@ -773,6 +780,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div id="keydates" class="key-dates-box">
             <h2>Key Dates — Spring Session 2026</h2>
             <div class="key-dates-grid">
+                <div class="key-dates-row-label">Session Dates</div>
                 <div class="key-date-item">
                     <div class="key-date-label">Session Commences</div>
                     <div class="key-date-value">27 Jul 2026</div>
@@ -789,24 +797,21 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     <div class="key-date-label">Formal Classes End</div>
                     <div class="key-date-value">23 Oct 2026</div>
                 </div>
+                <div class="key-dates-row-label">Assessments</div>
                 <div class="key-date-item">
-                    <div class="key-date-label">Final Assessment Period</div>
-                    <div class="key-date-value">2–20 Nov 2026</div>
+                    <div class="key-date-label">Seminar Presentation</div>
+                    <div class="key-date-value">In Class</div>
                 </div>
                 <div class="key-date-item">
-                    <div class="key-date-label">Results Published</div>
-                    <div class="key-date-value">7 Dec 2026</div>
-                </div>
-                <div class="key-date-item">
-                    <div class="key-date-label">Plea Assessment (40%)</div>
+                    <div class="key-date-label">Written Plea</div>
                     <div class="key-date-value">TBD</div>
                 </div>
                 <div class="key-date-item">
-                    <div class="key-date-label">Contract Review (40%)</div>
+                    <div class="key-date-label">Take Home Paper Release</div>
                     <div class="key-date-value">TBD</div>
                 </div>
                 <div class="key-date-item">
-                    <div class="key-date-label">Oral Assessment (20%)</div>
+                    <div class="key-date-label">Take Home Paper Due</div>
                     <div class="key-date-value">TBD</div>
                 </div>
             </div>
@@ -1194,11 +1199,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 el.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 // Briefly highlight the card
                 el.style.boxShadow = '0 0 0 3px var(--color-gold)';
-                setTimeout(() => { el.style.boxShadow = ''; }, 2000);
-            }
-        }
-
-        // Update sidebar link labels with the target week
-        const nextLecWeek = findNext(lectureWeeks);
-        const nextTutWeek = findNext(tutorialWeeks);
-        const nextLecLink = document.getElementByI
+                setTimeo
