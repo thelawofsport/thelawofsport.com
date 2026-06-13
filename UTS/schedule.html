@@ -1176,4 +1176,56 @@ h1, h2, h3, h4 { line-height: 1.2; }
         // Session dates (Tuesday of each teaching week)
         const weekStarts = {
             1:  new Date(2026, 6, 28),  // 28 Jul
-            2:  new Date(2026, 
+            2:  new Date(2026, 7, 4),   // 4 Aug
+            3:  new Date(2026, 7, 11),  // 11 Aug
+            4:  new Date(2026, 7, 18),  // 18 Aug
+            5:  new Date(2026, 7, 25),  // 25 Aug
+            6:  new Date(2026, 8, 1),   // 1 Sep
+            7:  new Date(2026, 8, 8),   // 8 Sep
+            8:  new Date(2026, 8, 15),  // 15 Sep
+            9:  new Date(2026, 8, 29),  // 29 Sep (after StuVac)
+            10: new Date(2026, 9, 6),   // 6 Oct
+            11: new Date(2026, 9, 13),  // 13 Oct
+            12: new Date(2026, 9, 20),  // 20 Oct
+        };
+
+        function getCurrentWeek() {
+            const now = new Date();
+            let currentWeek = 1;
+            for (let w = 12; w >= 1; w--) {
+                if (weekStarts[w] && now >= weekStarts[w]) { currentWeek = w; break; }
+            }
+            return currentWeek;
+        }
+
+        function findNext(weekList) {
+            const current = getCurrentWeek();
+            for (const w of weekList) {
+                if (w >= current) return w;
+            }
+            return weekList[weekList.length - 1];
+        }
+
+        function scrollToWeek(weekNum) {
+            const el = document.getElementById('week-' + weekNum);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.style.boxShadow = '0 0 0 3px var(--color-gold)';
+                setTimeout(() => { el.style.boxShadow = ''; }, 2000);
+            }
+        }
+
+        // Wire up sidebar Next Lecture / Next Tutorial links
+        const nextLecWeek = findNext(lectureWeeks);
+        const nextTutWeek = findNext(tutorialWeeks);
+        const nextLecLink = document.getElementById('nextLectureLink');
+        const nextTutLink = document.getElementById('nextTutorialLink');
+        if (nextLecLink) {
+            nextLecLink.addEventListener('click', (e) => { e.preventDefault(); scrollToWeek(nextLecWeek); });
+        }
+        if (nextTutLink) {
+            nextTutLink.addEventListener('click', (e) => { e.preventDefault(); scrollToWeek(nextTutWeek); });
+        }
+    </script>
+</body>
+</html>
