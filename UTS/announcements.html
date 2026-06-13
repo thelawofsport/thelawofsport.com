@@ -60,7 +60,7 @@
     --color-gray-200: #2A3A5C;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 135px; }
 body {
     font-family: var(--font-sans); color: var(--color-text);
     background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
@@ -72,11 +72,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .logo-text { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-white); }
 
 /* Portal Layout */
-.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+.portal-page { display: flex; min-height: 100vh; padding-top: 117px; }
 
 /* Portal Top Nav */
+.portal-top-strip { position: fixed; top: 0; left: 0; right: 0; height: 40px; background: var(--color-navy); z-index: 101; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .portal-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    position: fixed; top: 40px; left: 0; right: 0; z-index: 100; height: 77px;
     background: var(--color-navy); display: flex; align-items: center;
     justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
 }
@@ -557,7 +558,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 @media (max-width: 900px) {
     .portal-nav-menu { display: none; }
     .portal-nav-right { display: none; }
-    .portal-nav {
+    .portal-top-strip { position: fixed; top: 0; left: 0; right: 0; height: 40px; background: var(--color-navy); z-index: 101; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.portal-nav {
         justify-content: space-between;
     }
 }
@@ -565,6 +567,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 </style>
 </head>
 <body class="portal-page">
+    <div class="portal-top-strip"></div>
 
     <!-- Top Navigation -->
     <nav class="portal-nav">
@@ -668,7 +671,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="page-header">
             <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; Announcements</div>
             <h1>Announcements</h1>
-            <p>Course updates, reminders, and important notices from your lecturer.</p>
+            <p>Course updates, reminders, and important notices from your course coordinator.</p>
         </div>
 
         <!-- Two-column layout -->
@@ -699,7 +702,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <h3 class="announcement-title">Welcome to Sports Law — Trimester 3, 2026</h3>
                 <div class="announcement-body">
-                    <p>Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome section to meet your lecturer and understand how the course works, then move into Module 1. If you have any questions, check the Contact page for the best way to reach me. I'm looking forward to a great trimester.</p>
+                    <p>Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome section to meet your course coordinator and understand how the course works, then move into Module 1. If you have any questions, check the Contact page for the best way to reach me. I'm looking forward to a great trimester.</p>
                 </div>
             </div>
 
@@ -929,7 +932,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="contact.html" class="quick-link-item">
                     <div class="quick-link-icon contact">&#128231;</div>
                     <div class="quick-link-info">
-                        <div class="quick-link-title">Contact Your Lecturer</div>
+                        <div class="quick-link-title">Contact Your Course Coordinator</div>
                         <div class="quick-link-desc">Response times &amp; office hours</div>
                     </div>
                     <span class="quick-link-arrow">&rarr;</span>

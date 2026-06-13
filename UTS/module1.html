@@ -62,7 +62,7 @@
     --color-gray-200: #2A3A5C;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 135px; }
 body {
     font-family: var(--font-sans); color: var(--color-text);
     background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
@@ -75,11 +75,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .logo-text { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-white); }
 
 /* Portal Layout */
-.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+.portal-page { display: flex; min-height: 100vh; padding-top: 117px; }
 
 /* Portal Top Nav */
+.portal-top-strip { position: fixed; top: 0; left: 0; right: 0; height: 40px; background: var(--color-navy); z-index: 101; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .portal-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    position: fixed; top: 40px; left: 0; right: 0; z-index: 100; height: 77px;
     background: var(--color-navy); display: flex; align-items: center;
     justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
 }
@@ -474,7 +475,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 @media (max-width: 900px) {
     .portal-nav-menu { display: none; }
     .portal-nav-right { display: none; }
-    .portal-nav {
+    .portal-top-strip { position: fixed; top: 0; left: 0; right: 0; height: 40px; background: var(--color-navy); z-index: 101; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.portal-nav {
         justify-content: space-between;
     }
 }
@@ -482,6 +484,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 </style>
 </head>
 <body class="portal-page">
+    <div class="portal-top-strip"></div>
 
     <!-- Top Navigation -->
     <nav class="portal-nav">
