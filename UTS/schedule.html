@@ -843,7 +843,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture1.html">Lecture 1: What is Sports Law?</a></div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mike &amp; Mat</div>
                         </div>
-                        <div class="key-date-badge">&#128203; Combined intro session</div>
+
                     </div>
                 </div>
 
@@ -1185,4 +1185,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         function findNext(weekList) {
             const current = getCurrentWeek();
-            // Find th
+            // Find the current or next week that has the item
+            for (const w of weekList) {
+         
