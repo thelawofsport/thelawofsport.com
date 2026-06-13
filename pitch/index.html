@@ -912,11 +912,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <!-- CTA / Contact -->
     <section id="contact" class="pitch-contact">
         <div class="section-inner">
-            <div class="contact-box">
-                <p class="section-eyebrow" style="color:var(--color-gold);">Ready to get started?</p>
-                <h2>Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
+            <div class="contact-box" style="text-align:left;">
+                <p class="section-eyebrow" style="color:var(--color-gold); text-align:left;">Ready to get started?</p>
+                <h2 style="text-align:left;">Let's have a chat about introducing Sports&nbsp;Law at your institution for 2027 or&nbsp;2028</h2>
                 <p>Whether you're exploring a new elective, expanding your law program, or looking for a practice-ready course that students will genuinely enjoy — I'd love to hear from you. No commitment, just a conversation.</p>
-                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+                <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-start; margin-bottom:20px;">
                     <a href="mailto:mike@thelawofsport.com?subject=Sports%20Law%20Course%20—%20Enquiry" class="btn btn-primary btn-large" style="font-size:1.05rem; padding:16px 36px;">Email Me</a>
                     <a href="https://www.linkedin.com/in/michael-bricknell-8a7b9221/" target="_blank" class="btn btn-large" style="font-size:1.05rem; padding:16px 36px; background:#0A66C2; color:#fff; border-color:#0A66C2;">LinkedIn Message</a>
 
@@ -947,6 +947,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
     btn.addEventListener('click', function() {
         btn.classList.toggle('active');
         overlay.classList.toggle('open');
-        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
-    });
-    o
+        document.body.style.overf
