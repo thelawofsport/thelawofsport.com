@@ -276,18 +276,18 @@ h1, h2, h3, h4 { line-height: 1.2; }
     display: flex; flex-direction: column; gap: 18px; margin-bottom: 44px;
 }
 .structure-card {
-    background: var(--color-surface); border: 1px solid var(--color-border);
+    background: var(--sc-bg, var(--color-surface));
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--sc-color, var(--color-emerald));
     border-radius: var(--radius-md); padding: 22px 26px;
     display: flex; align-items: center; gap: 16px;
     transition: all var(--transition);
     text-decoration: none; color: inherit;
 }
 .structure-card:hover {
-    box-shadow: var(--shadow-md); border-color: var(--color-emerald);
+    box-shadow: var(--shadow-md); filter: brightness(0.97);
 }
-.structure-card-dot {
-    flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
-}
+.structure-card-dot { display: none; }
 .structure-card-content { flex: 1; }
 .structure-card-title {
     font-size: 0.95rem; font-weight: 600; color: var(--color-text); margin-bottom: 3px;
@@ -873,7 +873,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <hr class="section-divider">
             <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-light); margin-bottom: 20px;">Sports Law is taught across five modules, each featuring between one and three pre-recorded lectures and one live tutorial. The modules move progressively from the foundations of how sport is governed, through disputes, athlete contracts, integrity regulation, and the commercial architecture that funds the entire system.</p>
             <div class="structure-cards">
-                <a href="welcome.html" class="structure-card">
+                <a href="welcome.html" class="structure-card" style="--sc-color:#1B7A5A; --sc-bg:rgba(27,122,90,0.06);">
                     <div class="structure-card-dot" style="background: #1B7A5A;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Welcome to Sports Law</div>
@@ -882,7 +882,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <span class="structure-card-arrow">&#8594;</span>
                 </a>
-                <a href="module1.html" class="structure-card">
+                <a href="module1.html" class="structure-card" style="--sc-color:#0B1D3A; --sc-bg:rgba(11,29,58,0.05);">
                     <div class="structure-card-dot" style="background: #0B1D3A;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Module 1: Governance &amp; Systems</div>
@@ -891,7 +891,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <span class="structure-card-arrow">&#8594;</span>
                 </a>
-                <a href="module2.html" class="structure-card">
+                <a href="module2.html" class="structure-card" style="--sc-color:#B45309; --sc-bg:rgba(180,83,9,0.06);">
                     <div class="structure-card-dot" style="background: #B45309;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Module 2: Challenging Decisions</div>
@@ -900,7 +900,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <span class="structure-card-arrow">&#8594;</span>
                 </a>
-                <a href="module3.html" class="structure-card">
+                <a href="module3.html" class="structure-card" style="--sc-color:#1E4D6E; --sc-bg:rgba(30,77,110,0.06);">
                     <div class="structure-card-dot" style="background: #1E4D6E;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Module 3: Athletes, Contract &amp; Control</div>
@@ -909,7 +909,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <span class="structure-card-arrow">&#8594;</span>
                 </a>
-                <a href="module4.html" class="structure-card">
+                <a href="module4.html" class="structure-card" style="--sc-color:#8B1A1A; --sc-bg:rgba(139,26,26,0.06);">
                     <div class="structure-card-dot" style="background: #8B1A1A;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Module 4: Sports Integrity &amp; Regulation</div>
@@ -918,7 +918,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     </div>
                     <span class="structure-card-arrow">&#8594;</span>
                 </a>
-                <a href="module5.html" class="structure-card">
+                <a href="module5.html" class="structure-card" style="--sc-color:#5B2D8E; --sc-bg:rgba(91,45,142,0.06);">
                     <div class="structure-card-dot" style="background: #5B2D8E;"></div>
                     <div class="structure-card-content">
                         <div class="structure-card-title">Module 5: Commercialising Sports Rights</div>
