@@ -1,11 +1,12 @@
 // Shared Key Dates widget — edit this file to update both the Home and How To pages
 (function () {
     var dates = [
-        { month: 'Jul', day: '28', title: 'Tutorial 1: Intro to Sports Law',           type: 'Tutorial',    assessment: false },
-        { month: 'Aug', day: '4',  title: 'Tutorial 2: Governance',                    type: 'Tutorial',    assessment: false },
-        { month: 'Aug', day: '11', title: 'Tutorial 3: Discipline &amp; Disputes',     type: 'Tutorial',    assessment: false },
-        { month: 'Oct', day: '20', title: 'Assessment 2: Take Home Paper Release',      type: 'Assessment',  assessment: true  },
-        { month: 'Sep', day: 'TBD', title: 'Assessment 3: Plea Assessment',            type: 'Assessment',  assessment: true  },
+        { month: 'Jul', day: '28',  title: 'Tutorial 1: Intro to Sports Law (Week 1 — Welcome Module)',      type: 'Tutorial',    assessment: false },
+        { month: 'Aug', day: '4',   title: 'Tutorial 2: Governance (Week 2 — Module 1)',                     type: 'Tutorial',    assessment: false },
+        { month: 'Aug', day: '11',  title: 'Tutorial 3: Discipline &amp; Disputes (Week 3 — Module 2)',      type: 'Tutorial',    assessment: false },
+        { month: 'Sep', day: 'TBD', title: 'Assessment 1: Seminar Presentation',                             type: 'Assessment',  assessment: true  },
+        { month: 'Sep', day: '8',   title: 'Assessment 3A &amp; 3B: Plea of Mitigation (Weeks 7–8)',         type: 'Assessment',  assessment: true  },
+        { month: 'Oct', day: '20',  title: 'Assessment 2: Contract Review — Take Home Paper Released',       type: 'Assessment',  assessment: true  },
     ];
 
     var html = '<h3>Key Dates</h3>';
