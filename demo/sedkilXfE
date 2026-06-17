@@ -556,7 +556,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <nav class="portal-nav">
         <div class="portal-nav-left">
             <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
-                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:50pxPLACEHOLDER; width:auto; display:block;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
             </a>
             <div class="portal-nav-menu">
 <a href="v1.html">Home</a>
@@ -731,7 +731,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="assessment" id="assessment-news">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">1 March 2027</div>
+                        <div class="announcement-date">5 October 2026</div>
                         <span class="announcement-category-tag assessment">Assessment</span>
                     </div>
                 </div>
@@ -746,7 +746,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="admin">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">1 March 2027</div>
+                        <div class="announcement-date">5 October 2026</div>
                         <span class="announcement-category-tag admin">Course Admin</span>
                     </div>
                 </div>
@@ -761,7 +761,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="admin">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">27 February 2027</div>
+                        <div class="announcement-date">3 October 2026</div>
                         <span class="announcement-category-tag admin">Course Admin</span>
                     </div>
                 </div>
@@ -790,8 +790,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="cal-section-label">&#127891; Lectures</div>
                 <a href="lecture1.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box lecture">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">3</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">7</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Lecture 1: What is Sports Law</div>
@@ -800,8 +800,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </a>
                 <a href="lecture2.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box lecture">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">10</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">14</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Lecture 2: Sports Governance</div>
@@ -810,8 +810,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </a>
                 <a href="lecture3.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box lecture">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">17</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">21</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Lecture 3: Discipline &amp; Disputes</div>
@@ -820,8 +820,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </a>
                 <a href="lecture4.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box lecture">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">24</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">28</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Lecture 4: Player Contracting</div>
@@ -830,8 +830,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </a>
                 <a href="lecture5.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box lecture">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">31</span>
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">4</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Lecture 5: Player Representation</div>
@@ -843,8 +843,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="cal-section-label">&#128172; Tutorials</div>
                 <div class="cal-item">
                     <div class="cal-date-box tutorial">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">10</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">8</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Tutorial 1: Sports Governance</div>
@@ -853,8 +853,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <div class="cal-item">
                     <div class="cal-date-box tutorial">
-                        <span class="cal-date-month">Mar</span>
-                        <span class="cal-date-day">24</span>
+                        <span class="cal-date-month">Oct</span>
+                        <span class="cal-date-day">22</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Tutorial 2: Sports Discipline &amp; Disputes</div>
@@ -863,8 +863,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <div class="cal-item">
                     <div class="cal-date-box tutorial">
-                        <span class="cal-date-month">Apr</span>
-                        <span class="cal-date-day">7</span>
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">5</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Tutorial 3: Athletes, Contract &amp; Control</div>
@@ -876,8 +876,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="cal-section-label">&#128221; Assessments</div>
                 <a href="assessment.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box assessment">
-                        <span class="cal-date-month">Apr</span>
-                        <span class="cal-date-day">2</span>
+                        <span class="cal-date-month">Nov</span>
+                        <span class="cal-date-day">6</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Assessment 1: Plea of Mitigation</div>
@@ -886,8 +886,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </a>
                 <a href="assessment.html" class="cal-item" style="text-decoration:none; color:inherit;">
                     <div class="cal-date-box assessment">
-                        <span class="cal-date-month">May</span>
-                        <span class="cal-date-day">14</span>
+                        <span class="cal-date-month">Dec</span>
+                        <span class="cal-date-day">11</span>
                     </div>
                     <div class="cal-item-info">
                         <div class="cal-item-title">Assessment 2: Sponsorship Review</div>
@@ -944,7 +944,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- Footer -->
         <div class="portal-footer">
-            <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <span>&copy; 2027 The Law of Sport — Michael Bricknell</span>
         </div>
 
     </main>

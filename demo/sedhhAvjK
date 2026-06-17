@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 7: Corruption & Wagering — The Law of Sport</title>
+    <title>Lecture 11: Sports Sponsorship — The Law of Sport</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -43,9 +43,9 @@
     --shadow-sm: 0 1px 3px var(--color-shadow);
     --shadow-md: 0 4px 12px var(--color-shadow);
     --transition: 0.2s ease;
-    /* Module 4 colour */
-    --module-color: #8B1A1A;
-    --module-color-light: #B52828;
+    /* Module 5 colour */
+    --module-color: #5B2D8E;
+    --module-color-light: #7C3DAF;
 }
 [data-theme="dark"] {
     --color-text: #E5E7EB;
@@ -488,13 +488,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <nav class="portal-nav">
         <div class="portal-nav-left">
             <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
-                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:50pxPLACEHOLDER; width:auto; display:block;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
             </a>
             <div class="portal-nav-menu">
                 <a href="v1.html">Home</a>
-                
                 <a href="contact.html">Contact</a>
-                <a href="howto.html">How To</a>
                 <a href="overview.html">Overview</a>
                 <a href="modules.html" class="active">Modules</a>
 
@@ -517,9 +515,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     </nav>
     <div class="mobile-nav-overlay">
         <a href="v1.html">Home</a>
-        
         <a href="contact.html">Contact</a>
-        <a href="howto.html">How To</a>
         <a href="overview.html">Overview</a>
         <a href="modules.html" class="active">Modules</a>
         <a href="schedule.html">Schedule</a>
@@ -548,17 +544,17 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <div class="sidebar-divider"></div>
 
-        <!-- Contextual: Module 4 lectures -->
+        <!-- Contextual: Module 5 lectures -->
         <div class="sidebar-section">
-            <div class="sidebar-label">Module 4 — Sports Integrity &amp; Regulation</div>
-            <a href="lecture6.html" class="sidebar-link">
-                <span class="sidebar-icon">6</span> Clean Sport
+            <div class="sidebar-label">Module 5 — Commercialising Sports Rights</div>
+            <a href="lecture9.html" class="sidebar-link">
+                <span class="sidebar-icon">9</span> From Right to Contract
             </a>
-            <a href="lecture7.html" class="sidebar-link active">
-                <span class="sidebar-icon">7</span> Corruption &amp; Wagering
+            <a href="lecture10.html" class="sidebar-link">
+                <span class="sidebar-icon">10</span> Sports Media
             </a>
-            <a href="lecture8.html" class="sidebar-link">
-                <span class="sidebar-icon">8</span> High Risk Sport &amp; Permitted Harm
+            <a href="lecture11.html" class="sidebar-link active">
+                <span class="sidebar-icon">11</span> Sports Sponsorship
             </a>
         </div>
 
@@ -566,16 +562,16 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <div class="sidebar-section">
             <div class="sidebar-label">eLearning (External)</div>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128196;</span> Course Outline
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128200;</span> Grades &amp; Feedback
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128228;</span> Submit Assessment
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128490;</span> Discussion Forums
             </a>
         </div>
@@ -588,22 +584,22 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="page-breadcrumb">
             <a href="v1.html">Home</a> &nbsp;/&nbsp;
             <a href="modules.html">Modules</a> &nbsp;/&nbsp;
-            <a href="module4.html">Module 4: Sports Integrity &amp; Regulation</a> &nbsp;/&nbsp;
-            Lecture 7: Corruption &amp; Wagering
+            <a href="module5.html">Module 5: Commercialising Sports Rights</a> &nbsp;/&nbsp;
+            Lecture 11: Sports Sponsorship
         </div>
 
         <!-- Lecture Header Bar -->
         <div class="lecture-header">
             <div class="lecture-header-badge">
-                Lect<span class="badge-num">7</span>
+                Lect<span class="badge-num">11</span>
             </div>
             <div class="lecture-header-info">
-                <div class="lecture-header-module">Module 4 &mdash; Sports Integrity &amp; Regulation</div>
-                <div class="lecture-header-title">Corruption &amp; Wagering</div>
+                <div class="lecture-header-module">Module 5 &mdash; Commercialising Sports Rights</div>
+                <div class="lecture-header-title">Sports Sponsorship</div>
             </div>
             <div class="lecture-header-nav">
-                <button class="lecture-nav-btn" title="Previous: Clean Sport">&#8592;</button>
-                <button class="lecture-nav-btn" title="Next: High Risk Sport & Permitted Harm">&#8594;</button>
+                <button class="lecture-nav-btn" title="Previous: Sports Media">&#8592;</button>
+                <button class="lecture-nav-btn disabled" title="No next lecture">&#8594;</button>
             </div>
         </div>
 
@@ -624,8 +620,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <!-- Video Playlist -->
             <div class="video-playlist">
                 <div class="playlist-header">
-                    <h3>Lecture 7: Corruption &amp; Wagering</h3>
-                    <p>7 videos &bull; Module 4</p>
+                    <h3>Lecture 11: Sports Sponsorship</h3>
+                    <p>7 videos &bull; Module 5</p>
                 </div>
                 <div class="playlist-items" id="playlistItems">
                     <!-- Videos populated by JS -->
@@ -637,8 +633,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Context Panel -->
         <div class="lecture-context" id="lectureContext">
             <div class="context-segment-label" id="contextLabel">Part 1 of 7</div>
-            <div class="context-segment-title" id="contextTitle">Introduction to Sports Corruption</div>
-            <div class="context-segment-desc" id="contextDesc">Sport and wagering are not in opposition. They are structurally entangled — commercially, economically, and legally — in ways that cannot be cleanly separated. This lecture examines the regulatory architecture built to manage that entanglement. Sport has commercial value because it is uncertain, and corruption destroys that uncertainty. The heart of the lecture is the Sports Controlling Body framework — the centrepiece of Australian wagering integrity regulation — which gives sporting bodies the tools to manage integrity around their events: suspicious betting alerts, market suspension authority, and information-sharing with operators and law enforcement.</div>
+            <div class="context-segment-title" id="contextTitle">Introduction to Sports Sponsorship</div>
+            <div class="context-segment-desc" id="contextDesc">Sponsorship is not a transaction for intellectual property. It is a reputation-transfer and association-control contract. A sponsor pays to associate with the authority, legitimacy, and public trust that governance creates. When governance fails, the sponsorship asset is destroyed — not because a contractual term has been breached, but because the thing the contract was designed to monetise no longer exists. The morality clause is the most important clause in the contract — the mechanism through which the sponsor pre-authorises exit when the sponsored party's conduct threatens the association's value. As the final substantive lecture of the course, it closes a loop that began in Module 2: governance creates authority, contracts monetise trust in that authority, and sponsorship is where the monetisation is most directly dependent on the trust remaining intact.</div>
         </div>
 
         <!-- Resources -->
@@ -655,7 +651,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <div class="resource-icon resource-icon-slides">&#128202;</div>
                 <div class="resource-info">
                     <div class="resource-title">Lecture Slides</div>
-                    <div class="resource-desc">PDF slides — Corruption &amp; Wagering (46 slides)</div>
+                    <div class="resource-desc">PDF slides — Sports Sponsorship (48 slides)</div>
                 </div>
                 <div class="resource-action">Download &rarr;</div>
             </a>
@@ -663,19 +659,22 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- Bottom Navigation -->
         <div class="lecture-bottom-nav">
-            <a href="lecture6.html" class="bottom-nav-link">
+            <a href="lecture10.html" class="bottom-nav-link">
                 <span class="bottom-nav-arrow">&#8592;</span>
-                <div><div class="bottom-nav-label">Previous</div><div class="bottom-nav-title">Clean Sport</div></div>
+                <div><div class="bottom-nav-label">Previous Lecture</div><div class="bottom-nav-title">Sports Media</div></div>
             </a>
-            <a href="lecture8.html" class="bottom-nav-link">
-                <div style="text-align:right"><div class="bottom-nav-label">Next Lecture</div><div class="bottom-nav-title">High Risk Sport &amp; Permitted Harm</div></div>
-                <span class="bottom-nav-arrow">&#8594;</span>
-            </a>
+            <div class="bottom-nav-placeholder">
+                <div class="bottom-nav-link">
+                    <div style="text-align:right"><div class="bottom-nav-label">Next Lecture</div><div class="bottom-nav-title">Placeholder</div></div>
+                    <span class="bottom-nav-arrow">&#8594;</span>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
         <div class="portal-footer">
             <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <a href="#">Grades, submissions, extensions &amp; policies are on your university's platform</a>
         </div>
 
     </main>
@@ -687,52 +686,52 @@ h1, h2, h3, h4 { line-height: 1.2; }
     const videos = [
         {
             id: 1,
-            title: 'Introduction to Sports Corruption',
-            desc: 'Sport and wagering are not in opposition. They are structurally entangled — commercially, economically, and legally — in ways that cannot be cleanly separated. This lecture examines the regulatory architecture built to manage that entanglement. Sport has commercial value because it is uncertain, and corruption destroys that uncertainty. The heart of the lecture is the Sports Controlling Body framework — the centrepiece of Australian wagering integrity regulation — which gives sporting bodies the tools to manage integrity around their events: suspicious betting alerts, market suspension authority, and information-sharing with operators and law enforcement.',
+            title: 'Introduction to Sports Sponsorship',
+            desc: 'Sponsorship is not a transaction for intellectual property. It is a reputation-transfer and association-control contract. A sponsor pays to associate with the authority, legitimacy, and public trust that governance creates. When governance fails, the sponsorship asset is destroyed — not because a contractual term has been breached, but because the thing the contract was designed to monetise no longer exists. The morality clause is the most important clause in the contract — the mechanism through which the sponsor pre-authorises exit when the sponsored party\'s conduct threatens the association\'s value. As the final substantive lecture of the course, it closes a loop that began in Module 2: governance creates authority, contracts monetise trust in that authority, and sponsorship is where the monetisation is most directly dependent on the trust remaining intact.',
             vimeoId: '',
-            duration: '11:15'
+            duration: '11:05'
         },
         {
             id: 2,
-            title: 'Match-Fixing & Spot-Fixing',
-            desc: 'How matches are manipulated, the actors involved, and the legal frameworks designed to detect and punish match-fixing and spot-fixing.',
+            title: 'Sponsorship Agreements',
+            desc: 'The key elements of a sports sponsorship agreement — rights granted, exclusivity, activation obligations, termination clauses, and morality provisions.',
             vimeoId: '',
             duration: '15:30'
         },
         {
             id: 3,
-            title: 'The Regulation of Sports Betting',
-            desc: 'How sports gambling is regulated in Australia and internationally — licensing, advertising restrictions, and the tension between commercial interest and integrity risk.',
+            title: 'Ambush Marketing',
+            desc: 'When non-sponsors attempt to associate with sporting events — what is ambush marketing, how is it combated, and what are the legal tools available to rights holders?',
             vimeoId: '',
-            duration: '14:45'
+            duration: '14:15'
         },
         {
             id: 4,
-            title: 'Sports Integrity Units',
-            desc: 'The role of integrity units within sporting organisations and government agencies — investigation, intelligence sharing, and enforcement mechanisms.',
+            title: 'Athlete Endorsements &amp; Image Rights',
+            desc: 'The legal framework governing athlete endorsement deals — image rights, personality rights, and the tensions between individual and organisational commercial interests.',
+            vimeoId: '',
+            duration: '14:50'
+        },
+        {
+            id: 5,
+            title: 'Reputational Risk in Sport',
+            desc: 'Managing reputational risk — morality clauses, social media policies, and the legal consequences when athletes or sponsors behave in ways that damage brand value.',
             vimeoId: '',
             duration: '13:20'
         },
         {
-            id: 5,
-            title: 'Criminal Law & Sports Corruption',
-            desc: 'When does sports corruption become a criminal matter? The intersection of sporting regulation, fraud, and criminal law.',
-            vimeoId: '',
-            duration: '14:00'
-        },
-        {
             id: 6,
-            title: 'Case Studies in Anti-Corruption',
-            desc: 'Real cases of match-fixing and gambling-related corruption in sport — what happened, how it was detected, and the legal consequences.',
+            title: 'The Future of Sports Commercialisation',
+            desc: 'Emerging trends — naming rights, esports sponsorship, NFTs, athlete-owned media, and the evolving relationship between sport and its commercial partners.',
             vimeoId: '',
-            duration: '12:40'
+            duration: '12:35'
         },
         {
             id: 7,
-            title: 'Summary & Looking Ahead',
-            desc: 'Wrapping up anti-corruption and previewing the final Module 4 lecture on high-risk sport and permitted harm.',
+            title: 'Summary &amp; Course Conclusion',
+            desc: 'Concluding the final lecture and the course — a recap of the key themes across all five modules and how they interconnect.',
             vimeoId: '',
-            duration: '7:55'
+            duration: '9:15'
         }
     ];
 
