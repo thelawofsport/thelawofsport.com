@@ -1,6 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 115">
-  <text font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" fill="#FFFFFF" text-rendering="geometricPrecision">
-    <tspan x="0" y="80" font-size="82" font-weight="900" letter-spacing="-1">LAWOFSPORT</tspan><tspan font-size="45" font-weight="900" dy="-12">.com</tspan>
-  </text>
-  <text x="1" y="110" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" font-style="italic" letter-spacing="4.5" fill="#00D4AA" text-rendering="geometricPrecision">APPLIED LAW FOR MODERN SPORT</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,500&amp;display=swap');
+      .main-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 100px;
+        font-weight: 400;
+        fill: #FFFFFF;
+        letter-spacing: 3px;
+      }
+      .sub-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        fill: #02C5C3;
+        font-style: italic;
+      }
+    </style>
+  
