@@ -185,8 +185,7 @@
 <body>
     <div class="demo-header">
         <div class="demo-logo">
-            <span class="demo-logo-icon">&#9878;</span>
-            <span class="demo-logo-text">The Law of Sport</span>
+            <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:36px; width:auto; display:block;">
         </div>
         <button class="demo-dark-toggle" onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? '' : 'dark')">
             Toggle Dark Mode
@@ -271,6 +270,4 @@ app.post('/api/chat', express.json(), async (req, res) => {
     </div>
 
     <!-- The chatbot widget — this single line is all you need on any page -->
-    <script src="chatbot-widget.js"></script>
-</body>
-</html>
+    <script src="chatbot-widget.js">
