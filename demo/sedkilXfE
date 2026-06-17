@@ -78,7 +78,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .portal-nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
     background: var(--color-navy); display: flex; align-items: center;
-    justify-content: space-between; padding: 0 40px; overflow: visible;
+    justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
 }
 .portal-nav-left { display: flex; align-items: center; gap: 44px; }
 .portal-nav-left .logo-text { font-size: 1rem; }
@@ -87,12 +87,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
     color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
     padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
 }
-.portal-nav-menu a.btn-nav { background: var(--color-emerald); color: var(--color-white) !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
-.portal-nav-menu a.btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
-.portal-nav-menu a.btn-nav-gold { background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; border-radius: var(--radius-sm); }
-.portal-nav-menu a.btn-nav-gold:hover { background: #b07a1e; color: #fff !important; }
-.btn-nav-gold { display: inline-flex; align-items: center; background: #C8952A; color: #fff !important; padding: 8px 20px; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; border: none; cursor: pointer; }
-.btn-nav-gold:hover { background: #b07a1e; color: #fff !important; }
 .portal-nav-menu a:hover, .portal-nav-menu a.active {
     color: var(--color-gold); background: rgba(255,255,255,0.1);
 }
@@ -508,14 +502,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
     color: #D4A847;
     background: rgba(255,255,255,0.06);
 }
-.mobile-nav-overlay .btn-nav-gold {
-    background: #C8952A;
-    color: #fff !important;
-    text-align: center;
-    margin-top: 8px;
-    border-radius: var(--radius-sm);
-    padding: 10px 20px;
-}
 .mobile-nav-overlay .btn-nav {
     background: #1B7A5A;
     color: #fff !important;
@@ -570,19 +556,26 @@ h1, h2, h3, h4 { line-height: 1.2; }
     <nav class="portal-nav">
         <div class="portal-nav-left">
             <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
-                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:144pxPLACEHOLDER; width:auto; display:block;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
             </a>
             <div class="portal-nav-menu">
 <a href="v1.html">Home</a>
-<a href="howto.html" class="btn-nav">How To</a>
-<a href="overview.html" class="btn-nav">Overview</a>
+<a href="contact.html">Contact</a>
+<a href="howto.html">How To</a>
+<a href="overview.html">Overview</a>
 <a href="modules.html">Modules</a>
 <a href="schedule.html">Schedule</a>
 <a href="assessment.html">Assessment</a>
 </div>
         </div>
         <div class="portal-nav-right">
-            <a href="contact.html" class="btn-nav-gold" style="font-size:0.85rem; padding:8px 20px; border-radius:4px; text-decoration:none; font-weight:600; white-space:nowrap;">Contact</a>
+            <div class="portal-search">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" placeholder="Search lectures, modules..." id="searchInput">
+            </div>
+            <button class="ai-assistant-btn" id="aiAssistant" title="AI Study Assistant">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1.27a7 7 0 0 1-12.46 0H6a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="9.5" cy="15.5" r="1"/><circle cx="14.5" cy="15.5" r="1"/></svg>
+            </button>
             <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
         </div>
     
@@ -590,14 +583,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
     </nav>
     <div class="mobile-nav-overlay">
 <a href="v1.html">Home</a>
-<a href="howto.html" class="btn-nav">How To</a>
-<a href="overview.html" class="btn-nav">Overview</a>
+<a href="contact.html">Contact</a>
+<a href="howto.html">How To</a>
+<a href="overview.html">Overview</a>
 <a href="modules.html">Modules</a>
 <a href="schedule.html">Schedule</a>
 <a href="assessment.html">Assessment</a>
 <div class="mobile-divider"></div>
-        <a href="contact.html" class="btn-nav-gold" style="display:block; text-align:center; margin-top:8px; padding:10px 20px; text-decoration:none; font-weight:600;">Contact</a>
-        </div>
+        <div class="mobile-search"><span>&#128269;</span><input type="text" placeholder="Search lectures, modules..."></div>
+    </div>
 
     <!-- Left Sidebar -->
     <aside class="portal-sidebar">
@@ -668,7 +662,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <div class="page-header">
             <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; Announcements</div>
             <h1>Announcements</h1>
-            <p>Course updates, reminders, and important notices from your course coordinator.</p>
+            <p>Course updates, reminders, and important notices from your lecturer.</p>
         </div>
 
         <!-- Two-column layout -->
@@ -693,13 +687,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="admin" id="admin">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">7 October 2026</div>
+                        <div class="announcement-date">3 March 2027</div>
                         <span class="announcement-category-tag admin">Course Admin</span>
                     </div>
                 </div>
-                <h3 class="announcement-title">Welcome to Sports Law — Trimester 3, 2026</h3>
+                <h3 class="announcement-title">Welcome to Sports Law — Trimester 1, 2027</h3>
                 <div class="announcement-body">
-                    <p>Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome section to meet your course coordinator and understand how the course works, then move into Module 1. If you have any questions, check the Contact page for the best way to reach me. I'm looking forward to a great trimester.</p>
+                    <p>Welcome to The Law of Sport for Trimester 1! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome section to meet your lecturer and understand how the course works, then move into Module 1. If you have any questions, check the Contact page for the best way to reach me. I'm looking forward to a great trimester.</p>
                 </div>
             </div>
 
@@ -707,7 +701,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="lecture" id="lecture-news">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">6 October 2026</div>
+                        <div class="announcement-date">2 March 2027</div>
                         <span class="announcement-category-tag lecture">Lecture</span>
                     </div>
                 </div>
@@ -722,7 +716,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <div class="announcement-card" data-category="tutorial" id="tutorial-news">
                 <div class="announcement-header">
                     <div>
-                        <div class="announcement-date">6 October 2026</div>
+                        <div class="announcement-date">2 March 2027</div>
                         <span class="announcement-category-tag tutorial">Tutorial</span>
                     </div>
                 </div>
@@ -773,7 +767,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 </div>
                 <h3 class="announcement-title">Course Site Now Live</h3>
                 <div class="announcement-body">
-                    <p>The Law of Sport course platform is now live for Trimester 3. All lecture content, module overviews, and assessment information will be published here throughout the trimester. Content is released week by week — check the Schedule page for the full timeline. Bookmark this site and check back regularly.</p>
+                    <p>The Law of Sport course platform is now live for Trimester 1. All lecture content, module overviews, and assessment information will be published here throughout the trimester. Content is released week by week — check the Schedule page for the full timeline. Bookmark this site and check back regularly.</p>
                 </div>
                 <a href="schedule.html" class="announcement-link">View Schedule &rarr;</a>
             </div>
@@ -929,7 +923,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="contact.html" class="quick-link-item">
                     <div class="quick-link-icon contact">&#128231;</div>
                     <div class="quick-link-info">
-                        <div class="quick-link-title">Contact Your Course Coordinator</div>
+                        <div class="quick-link-title">Contact Your Lecturer</div>
                         <div class="quick-link-desc">Response times &amp; office hours</div>
                     </div>
                     <span class="quick-link-arrow">&rarr;</span>
@@ -950,7 +944,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- Footer -->
         <div class="portal-footer">
-            <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <span>&copy; 2027 The Law of Sport — Michael Bricknell</span>
         </div>
 
     </main>

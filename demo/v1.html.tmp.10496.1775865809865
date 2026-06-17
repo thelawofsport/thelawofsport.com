@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Law | The Law of Sport</title>
+    <title>Sports Law — UNE | The Law of Sport</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
 :root {
     --color-navy: #0B1D3A;
@@ -36,7 +36,7 @@
     --color-border: #E5E7EB;
     --color-shadow: rgba(11, 29, 58, 0.08);
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-serif: 'Merriweather', Georgia, serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
@@ -60,7 +60,7 @@
     --color-gray-200: #2A3A5C;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 95px; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
     font-family: var(--font-sans); color: var(--color-text);
     background: var(--color-bg); line-height: 1.6; -webkit-font-smoothing: antialiased;
@@ -68,28 +68,28 @@ body {
 a { color: var(--color-emerald); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--color-emerald-light); }
 h1, h2, h3, h4 { line-height: 1.2; }
-.pitch-logo { display: flex; align-items: center; gap: 10px; overflow: visible; flex-shrink: 0; }
+.pitch-logo { display: flex; align-items: center; gap: 10px; }
 .logo-icon { font-size: 1.4rem; color: var(--color-gold); }
 .logo-text { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-white); }
 
 /* Portal Layout */
-.portal-page { display: flex; min-height: 100vh; padding-top: 77px; }
+.portal-page { display: flex; min-height: 100vh; padding-top: 56px; }
 
 /* Portal Top Nav */
 .portal-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 77px;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 56px;
     background: var(--color-navy); display: flex; align-items: center;
-    justify-content: space-between; padding: 0 24px 0 8px; overflow: visible;
+    justify-content: space-between; padding: 0 24px;
 }
-.portal-nav-left { display: flex; align-items: center; gap: 44px; }
+.portal-nav-left { display: flex; align-items: center; gap: 24px; }
 .portal-nav-left .logo-text { font-size: 1rem; }
 .portal-nav-menu { display: flex; gap: 4px; }
 .portal-nav-menu a {
-    color: rgba(255,255,255,0.7); font-size: 1rem; font-weight: 500;
+    color: rgba(255,255,255,0.7); font-size: 0.84rem; font-weight: 500;
     padding: 6px 14px; border-radius: var(--radius-sm); transition: all var(--transition);
 }
 .portal-nav-menu a:hover, .portal-nav-menu a.active {
-    color: var(--color-gold); background: rgba(255,255,255,0.1);
+    color: var(--color-white); background: rgba(255,255,255,0.1);
 }
 .portal-nav-right { display: flex; align-items: center; gap: 16px; }
 .portal-search {
@@ -128,9 +128,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 /* Left Sidebar */
 .portal-sidebar {
-    width: 245px; background: var(--color-bg-alt); border-right: 1px solid var(--color-border);
-    padding: 24px 0; flex-shrink: 0; position: sticky; top: 77px;
-    height: calc(100vh - 64px); overflow-y: auto; display: flex; flex-direction: column;
+    width: 220px; background: var(--color-bg-alt); border-right: 1px solid var(--color-border);
+    padding: 24px 0; flex-shrink: 0; position: sticky; top: 56px;
+    height: calc(100vh - 56px); overflow-y: auto;
 }
 .sidebar-section { padding: 0 16px; margin-bottom: 28px; }
 .sidebar-label {
@@ -147,8 +147,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
 [data-theme="dark"] .sidebar-link.active { background: rgba(27,122,90,0.2); }
 .sidebar-icon { font-size: 1rem; width: 20px; text-align: center; }
 .sidebar-divider { height: 1px; background: var(--color-border); margin: 0 16px 28px; }
-.portal-sidebar > :nth-child(2) { margin-top: auto; }
-.portal-sidebar > :nth-last-child(2) { margin-top: auto; }
+.sidebar-link { position: relative; }
+.sidebar-badge {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    min-width: 18px; height: 18px; border-radius: 9px;
+    background: #E53E3E; color: #FFFFFF; font-size: 0.65rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; padding: 0 5px;
+    line-height: 1; box-shadow: 0 1px 3px rgba(229,62,62,0.4);
+}
 
 /* Main Content Area */
 .portal-main { flex: 1; padding: 32px 40px; min-width: 0; }
@@ -234,72 +240,49 @@ h1, h2, h3, h4 { line-height: 1.2; }
     position: relative; overflow: hidden; height: 180px;
     background: var(--color-navy); margin-bottom: 28px; border-radius: var(--radius-md);
 }
-.hero-banner .gradient-bg {
-    position: absolute; inset: -50%;
-    background: conic-gradient(from 180deg at 50% 50%, #0B1D3A 0deg, #1A3A6B 60deg, #0f2847 120deg, #0B1D3A 180deg, #162d52 240deg, #1A3A6B 300deg, #0B1D3A 360deg);
-    animation: banner-rotate 25s linear infinite;
+.hero-banner-bg {
+    position: absolute; inset: 0; opacity: 0.25;
+    background:
+        url('https://images.unsplash.com/photo-1461896836934-bd45ba8fcfc7?w=1200&q=80') center/cover no-repeat;
 }
-@keyframes banner-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.hero-banner .geo-pattern {
-    position: absolute; inset: 0; z-index: 1; opacity: 0.04;
-    background-image: linear-gradient(30deg, var(--color-gold) 1px, transparent 1px), linear-gradient(150deg, var(--color-gold) 1px, transparent 1px);
-    background-size: 80px 140px, 80px 140px;
+[data-theme="dark"] .hero-banner-bg { opacity: 0.15; }
+.hero-banner-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(11,29,58,0.85) 0%, rgba(26,58,107,0.7) 50%, rgba(11,29,58,0.85) 100%);
 }
-.hero-banner .sports-items { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
-.hero-banner .sport-item {
-    position: absolute; opacity: 0;
-    animation: sport-drift 22s ease-in-out infinite;
-}
-.hero-banner .sport-item svg { width: 100%; height: 100%; }
-.hero-banner .sport-item:nth-child(1) { animation-delay: 0s; }
-.hero-banner .sport-item:nth-child(2) { animation-delay: 3.5s; }
-.hero-banner .sport-item:nth-child(3) { animation-delay: 7s; }
-.hero-banner .sport-item:nth-child(4) { animation-delay: 10.5s; }
-.hero-banner .sport-item:nth-child(5) { animation-delay: 14s; }
-.hero-banner .sport-item:nth-child(6) { animation-delay: 17.5s; }
-@keyframes sport-drift {
-    0%   { opacity: 0; transform: translateY(6px) scale(0.96); }
-    8%   { opacity: 0.16; transform: translateY(0) scale(1); }
-    28%  { opacity: 0.16; }
-    40%  { opacity: 0; transform: translateY(-6px) scale(0.96); }
-    100% { opacity: 0; }
-}
-.hero-banner .si-1 { width: 80px;  height: 80px;  top: -2%;   right: 1%; }
-.hero-banner .si-2 { width: 80px;  height: 80px;  bottom: 5%; left: 3%; }
-.hero-banner .si-3 { width: 100px; height: 100px; bottom: -5%; right: 1%; }
-.hero-banner .si-4 { width: 100px; height: 100px; top: -8%;   left: 2%; }
-.hero-banner .si-5 { width: 100px; height: 100px; top: -5%;   right: 4%; }
-.hero-banner .si-6 { width: 95px;  height: 95px;  bottom: -8%; left: 1%; }
-.hero-banner .accent-lines { position: absolute; inset: 0; z-index: 3; pointer-events: none; overflow: hidden; }
-.hero-banner .accent-line { position: absolute; height: 1px; background: var(--color-gold); transform-origin: left center; }
-.hero-banner .accent-line:nth-child(1) { top: 22%; left: 0; width: 35%; opacity: 0.1; transform: rotate(1.5deg); }
-.hero-banner .accent-line:nth-child(2) { top: 55%; right: 0; width: 30%; opacity: 0.06; transform: rotate(-1deg); }
-.hero-banner .accent-line:nth-child(3) { top: 80%; left: 12%; width: 45%; opacity: 0.04; transform: rotate(0.8deg); }
 .hero-banner-content {
-    position: relative; z-index: 5; height: 100%;
+    position: relative; z-index: 2; height: 100%;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; padding: 0 24px; overflow: visible;
+    text-align: center; padding: 0 24px;
 }
 .hero-banner-title {
-    font-family: var(--font-sans); font-size: 2.8rem; font-weight: 800;
+    font-family: var(--font-sans); font-size: 3rem; font-weight: 800;
     letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-white);
-    text-shadow: 0 2px 30px rgba(0,0,0,0.5), 0 0 60px rgba(11,29,58,0.8); font-style: italic;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 .hero-banner-title span { color: var(--color-gold); }
 .hero-banner-sub {
-    font-size: 0.95rem; color: #00D4AA; margin-top: 10px;
-    letter-spacing: 0.12em; font-weight: 500;
-    text-shadow: 0 1px 10px rgba(0,0,0,0.4), 0 0 20px rgba(0,212,170,0.15);
+    font-size: 0.9rem; color: rgba(255,255,255,0.65); margin-top: 6px;
+    font-weight: 400; letter-spacing: 0.06em;
 }
-.hero-banner .pip-row { display: flex; gap: 6px; margin-top: 14px; }
-.hero-banner .pip { width: 28px; height: 3px; border-radius: 2px; background: var(--color-gold); opacity: 0.4; }
-.hero-banner .pip:nth-child(2) { opacity: 0.7; width: 36px; }
-.hero-banner .pip:nth-child(3) { opacity: 0.4; }
-.hero-banner .bottom-bar {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 3px; z-index: 5;
-    background: linear-gradient(90deg, transparent, var(--color-gold), #1B7A5A, transparent);
-    border-radius: 0 0 var(--radius-md) var(--radius-md);
+.hero-banner-accents {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden;
 }
+.hero-accent-line {
+    position: absolute; height: 2px; background: var(--color-gold); opacity: 0.3;
+}
+.hero-accent-line:nth-child(1) { top: 30px; left: -20px; width: 120px; transform: rotate(-8deg); }
+.hero-accent-line:nth-child(2) { bottom: 40px; right: -10px; width: 160px; transform: rotate(5deg); }
+.hero-accent-line:nth-child(3) { top: 50%; left: 10%; width: 80px; transform: rotate(-3deg); opacity: 0.15; }
+/* Sports icon silhouettes */
+.hero-sport-icon {
+    position: absolute; font-size: 2.5rem; opacity: 0.07; color: var(--color-white);
+}
+.hero-sport-icon:nth-child(4) { top: 20px; left: 8%; }
+.hero-sport-icon:nth-child(5) { bottom: 15px; left: 25%; }
+.hero-sport-icon:nth-child(6) { top: 25px; right: 12%; }
+.hero-sport-icon:nth-child(7) { bottom: 20px; right: 8%; }
+.hero-sport-icon:nth-child(8) { top: 50%; right: 30%; transform: translateY(-50%); }
 
 /* Portal Footer */
 .portal-footer {
@@ -315,147 +298,24 @@ h1, h2, h3, h4 { line-height: 1.2; }
     .tile-grid { grid-template-columns: repeat(2, 1fr); }
     .portal-sidebar { display: none; }
     .portal-main { padding: 24px 20px; }
-    .uni-banner { flex-direction: column; gap: 8px; text-align: center; padding: 12px 16px; }
-    .hero-banner { height: 140px; }
-    .hero-banner-title { font-size: 2.2rem; letter-spacing: 0.12em; }
-    .hero-banner-sub { font-size: 0.8rem; }
-    .hero-banner-content { padding: 0 16px; }
 }
-@media (max-width: 600px) {
-    .tile-grid { grid-template-columns: 1fr; }
-    .hero-banner { height: 120px; }
-    .hero-banner-title { font-size: 1.6rem; letter-spacing: 0.08em; }
-    .hero-banner-sub { font-size: 0.72rem; }
-    .hero-banner .pip-row { margin-top: 8px; }
-    .hero-banner .pip { width: 20px; height: 2px; }
-    .hero-banner .pip:nth-child(2) { width: 28px; }
-}
-    
-/* ===== Mobile Navigation ===== */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 200;
-    flex-shrink: 0;
-}
-.mobile-menu-btn span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: rgba(255,255,255,0.9);
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-.mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-.mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-.mobile-nav-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(11, 29, 58, 0.97);
-    z-index: 150;
-    padding-top: 80px;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    overflow-y: auto;
-}
-.mobile-nav-overlay.open {
-    display: flex;
-}
-.mobile-nav-overlay a,
-.mobile-nav-overlay button.theme-toggle,
-.mobile-nav-overlay .portal-search {
-    color: rgba(255,255,255,0.85);
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 14px 24px;
-    text-align: center;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    width: 100%;
-    max-width: 320px;
-    border-radius: 8px;
-}
-.mobile-nav-overlay a:hover,
-.mobile-nav-overlay a.active {
-    color: #D4A847;
-    background: rgba(255,255,255,0.06);
-}
-.mobile-nav-overlay .btn-nav {
-    background: #1B7A5A;
-    color: #fff !important;
-    text-align: center;
-    margin-top: 12px;
-    border-radius: 6px;
-}
-.mobile-nav-overlay .mobile-search {
-    display: flex;
-    align-items: center;
-    background: rgba(255,255,255,0.1);
-    border-radius: 6px;
-    padding: 10px 16px;
-    gap: 10px;
-    margin-top: 8px;
-}
-.mobile-nav-overlay .mobile-search input {
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-family: inherit;
-    font-size: 1rem;
-    outline: none;
-    width: 100%;
-}
-.mobile-nav-overlay .mobile-search input::placeholder {
-    color: rgba(255,255,255,0.4);
-}
-.mobile-nav-overlay .mobile-divider {
-    width: 60px;
-    height: 1px;
-    background: rgba(255,255,255,0.15);
-    margin: 8px auto;
-}
-@media (max-width: 900px) {
-    .mobile-menu-btn { display: block; }
-}
-
-@media (max-width: 900px) {
-    .portal-nav-menu { display: none; }
-    .portal-nav-right { display: none; }
-    .portal-nav {
-        justify-content: space-between;
-    }
-}
-
-</style>
+@media (max-width: 600px) { .tile-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body class="portal-page">
 
     <!-- Top Navigation -->
     <nav class="portal-nav">
         <div class="portal-nav-left">
-            <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
-                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:144pxPLACEHOLDER; width:auto; display:block;">
+            <a href="../" class="pitch-logo" style="text-decoration:none;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:36px; width:auto; display:block;">
             </a>
             <div class="portal-nav-menu">
                 <a href="v1.html" class="active">Home</a>
                 <a href="contact.html">Contact</a>
-                <a href="howto.html">How To</a>
                 <a href="overview.html">Overview</a>
-                <a href="modules.html">Modules</a>
                 <a href="schedule.html">Schedule</a>
+                <a href="modules.html">Modules</a>
                 <a href="assessment.html">Assessment</a>
             </div>
         </div>
@@ -469,20 +329,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </button>
             <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
         </div>
-    
-        <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
-    <div class="mobile-nav-overlay">
-        <a href="v1.html" class="active">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="howto.html">How To</a>
-        <a href="overview.html">Overview</a>
-        <a href="modules.html">Modules</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="assessment.html">Assessment</a>
-        <div class="mobile-divider"></div>
-        <div class="mobile-search"><span>&#128269;</span><input type="text" placeholder="Search lectures, modules..."></div>
-    </div>
 
     <!-- Left Sidebar -->
     <aside class="portal-sidebar">
@@ -494,11 +341,12 @@ h1, h2, h3, h4 { line-height: 1.2; }
             </a>
             <a href="announcements.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128227;</span> Announcements
+                <span class="sidebar-badge">2</span>
             </a>
-            <a href="lectures.html" class="sidebar-link">
+            <a href="#" class="sidebar-link">
                 <span class="sidebar-icon">&#127891;</span> Lectures
             </a>
-            <a href="tutorials.html" class="sidebar-link">
+            <a href="#" class="sidebar-link">
                 <span class="sidebar-icon">&#128172;</span> Tutorials
             </a>
         </div>
@@ -508,10 +356,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Contextual links — change per page -->
         <div class="sidebar-section">
             <div class="sidebar-label">This Week</div>
-            <a href="lecture1.html" class="sidebar-link">
+            <a href="#" class="sidebar-link">
                 <span class="sidebar-icon">&#9654;</span> Current Lecture
             </a>
-            <a href="welcome.html" class="sidebar-link">
+            <a href="#" class="sidebar-link">
                 <span class="sidebar-icon">&#128203;</span> Tutorial Activity
             </a>
         </div>
@@ -520,18 +368,21 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- University LMS links -->
         <div class="sidebar-section">
-            <div class="sidebar-label">eLearning (External)</div>
-            <a href="elearning.html" class="sidebar-link">
+            <div class="sidebar-label">UNE MyLearn</div>
+            <a href="#" class="sidebar-link" target="_blank">
                 <span class="sidebar-icon">&#128196;</span> Course Outline
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="#" class="sidebar-link" target="_blank">
                 <span class="sidebar-icon">&#128200;</span> Grades &amp; Feedback
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="#" class="sidebar-link" target="_blank">
                 <span class="sidebar-icon">&#128228;</span> Submit Assessment
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="#" class="sidebar-link" target="_blank">
                 <span class="sidebar-icon">&#128490;</span> Discussion Forums
+            </a>
+            <a href="#" class="sidebar-link" target="_blank">
+                <span class="sidebar-icon">&#128220;</span> Uni Policies
             </a>
         </div>
     </aside>
@@ -541,35 +392,28 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
         <!-- University Banner -->
         <div class="uni-banner">
-            <span class="uni-banner-text">Welcome to <strong>Sports Law — The Law of Sport</strong> &nbsp;|&nbsp; Trimester 1, 2027</span>
-            <a href="#" class="uni-banner-link">Student Portal &#8599;</a>
+            <span class="uni-banner-text">Welcome to <strong>Sports Law — University of New England</strong> &nbsp;|&nbsp; Trimester 3, 2026</span>
+            <a href="#" class="uni-banner-link">UNE Student Portal &#8599;</a>
         </div>
 
         <!-- Hero Banner Strip -->
         <div class="hero-banner">
-            <div class="gradient-bg"></div>
-            <div class="geo-pattern"></div>
-            <div class="sports-items">
-                <!-- Checkered Flag -->
-                <div class="sport-item si-1"><svg viewBox="0 0 110 100" xmlns="http://www.w3.org/2000/svg"><g stroke="rgba(212,168,71,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="14" y1="8" x2="14" y2="95" stroke-width="3"/><path d="M14 10c16-4 32 4 48 0s32-4 40 2v50c-8-6-24-2-40 2s-32-4-48 0z" fill="rgba(212,168,71,0.08)" stroke-width="2"/><rect x="18" y="12" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="42" y="12" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="66" y="10" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="88" y="10" width="10" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="30" y="22" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="54" y="20" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="78" y="20" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="18" y="32" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="42" y="32" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="66" y="32" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="88" y="34" width="10" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="30" y="42" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="54" y="42" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><rect x="78" y="44" width="12" height="10" fill="rgba(212,168,71,0.2)" stroke="none"/><circle cx="14" cy="8" r="4" fill="rgba(212,168,71,0.2)"/></g></svg></div>
-                <!-- Basketball -->
-                <div class="sport-item si-2"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="rgba(212,168,71,0.55)" stroke-width="2.5"><circle cx="50" cy="50" r="40" fill="rgba(212,168,71,0.12)"/><line x1="50" y1="10" x2="50" y2="90"/><line x1="10" y1="50" x2="90" y2="50"/><path d="M32 12c-12 14-14 30-8 40s14 24 8 38" stroke-width="2"/><path d="M68 12c12 14 14 30 8 40s-14 24-8 38" stroke-width="2"/></g></svg></div>
-                <!-- Ice Hockey Stick -->
-                <div class="sport-item si-3"><svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="rgba(212,168,71,0.55)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="88" y1="6" x2="32" y2="70" stroke-width="4" stroke="rgba(212,168,71,0.3)"/><line x1="88" y1="6" x2="32" y2="70" stroke-width="2.5"/><path d="M32 70l-20 8c-4 2-6 5-4 8 2 3 6 4 10 3l34-12c4-2 6-4 4-8l-4-4z" fill="rgba(212,168,71,0.12)"/><line x1="18" y1="78" x2="26" y2="75" stroke-width="1.2"/><line x1="28" y1="76" x2="36" y2="73" stroke-width="1.2"/><line x1="38" y1="72" x2="46" y2="69" stroke-width="1.2"/><line x1="78" y1="16" x2="82" y2="12" stroke-width="1.5"/><line x1="74" y1="22" x2="78" y2="18" stroke-width="1.5"/><line x1="70" y1="28" x2="74" y2="24" stroke-width="1.5"/><ellipse cx="72" cy="94" rx="16" ry="6" fill="rgba(212,168,71,0.15)"/><path d="M56 90v4" stroke-width="2"/><path d="M88 90v4" stroke-width="2"/><ellipse cx="72" cy="90" rx="16" ry="6" fill="rgba(212,168,71,0.1)"/></g></svg></div>
-                <!-- Rugby Ball -->
-                <div class="sport-item si-4"><svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="rgba(212,168,71,0.55)" stroke-width="2.5" stroke-linecap="round"><path d="M16 40c0-18 20-30 44-30s44 12 44 30-20 30-44 30S16 58 16 40z" fill="rgba(212,168,71,0.12)"/><line x1="34" y1="40" x2="86" y2="40" stroke-width="2"/><line x1="42" y1="34" x2="42" y2="46" stroke-width="2"/><line x1="50" y1="34" x2="50" y2="46" stroke-width="2"/><line x1="58" y1="34" x2="58" y2="46" stroke-width="2"/><line x1="66" y1="34" x2="66" y2="46" stroke-width="2"/><line x1="74" y1="34" x2="74" y2="46" stroke-width="2"/></g></svg></div>
-                <!-- Golf Club -->
-                <div class="sport-item si-5"><svg viewBox="0 0 80 110" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="rgba(212,168,71,0.55)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="42" y1="8" x2="42" y2="78" stroke-width="2"/><rect x="39" y="4" width="6" height="24" rx="3" fill="rgba(212,168,71,0.1)" stroke-width="2"/><line x1="39" y1="10" x2="45" y2="10" stroke-width="1"/><line x1="39" y1="15" x2="45" y2="15" stroke-width="1"/><line x1="39" y1="20" x2="45" y2="20" stroke-width="1"/><path d="M42 78l-18 10c-4 2-4 6-2 8l4 2h24l2-4c0-3-2-6-6-8z" fill="rgba(212,168,71,0.12)"/><line x1="30" y1="86" x2="40" y2="82" stroke-width="1"/><line x1="32" y1="89" x2="42" y2="85" stroke-width="1"/><line x1="34" y1="92" x2="44" y2="88" stroke-width="1"/><circle cx="64" cy="90" r="7" fill="rgba(212,168,71,0.12)" stroke-width="2"/><circle cx="62" cy="88" r="1" fill="rgba(212,168,71,0.2)" stroke="none"/><circle cx="66" cy="88" r="1" fill="rgba(212,168,71,0.2)" stroke="none"/><circle cx="64" cy="92" r="1" fill="rgba(212,168,71,0.2)" stroke="none"/><line x1="64" y1="97" x2="64" y2="106" stroke-width="2"/><path d="M60 97h8" stroke-width="1.5"/></g></svg></div>
-                <!-- Tennis Racket -->
-                <div class="sport-item si-6"><svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="rgba(212,168,71,0.55)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="50" cy="36" rx="28" ry="32" fill="rgba(212,168,71,0.12)"/><line x1="28" y1="20" x2="72" y2="20" stroke-width="1"/><line x1="24" y1="28" x2="76" y2="28" stroke-width="1"/><line x1="23" y1="36" x2="77" y2="36" stroke-width="1"/><line x1="24" y1="44" x2="76" y2="44" stroke-width="1"/><line x1="28" y1="52" x2="72" y2="52" stroke-width="1"/><line x1="35" y1="60" x2="65" y2="60" stroke-width="1"/><line x1="36" y1="6" x2="36" y2="65" stroke-width="1"/><line x1="43" y1="5" x2="43" y2="67" stroke-width="1"/><line x1="50" y1="4" x2="50" y2="68" stroke-width="1"/><line x1="57" y1="5" x2="57" y2="67" stroke-width="1"/><line x1="64" y1="6" x2="64" y2="65" stroke-width="1"/><path d="M40 66l4 6h12l4-6"/><rect x="46" y="72" width="8" height="30" rx="3" fill="rgba(212,168,71,0.1)" stroke-width="2"/><line x1="46" y1="80" x2="54" y2="78" stroke-width="1.5"/><line x1="46" y1="86" x2="54" y2="84" stroke-width="1.5"/><line x1="46" y1="92" x2="54" y2="90" stroke-width="1.5"/><line x1="46" y1="98" x2="54" y2="96" stroke-width="1.5"/></g></svg></div>
+            <div class="hero-banner-bg"></div>
+            <div class="hero-banner-overlay"></div>
+            <div class="hero-banner-accents">
+                <div class="hero-accent-line"></div>
+                <div class="hero-accent-line"></div>
+                <div class="hero-accent-line"></div>
+                <div class="hero-sport-icon">&#9917;</div>
+                <div class="hero-sport-icon">&#127944;</div>
+                <div class="hero-sport-icon">&#127934;</div>
+                <div class="hero-sport-icon">&#127936;</div>
+                <div class="hero-sport-icon">&#9918;</div>
             </div>
-            <div class="accent-lines"><div class="accent-line"></div><div class="accent-line"></div><div class="accent-line"></div></div>
             <div class="hero-banner-content">
                 <div class="hero-banner-title">SPORTS <span>LAW</span></div>
-                <div class="hero-banner-sub">thelawofsport.com</div>
-                <div class="pip-row"><div class="pip"></div><div class="pip"></div><div class="pip"></div></div>
+                <div class="hero-banner-sub">The Law of Sport &mdash; thelawofsport.com</div>
             </div>
-            <div class="bottom-bar"></div>
         </div>
 
         <!-- Home Grid -->
@@ -580,15 +424,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <h2 class="portal-section-heading">Recent Announcements</h2>
 
                 <div class="announcement-card">
-                    <div class="announcement-date">3 March 2027</div>
+                    <div class="announcement-date">7 October 2026</div>
                     <div class="announcement-title">Welcome to Sports Law</div>
-                    <div class="announcement-text">Welcome to The Law of Sport for Trimester 1! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome module below to get oriented, then move into Module 1.</div>
+                    <div class="announcement-text">Welcome to The Law of Sport for Trimester 3! This site is your central hub for lectures, tutorials, and assessment information. Start with the Welcome module below to get oriented, then move into Module 1.</div>
                 </div>
 
                 <div class="announcement-card">
-                    <div class="announcement-date">1 March 2027</div>
+                    <div class="announcement-date">5 October 2026</div>
                     <div class="announcement-title">Assessment 1 brief now available</div>
-                    <div class="announcement-text">The brief for Assessment 1 (Research Essay) is now available on the Assessment page. Due date: 2 April 2027. See the page for full details, marking criteria, and an explanatory video.</div>
+                    <div class="announcement-text">The brief for Assessment 1 (Research Essay) is now available on the Assessment page. Due date: 6 November 2026. See the page for full details, marking criteria, and an explanatory video.</div>
                 </div>
             </div>
 
@@ -599,8 +443,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Mar</span>
-                            <span class="cal-day">5</span>
+                            <span class="cal-month">Oct</span>
+                            <span class="cal-day">8</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Lecture 1: What is Sports Law?</div>
@@ -610,19 +454,19 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Mar</span>
-                            <span class="cal-day">7</span>
+                            <span class="cal-month">Oct</span>
+                            <span class="cal-day">10</span>
                         </div>
                         <div class="cal-info">
-                            <div class="cal-title">Tutorial 1: Sports Governance</div>
+                            <div class="cal-title">Tutorial 1: The Regulatory Landscape</div>
                             <div class="cal-type">Tutorial</div>
                         </div>
                     </div>
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Apr</span>
-                            <span class="cal-day">2</span>
+                            <span class="cal-month">Nov</span>
+                            <span class="cal-day">6</span>
                         </div>
                         <div class="cal-info">
                             <div class="cal-title">Assessment 1 Due</div>
@@ -632,11 +476,11 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
                     <div class="calendar-item">
                         <div class="cal-date">
-                            <span class="cal-month">Mar</span>
-                            <span class="cal-day">12</span>
+                            <span class="cal-month">Oct</span>
+                            <span class="cal-day">15</span>
                         </div>
                         <div class="cal-info">
-                            <div class="cal-title">Lecture 2: Sports Governance</div>
+                            <div class="cal-title">Lecture 2: Sources of Sports Law</div>
                             <div class="cal-type">Lecture</div>
                         </div>
                     </div>
@@ -659,21 +503,21 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <!-- Module 1 -->
                 <a href="module1.html" class="module-tile">
                     <div class="tile-module-num">Module 1</div>
-                    <h4>Governance &amp; Systems</h4>
-                    <p>How is sport governed, and how do sporting organisations shape the legal landscape?</p>
+                    <h4>Intro &amp; Overview</h4>
+                    <p>What is sports law, and how does sports governance shape the legal landscape?</p>
                 </a>
 
                 <!-- Module 2 -->
                 <a href="module2.html" class="module-tile">
                     <div class="tile-module-num">Module 2</div>
-                    <h4>Challenging Decisions</h4>
+                    <h4>Challenging Sporting Decisions</h4>
                     <p>How athletes challenge disciplinary outcomes and dispute processes.</p>
                 </a>
 
                 <!-- Module 3 -->
                 <a href="module3.html" class="module-tile">
                     <div class="tile-module-num">Module 3</div>
-                    <h4>Athlete, Contracts &amp; Control</h4>
+                    <h4>Athletes, Contracts &amp; Control</h4>
                     <p>Player contracting, athlete representation, and power dynamics in sport.</p>
                 </a>
 
@@ -697,6 +541,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Footer -->
         <div class="portal-footer">
             <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <a href="#">Grades, submissions, extensions &amp; policies are on your university's platform</a>
         </div>
 
     </main>
@@ -737,27 +582,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
             }
         });
     </script>
-
-
-<script>
-(function() {
-    var btn = document.querySelector('.mobile-menu-btn');
-    var overlay = document.querySelector('.mobile-nav-overlay');
-    if (!btn || !overlay) return;
-    btn.addEventListener('click', function() {
-        btn.classList.toggle('active');
-        overlay.classList.toggle('open');
-        document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
-    });
-    overlay.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-            btn.classList.remove('active');
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-    });
-})();
-</script>
 
 </body>
 </html>

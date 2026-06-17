@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial 6: Sports Media Rights &amp; Sponsorship — Sports Law | The Law of Sport</title>
+    <title>Tutorial 3: Athletes, Contract &amp; Control — Sports Law | The Law of Sport</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -35,7 +35,7 @@
     --color-surface: #FFFFFF;
     --color-border: #E5E7EB;
     --color-shadow: rgba(11, 29, 58, 0.08);
-    --color-accent: #5B2D8E;
+    --color-accent: #1E4D6E;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-serif: 'Merriweather', Georgia, serif;
     --radius-sm: 6px;
@@ -208,7 +208,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
     background: var(--color-accent); color: var(--color-white);
 }
 .btn:hover {
-    background: #6F3BA8; transform: translateY(-2px);
+    background: #2A5B7F; transform: translateY(-2px);
 }
 .btn-secondary {
     background: transparent; color: var(--color-accent);
@@ -352,13 +352,11 @@ ul li { margin-bottom: 8px; }
     <nav class="portal-nav">
         <div class="portal-nav-left">
             <a href="v1.html" class="pitch-logo" style="text-decoration:none;">
-                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:144pxPLACEHOLDER; width:auto; display:block;">
+                <img src="../assets/logo.svg" alt="The Law of Sport — Applied Law for Modern Sport" style="height:48px; width:auto; display:block;">
             </a>
             <div class="portal-nav-menu">
                 <a href="v1.html">Home</a>
-                
                 <a href="contact.html">Contact</a>
-                <a href="howto.html">How To</a>
                 <a href="overview.html">Overview</a>
                 <a href="modules.html">Modules</a>
                 <a href="schedule.html">Schedule</a>
@@ -380,9 +378,7 @@ ul li { margin-bottom: 8px; }
     </nav>
     <div class="mobile-nav-overlay">
         <a href="v1.html">Home</a>
-        
         <a href="contact.html">Contact</a>
-        <a href="howto.html">How To</a>
         <a href="overview.html">Overview</a>
         <a href="modules.html">Modules</a>
         <a href="schedule.html">Schedule</a>
@@ -421,16 +417,16 @@ ul li { margin-bottom: 8px; }
             <a href="tutorial2.html" class="sidebar-link">
                 <span class="sidebar-icon">2</span> Governance &amp; Justice
             </a>
-            <a href="tutorial3.html" class="sidebar-link">
+            <a href="tutorial3.html" class="sidebar-link active">
                 <span class="sidebar-icon">3</span> Player Contracts
             </a>
             <a href="tutorial4.html" class="sidebar-link">
                 <span class="sidebar-icon">4</span> Anti-Doping
             </a>
             <a href="tutorial5.html" class="sidebar-link">
-                <span class="sidebar-icon">5</span> Commercial Contracting
+                <span class="sidebar-icon">5</span> Match-Fixing
             </a>
-            <a href="tutorial6.html" class="sidebar-link active">
+            <a href="tutorial6.html" class="sidebar-link">
                 <span class="sidebar-icon">6</span> Commercialising Sport
             </a>
         </div>
@@ -440,16 +436,16 @@ ul li { margin-bottom: 8px; }
         <!-- University LMS links -->
         <div class="sidebar-section">
             <div class="sidebar-label">eLearning (External)</div>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128196;</span> Course Outline
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#127942;</span> Grades
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128228;</span> Submit Assessment
             </a>
-            <a href="elearning.html" class="sidebar-link">
+            <a href="mylearn.html" class="sidebar-link">
                 <span class="sidebar-icon">&#128488;</span> Discussion Forums
             </a>
         </div>
@@ -461,22 +457,22 @@ ul li { margin-bottom: 8px; }
 
         <!-- Page Header -->
         <div class="page-header">
-            <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; <a href="tutorials.html">Tutorials</a> &nbsp;/&nbsp; Tutorial 6: Sports Media Rights &amp; Sponsorship</div>
-            <h1>Tutorial 6: Sports Media Rights &amp; Sponsorship</h1>
+            <div class="page-breadcrumb"><a href="v1.html">Home</a> &nbsp;/&nbsp; <a href="tutorials.html">Tutorials</a> &nbsp;/&nbsp; Tutorial 3: Athletes, Contract &amp; Control</div>
+            <h1>Tutorial 3: Athletes, Contract &amp; Control</h1>
         </div>
 
         <!-- Tutorial Overview -->
         <div class="content-section">
             <h2>Tutorial Overview</h2>
-            <p>This final tutorial explores the commercial dimensions of modern sport — sponsorship agreements, media rights deals, and intellectual property protection. Through analysis of real sponsorship and broadcasting arrangements, you'll develop skills in identifying the key legal issues that arise in structuring these increasingly complex deals.</p>
-            <p>The session emphasises the intersection of contract law, intellectual property, and competition law in the commercial sports context. You'll examine how sporting organisations generate revenue, how they protect their commercial interests, and the regulatory challenges that arise as sports commercialisation intensifies globally.</p>
+            <p>This practical session examines the legal structures that govern player relationships in sport. You'll explore player contract design, restraint of trade principles, and the ongoing tension between the interests of sporting organisations and the rights of individual athletes.</p>
+            <p>Through real-world case analysis and contract interpretation exercises, you'll develop skills in identifying problematic contractual clauses, understanding how courts approach enforceability, and recognizing the broader policy issues at stake. This tutorial emphasises the practical application of legal principles to the commercial realities of modern sport.</p>
         </div>
 
         <!-- Date & Access -->
         <div class="info-card">
             <h3>Date &amp; Access</h3>
-            <p><strong>Wednesday, 12 May 2027</strong></p>
-            <p><strong>6:00–8:00pm AEST</strong></p>
+            <p><strong>Wednesday, 26 March 2026</strong></p>
+            <p><strong>6:00–8:00pm AEDT</strong></p>
             <p style="margin-top: 16px;">
                 <a href="#" class="btn">Join Live Session</a>
             </p>
@@ -495,30 +491,30 @@ ul li { margin-bottom: 8px; }
             </div>
             <p style="margin-top: 24px;"><strong>Pre-reading &amp; Preparation:</strong></p>
             <ul>
-                <li>Watch Module 5, Lecture 1: "Sponsorship &amp; Commercial Agreements" (60 minutes)</li>
-                <li>Watch Module 5, Lecture 2: "Media Rights &amp; Broadcasting" (60 minutes)</li>
-                <li>Watch Module 5, Lecture 3: "Intellectual Property in Sport" (60 minutes)</li>
-                <li>Review real-world agreement templates and case examples in Module 5</li>
+                <li>Watch Module 3, Lecture 1: "Player Contracts &amp; Control" (60 minutes)</li>
+                <li>Watch Module 3, Lecture 2: "Restraint of Trade" (60 minutes)</li>
+                <li>Review sample contract clauses and annotations provided in Module 3</li>
             </ul>
-            <p><strong>Related Module:</strong> <a href="modules.html">Module 5: Commercialising Sports Rights</a></p>
+            <p><strong>Related Module:</strong> <a href="modules.html">Module 3: Athlete, Contracts &amp; Control</a></p>
         </div>
 
         <!-- Connection to Course -->
         <div class="content-section">
             <h2>Connection to Course</h2>
-            <p>This tutorial brings the course to a close by exploring the commercial side of sport. The contract interpretation and negotiation skills you've developed throughout the course — particularly in Tutorial 3 on player contracts — apply directly to commercial agreements in sport.</p>
-            <p>Completing this final tutorial gives you a comprehensive understanding of the full landscape of sports law, from governance and regulation through to the commercial dimensions that increasingly shape modern professional sport. These concepts and skills will provide a solid foundation for further study or professional practice in sports law.</p>
+            <p>This tutorial applies the governance and natural justice principles from Tutorial 2 to the specific context of player relationships and contractual arrangements. The restraint of trade doctrine you'll study here re-emerges in discussions of salary caps and transfer systems, and informs the disciplinary questions you'll encounter in later tutorials.</p>
+            <p>The practical skills you develop — contract analysis, clause interpretation, and policy reasoning — are directly relevant to your assessment work and to professional practice in sports law.</p>
         </div>
 
         <!-- Discussion -->
         <div class="content-section">
             <h2>Discussion & Questions</h2>
-            <p>Have questions about this tutorial or the course? Head to the <a href="#">Discussion Forums on eLearning</a> to connect with other students and your lecturer.</p>
+            <p>Have questions about this tutorial or the course? Head to the <a href="#">Discussion Forums on MyLearn</a> to connect with other students and your lecturer.</p>
         </div>
 
         <!-- Footer -->
         <div class="portal-footer">
             <span>&copy; 2026 The Law of Sport — Michael Bricknell</span>
+            <a href="#">Grades, submissions, extensions &amp; policies are on your university's platform</a>
         </div>
 
     </main>
