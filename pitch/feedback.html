@@ -95,16 +95,6 @@ img { max-width: 100%; display: block; }
 /* Disclaimer */
 .fb-note { max-width: 780px; margin: 36px auto 0; text-align: center; font-size: 0.85rem; color: var(--color-text-light); line-height: 1.7; padding: 0 24px; }
 
-/* Jump nav */
-.fb-jumpnav { position: sticky; top: 0; z-index: 50; background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 12px 0; margin-top: 44px; overflow-x: auto; }
-.fb-jumpnav-inner { display: flex; gap: 8px; flex-wrap: nowrap; }
-.fb-jumpnav a {
-    flex-shrink: 0; font-size: 0.78rem; font-weight: 600; color: var(--color-text-light);
-    background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: 20px;
-    padding: 7px 14px; white-space: nowrap;
-}
-.fb-jumpnav a:hover { color: var(--color-emerald); border-color: var(--color-emerald); }
-
 /* Theme sections */
 .fb-theme { padding: 56px 0; }
 .fb-theme.alt { background: var(--color-bg-alt); }
@@ -156,7 +146,6 @@ img { max-width: 100%; display: block; }
             <img src="../assets/logo.svg" alt="The Law of Sport" style="height:36px; width:auto; display:block;">
         </a>
         <div style="display:flex; align-items:center; gap:12px;">
-            <span class="fb-badge">Prepared for university partners — not publicly listed</span>
             <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
         </div>
     </div>
@@ -165,7 +154,7 @@ img { max-width: 100%; display: block; }
 <header class="fb-hero">
     <div class="section-inner">
         <p class="fb-eyebrow">Student Feedback — Sports Law</p>
-        <h1>What students said, in their own words</h1>
+        <h1><span style="color: #02C5C3;">What students said</span>, in their own words</h1>
         <p class="lede">Themes and verbatim comments drawn from an end-of-term course evaluation survey completed in Term 1, 2026 — optional and anonymous, completed by enrolled students.</p>
     </div>
 </header>
@@ -202,18 +191,6 @@ img { max-width: 100%; display: block; }
         <p class="fb-note">Comments below are reproduced as submitted by students, with only minor identifying details removed to preserve anonymity. They are grouped into seven recurring themes identified across the survey responses.</p>
     </div>
 </div>
-
-<nav class="fb-jumpnav">
-    <div class="section-inner fb-jumpnav-inner">
-        <a href="#t1">1. Practical Pedagogy</a>
-        <a href="#t2">2. Practitioner-Led Teaching</a>
-        <a href="#t3">3. Teaching Style</a>
-        <a href="#t4">4. Quality of Resources</a>
-        <a href="#t5">5. Inclusive Environment</a>
-        <a href="#t6">6. Feedback &amp; Support</a>
-        <a href="#t7">7. Satisfaction &amp; Recommendation</a>
-    </div>
-</nav>
 
 <!-- Theme 1 -->
 <section id="t1" class="fb-theme">
