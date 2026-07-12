@@ -130,6 +130,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .btn-ghost:hover { border-color: var(--color-white); color: var(--color-white); }
 .btn-nav { background: var(--color-emerald); color: var(--color-white) !important; padding: 8px 20px; font-size: 0.85rem; }
 .btn-nav:hover { background: var(--color-emerald-light); color: var(--color-white) !important; }
+.btn-feedback { background: #E4572E; border-color: #E4572E; color: var(--color-white) !important; padding: 8px 20px; font-size: 0.85rem; }
+.btn-feedback:hover { background: #F06A40; border-color: #F06A40; color: var(--color-white) !important; }
 .btn-large { padding: 16px 40px; font-size: 1.05rem; }
 
 .demo-strip {
@@ -496,6 +498,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
     color: #D4A847;
     background: rgba(255,255,255,0.06);
 }
+.mobile-nav-overlay .btn-feedback {
+    background: #E4572E;
+    color: #fff !important;
+    text-align: center;
+    margin-top: 12px;
+    border-radius: 6px;
+}
 .mobile-nav-overlay .btn-nav {
     background: #1B7A5A;
     color: #fff !important;
@@ -588,6 +597,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                 <a href="#course">The Course</a>
                 <a href="#approach">Approach</a>
                 <a href="#credentials">Credentials</a>
+                <a href="feedback.html" class="btn btn-feedback">Student Feedback</a>
                 <a href="#contact" class="btn btn-nav">Partner With Us</a>
                 <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">&#9790;</button>
             </div>
@@ -600,6 +610,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
             <a href="#course">The Course</a>
             <a href="#approach">Approach</a>
             <a href="#credentials">Credentials</a>
+            <a href="feedback.html" class="btn btn-feedback">Student Feedback</a>
             <a href="#contact" class="btn btn-nav">Partner With Us</a>
             <div class="mobile-divider"></div>
             <button class="theme-toggle" id="mobileThemeToggle" title="Toggle dark mode" style="margin:0 auto;">&#9790;</button>
@@ -973,21 +984,4 @@ h1, h2, h3, h4 { line-height: 1.2; }
             html.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
         } else {
-            html.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-        }
-        var icon = dark ? '\u2600' : '\u263E';
-        if (toggle) toggle.textContent = icon;
-        if (mobileToggle) mobileToggle.textContent = icon;
-    }
-    if (localStorage.getItem('theme') === 'dark') setTheme(true);
-    function handleClick() {
-        setTheme(html.getAttribute('data-theme') !== 'dark');
-    }
-    if (toggle) toggle.addEventListener('click', handleClick);
-    if (mobileToggle) mobileToggle.addEventListener('click', handleClick);
-})();
-</script>
-
-</body>
-</html>
+            html.removeAttrib
