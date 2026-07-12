@@ -984,4 +984,21 @@ h1, h2, h3, h4 { line-height: 1.2; }
             html.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
         } else {
-            html.removeAttrib
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        }
+        var icon = dark ? '\u2600' : '\u263E';
+        if (toggle) toggle.textContent = icon;
+        if (mobileToggle) mobileToggle.textContent = icon;
+    }
+    if (localStorage.getItem('theme') === 'dark') setTheme(true);
+    function handleClick() {
+        setTheme(html.getAttribute('data-theme') !== 'dark');
+    }
+    if (toggle) toggle.addEventListener('click', handleClick);
+    if (mobileToggle) mobileToggle.addEventListener('click', handleClick);
+})();
+</script>
+
+</body>
+</html>
