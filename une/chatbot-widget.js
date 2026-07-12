@@ -1,7 +1,7 @@
 /**
  * The Law of Sport — AI Study Assistant Widget
  *
- * A self-contained chatbot widget for thelawofsport.com student portal.
+ * A self-contained chatbot widget for lawofsport.com student portal.
  * Drop this script into any page and it adds a floating chat assistant.
  *
  * SETUP:
