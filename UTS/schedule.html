@@ -260,10 +260,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .week-card:nth-child(4)::before  { border-color: var(--color-module-teal); }
 .week-card:nth-child(5)::before  { border-color: var(--color-module-teal); }
 .week-card:nth-child(6)::before  { border-color: var(--color-module-red); }
-.week-card:nth-child(7)::before  { border-color: var(--color-gold); }
+.week-card:nth-child(7)::before  { border-color: var(--color-module-red); }
 .week-card:nth-child(8)::before  { border-color: var(--color-gold); }
 .week-card:nth-child(9)::before  { border-color: var(--color-gray-300); }
-.week-card:nth-child(10)::before { border-color: var(--color-module-red); }
+.week-card:nth-child(10)::before { border-color: var(--color-gold); }
 .week-card:nth-child(11)::before { border-color: var(--color-module-purple); }
 .week-card:nth-child(12)::before { border-color: var(--color-module-purple); }
 .week-card:nth-child(13)::before { border-color: var(--color-gold); }
@@ -283,10 +283,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .week-card:nth-child(4)  .week-number { background: var(--color-module-teal); }
 .week-card:nth-child(5)  .week-number { background: var(--color-module-teal); }
 .week-card:nth-child(6)  .week-number { background: var(--color-module-red); }
-.week-card:nth-child(7)  .week-number { background: var(--color-gold); }
+.week-card:nth-child(7)  .week-number { background: var(--color-module-red); }
 .week-card:nth-child(8)  .week-number { background: var(--color-gold); }
 .week-card:nth-child(9)  .week-number { background: var(--color-gray-400); }
-.week-card:nth-child(10) .week-number { background: var(--color-module-red); }
+.week-card:nth-child(10) .week-number { background: var(--color-gold); }
 .week-card:nth-child(11) .week-number { background: var(--color-module-purple); }
 .week-card:nth-child(12) .week-number { background: var(--color-module-purple); }
 .week-card:nth-child(13) .week-number { background: var(--color-gold); }
@@ -356,24 +356,26 @@ h1, h2, h3, h4 { line-height: 1.2; }
     border: 1px solid rgba(30, 77, 110, 0.3);
 }
 
-/* Week 6 — Module 4 — red */
-.week-card:nth-child(6) .week-content {
+/* Weeks 6–7 — Module 4 — red */
+.week-card:nth-child(6) .week-content,
+.week-card:nth-child(7) .week-content {
     background: linear-gradient(135deg, rgba(139, 26, 26, 0.06), rgba(139, 26, 26, 0.02));
     border: 1px solid rgba(139, 26, 26, 0.2);
 }
-[data-theme="dark"] .week-card:nth-child(6) .week-content {
+[data-theme="dark"] .week-card:nth-child(6) .week-content,
+[data-theme="dark"] .week-card:nth-child(7) .week-content {
     background: linear-gradient(135deg, rgba(139, 26, 26, 0.12), rgba(139, 26, 26, 0.06));
     border: 1px solid rgba(139, 26, 26, 0.3);
 }
 
-/* Weeks 7–8 — Plea Assessment — gold */
-.week-card:nth-child(7) .week-content,
-.week-card:nth-child(8) .week-content {
+/* Weeks 8 & 9 (cards 8 & 10) — Plea Assessment — gold */
+.week-card:nth-child(8) .week-content,
+.week-card:nth-child(10) .week-content {
     background: linear-gradient(135deg, rgba(212, 168, 71, 0.08), rgba(212, 168, 71, 0.04));
     border: 1px solid rgba(212, 168, 71, 0.3);
 }
-[data-theme="dark"] .week-card:nth-child(7) .week-content,
-[data-theme="dark"] .week-card:nth-child(8) .week-content {
+[data-theme="dark"] .week-card:nth-child(8) .week-content,
+[data-theme="dark"] .week-card:nth-child(10) .week-content {
     background: linear-gradient(135deg, rgba(212, 168, 71, 0.15), rgba(212, 168, 71, 0.08));
     border: 1px solid rgba(212, 168, 71, 0.4);
 }
@@ -382,16 +384,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .week-card:nth-child(9) .week-content {
     background: var(--color-bg-alt);
     border: 1px solid var(--color-border);
-}
-
-/* Week 9 (card 10) — Module 4 — red */
-.week-card:nth-child(10) .week-content {
-    background: linear-gradient(135deg, rgba(139, 26, 26, 0.06), rgba(139, 26, 26, 0.02));
-    border: 1px solid rgba(139, 26, 26, 0.2);
-}
-[data-theme="dark"] .week-card:nth-child(10) .week-content {
-    background: linear-gradient(135deg, rgba(139, 26, 26, 0.12), rgba(139, 26, 26, 0.06));
-    border: 1px solid rgba(139, 26, 26, 0.3);
 }
 
 /* Weeks 10–11 (cards 11–12) — Module 5 — purple */
@@ -827,7 +819,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
         <!-- Full Schedule Section -->
         <div id="schedule" class="schedule-section">
             <h2>Full Schedule</h2>
-            <p>Spring Session 2026 runs for 12 teaching weeks starting 28 July. There are two classes each Tuesday: <strong>Class A</strong> (window 3–6pm, standard sessions run 4–6pm) and <strong>Class B</strong> (window 6–9pm, standard sessions run 6–8pm). Two extended 3-hour sessions run in Weeks 3 and 12. Click on lectures to access video content and resources.</p>
+            <p>Spring Session 2026 runs for 12 teaching weeks starting 28 July. There are two classes each Tuesday: <strong>Class A</strong> (window 3–6pm, standard sessions run 4–6pm) and <strong>Class B</strong> (window 6–9pm, standard sessions run 6–8pm). Extended 3-hour sessions run in Weeks 3, 4, 8, 9, 10 and 12. Click on lectures to access video content and resources.</p>
 
             <!-- Week-by-Week Timeline -->
             <div class="schedule-timeline">
@@ -868,7 +860,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-label">Module</span><span>Module 1: Governance &amp; Systems</span></div>
+                            <div class="week-item"><span class="week-label">Module</span><span>Module 1: Systems &amp; Governance</span></div>
                             <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture2.html">Lecture 2: Sports Governance</a></div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mike</div>
                         </div>
@@ -891,6 +883,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="week-items">
                             <div class="week-item"><span class="week-label">Module</span><span>Module 2: Challenging Decisions</span></div>
                             <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture3.html">Lecture 3: Sports Discipline &amp; Disputes</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#127908;</span>Guest Speakers: Bird &amp; Bird</div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mike</div>
                         </div>
                         <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
@@ -906,15 +899,18 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m3">M3</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Player Contracting</div>
-                                <div class="week-dates">Tue 18 Aug 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
+                                <div class="week-title">Integrity Frameworks</div>
+                                <div class="week-dates">Tue 18 Aug 2026 &nbsp;·&nbsp; Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-label">Module</span><span>Module 3: Athlete, Contracts &amp; Control</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture4.html">Lecture 4: Player Contracting</a></div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Eve</div>
+                            <div class="week-item"><span class="week-label">Module</span><span>Module 3: Sports Integrity &amp; Regulation</span></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture7.html">Lecture 7: Corruption &amp; Wagering</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#128221;</span>Session also covers broader Integrity Frameworks content — dedicated lecture material pending</div>
+                            <div class="week-item"><span class="week-item-icon">&#128221;</span>2 student presentations each seminar</div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat</div>
                         </div>
+                        <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
                     </div>
                 </div>
 
@@ -927,14 +923,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m3">M3</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Player Representation &amp; Agency</div>
+                                <div class="week-title">Clean Sport</div>
                                 <div class="week-dates">Tue 25 Aug 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-label">Module</span><span>Module 3: Athlete, Contracts &amp; Control</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture5.html">Lecture 5: Player Representation &amp; Agency</a></div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Eve</div>
+                            <div class="week-item"><span class="week-label">Module</span><span>Module 3: Sports Integrity &amp; Regulation</span></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture6.html">Lecture 6: Clean Sport</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat</div>
                         </div>
                         <div class="census-badge">&#128340; Census Date: Thu 27 August</div>
                         <div class="assessment-badge">
@@ -953,14 +949,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m4">M4</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Clean Sport</div>
+                                <div class="week-title">Player Contracting</div>
                                 <div class="week-dates">Tue 1 Sep 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-label">Module</span><span>Module 4: Sports Integrity &amp; Regulation</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture6.html">Lecture 6: Clean Sport</a></div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat</div>
+                            <div class="week-item"><span class="week-label">Module</span><span>Module 4: Athlete, Contracts &amp; Control</span></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture4.html">Lecture 4: Player Contracting</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Eve</div>
                         </div>
                     </div>
                 </div>
@@ -974,17 +970,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m4">M4</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Plea Assessment — Part A</div>
+                                <div class="week-title">Player Representation</div>
                                 <div class="week-dates">Tue 8 Sep 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-item-icon">&#128221;</span>Tutorial focus — no lecture this week</div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat &amp; Oscar</div>
-                        </div>
-                        <div class="assessment-badge">
-                            <span class="assessment-badge-icon">&#128462;</span>
-                            <span><strong>Oral Plea (3B)</strong> &nbsp;In Class — Weeks 7–8</span>
+                            <div class="week-item"><span class="week-label">Module</span><span>Module 4: Athlete, Contracts &amp; Control</span></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture5.html">Lecture 5: Player Representation &amp; Agency</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Eve</div>
                         </div>
                     </div>
                 </div>
@@ -995,16 +988,20 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="week-number">8</div>
                     </div>
                     <div class="week-content">
-                        <span class="module-badge badge-m4">M4</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Plea Assessment — Part B</div>
-                                <div class="week-dates">Tue 15 Sep 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
+                                <div class="week-title">Plea Assessment — Part A</div>
+                                <div class="week-dates">Tue 15 Sep 2026 &nbsp;·&nbsp; Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm</div>
                             </div>
                         </div>
                         <div class="week-items">
                             <div class="week-item"><span class="week-item-icon">&#128221;</span>Tutorial focus — no lecture this week</div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat &amp; Oscar</div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead — Class A: Mat &nbsp;·&nbsp; Class B: Oscar</div>
+                        </div>
+                        <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
+                        <div class="assessment-badge">
+                            <span class="assessment-badge-icon">&#128462;</span>
+                            <span><strong>Oral Plea (3B)</strong> &nbsp;In Class — Weeks 8–9</span>
                         </div>
                     </div>
                 </div>
@@ -1033,18 +1030,17 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <div class="week-number">9</div>
                     </div>
                     <div class="week-content">
-                        <span class="module-badge badge-m4">M4</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Corruption &amp; Wagering</div>
-                                <div class="week-dates">Tue 29 Sep 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
+                                <div class="week-title">Plea Assessment — Part B</div>
+                                <div class="week-dates">Tue 29 Sep 2026 &nbsp;·&nbsp; Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-label">Module</span><span>Module 4: Sports Integrity &amp; Regulation</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture7.html">Lecture 7: Corruption &amp; Wagering</a></div>
-                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mat</div>
+                            <div class="week-item"><span class="week-item-icon">&#128221;</span>Tutorial focus — no lecture this week</div>
+                            <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead — Class A: Mat &nbsp;·&nbsp; Class B: Oscar</div>
                         </div>
+                        <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
                     </div>
                 </div>
 
@@ -1057,15 +1053,17 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m5">M5</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Sports Media Rights</div>
-                                <div class="week-dates">Tue 6 Oct 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
+                                <div class="week-title">Sports Sponsorship</div>
+                                <div class="week-dates">Tue 6 Oct 2026 &nbsp;·&nbsp; Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm</div>
                             </div>
                         </div>
                         <div class="week-items">
                             <div class="week-item"><span class="week-label">Module</span><span>Module 5: Commercialising Sports Rights</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture10.html">Lecture 10: Sports Media</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture11.html">Lecture 11: Sports Sponsorship</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#128221;</span>2 student presentations each seminar</div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Oscar</div>
                         </div>
+                        <div class="key-date-badge">&#128340; Extended session: 3 hours (Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm)</div>
                     </div>
                 </div>
 
@@ -1078,13 +1076,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
                         <span class="module-badge badge-m5">M5</span>
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Sports Sponsorship</div>
+                                <div class="week-title">Sports Media Rights</div>
                                 <div class="week-dates">Tue 13 Oct 2026 &nbsp;·&nbsp; Class A: 4–6pm &nbsp;·&nbsp; Class B: 6–8pm</div>
                             </div>
                         </div>
                         <div class="week-items">
                             <div class="week-item"><span class="week-label">Module</span><span>Module 5: Commercialising Sports Rights</span></div>
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture11.html">Lecture 11: Sports Sponsorship</a></div>
+                            <div class="week-item"><span class="week-item-icon">&#127891;</span><a href="lecture10.html">Lecture 10: Sports Media</a></div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Oscar</div>
                         </div>
                         <div class="assessment-badge">
@@ -1102,12 +1100,13 @@ h1, h2, h3, h4 { line-height: 1.2; }
                     <div class="week-content">
                         <div class="week-header">
                             <div>
-                                <div class="week-title">Emerging Topics &amp; Take-Home Explanation</div>
+                                <div class="week-title">Bonus: Emerging Topics</div>
                                 <div class="week-dates">Tue 20 Oct 2026 &nbsp;·&nbsp; Class A: 3–6pm &nbsp;·&nbsp; Class B: 6–9pm</div>
                             </div>
                         </div>
                         <div class="week-items">
-                            <div class="week-item"><span class="week-item-icon">&#127891;</span>Lecture: Emerging Topics in Sports Law</div>
+                            <div class="week-item"><span class="week-item-icon">&#128221;</span>Tutorial focus — no lecture this week</div>
+                            <div class="week-item"><span class="week-item-icon">&#127908;</span>Guest Speakers: Bird &amp; Bird</div>
                             <div class="week-item"><span class="week-item-icon">&#128100;</span>Tutorial lead: Mike</div>
                             <div class="week-item"><span class="week-item-icon">&#128221;</span>Take-home assessment explanation this session</div>
                         </div>
@@ -1169,8 +1168,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
         sections.forEach(s => { if (s.id) observer.observe(s); });
 
         // Next Lecture / Next Tutorial navigation — Spring 2026
-        // Weeks 7 & 8 are Plea Assessment (tutorial focus, no lecture)
-        const lectureWeeks = [1, 2, 3, 4, 5, 6, 9, 10, 11, 12];
+        // Weeks 8 & 9 are Plea Assessment (tutorial focus, no lecture); Week 12 is a guest-speaker bonus session (no lecture)
+        const lectureWeeks = [1, 2, 3, 4, 5, 6, 7, 10, 11];
         const tutorialWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
         // Session dates (Tuesday of each teaching week)
